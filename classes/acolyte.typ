@@ -17,20 +17,14 @@
     #align(center)[
       #box(image("../svgs/armor.svg", height: 2em))
       #linebreak()
-
-      Cloth
-      Leather
-      Hide
-      Chainmail
+      #("Cloth (L)", "Leather (L)", "Hide (L)", "Chainmail (H)").join(linebreak())
     ]
 
     #colbreak()
     #align(center)[
       #box(image("../svgs/sword.svg", height: 2em))
       #linebreak()
-
-      Simple Melee
-      Simple Ranged
+      #("Simple Melee", "Simple Ranged").join(linebreak())
     ]
     #colbreak();
     #align(center)[
@@ -45,59 +39,46 @@
     #align(center)[
       #box(image("../svgs/shield.svg", height: 2em))
       #linebreak()
-
-      Fortitude: 	11
-      Willpower:	13
-      Reflex:		11
+      #("Fortitude: 11", "Willpower: 13", "Reflex: 11").join(linebreak())
     ]
     #colbreak();
     #align(center)[
       #box(image("../svgs/heart.svg", height: 2em))
       #linebreak()
-
-      Health: 22
-      Health on level-up: 5
-      Healing Surges: 7
+      #("Health: 22", "Health on level-up: 5", "Healing Surges: 7").join(linebreak())
     ]
   ]
 
-  = *#underline("Characteristics")*
-  == Main Characteristic
+  #align(center)[= *#underline("Abilities")*]
+  == Main Ability
   Choose either Strength or Wisdom, that characteristic has 4 points and is your main characteristic.
 
   == Assign points
-  Assign 6 points to any of the characteristics you did not choose as your main characteristics. You can assign a maximum of 4 points to a single characteristic.
+  Assign 6 points to any ability that isn't your main, you may assign up to 4 in a single one.
 
-  === Dexterity
-  When you assign a point to Dexterity you gain:
-  - +1 Reflex
-  - +1 Initiative Bonus
-  - +1 AC when wearing light armor
+  #columns(3)[
+    === Dexterity
+    #("+1 Reflex", "+1 Initiative").join(linebreak())
 
-  === Strength
-  When you assign a point to Strength you gain:
-  - +1 Fortitude
-  - +1 to hit on some powers.
+    #colbreak()
+    === Strength
+    #("+1 Fortitude", "+1 to hit on some powers.").join(linebreak())
 
-  === Constitution
-  When you assign a point to Constitution you gain:
-  - +1 Fortitude
-  - +1 Healing Surge
-  - +2 Health
+    #colbreak()
+    === Constitution
+    #("+1 Fortitude", "+1 Healing Surge", "+2 Health").join(linebreak())
+  ]
 
-  === Intelligence
-  When you assign a point to Intelligence you gain:
-  - +1 Reflex
-  - +1 to AC when wearing light armor.
-  - +1 to an effect on some powers.
+  #columns(3)[
+    === Intelligence
+    #("+1 Reflex", "+1 to an effect on some powers.").join(linebreak())
 
-  === Wisdom
-  When you assign a point to Wisdom you gain:
-  - +1 Willpower
-  - +1 to hit on some powers.
+    #colbreak()
+    === Wisdom
+    #("+1 Willpower", "+1 to hit on some powers.").join(linebreak())
 
-  === Charisma
-  When you assign a point to Charisma you gain:
-  - +1 Willpower
-  - +1 to an effect on some powers.
+    #colbreak()
+    === Charisma
+    #("+1 Willpower", "+1 to an effect on some powers.").join(linebreak())
+  ]
 ]

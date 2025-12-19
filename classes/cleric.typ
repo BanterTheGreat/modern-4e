@@ -73,7 +73,7 @@
       [
         #box(image("../svgs/heart.svg", height: 2em))
         #linebreak()
-        #("Health: 22", "Health on level-up: 5", " Surges: 7").join(linebreak())
+        #("Health: 22", "Health on level-up: 5", "Healing Surges: 7").join(linebreak())
       ],
     ),
     size: 10pt,

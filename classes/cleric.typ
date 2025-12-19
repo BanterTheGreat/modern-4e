@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ": center-color, choiceBox, edge-color, header-color, header2-color;
+#import "../helpers/shared.typ": center-color, choiceBox, edge-color, header-color, header2-color, proficiencies, armorProf, weaponProf, implementProf, defensesAndHealth, abilities;
 #import "../helpers/powers.typ";
 
 #set page(
@@ -29,105 +29,18 @@
 ]
 
 #columns(2)[
-  = Proficiencies
-  // Your content goes here in 2 columns
-  #text(
-    table(
-      columns: (1fr, 1fr, 1fr),
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: center,
-      fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-      inset: 8pt,
-      [
-        #box(image("../svgs/armor.svg", height: 2em))
-        #linebreak()
-        #("Cloth (L)", "Leather (L)", "Hide (L)", "Chainmail (H)").join(linebreak())
-      ],
-      [
-        #box(image("../svgs/sword.svg", height: 2em))
-        #linebreak()
-        #("Simple Melee", "Simple Ranged").join(linebreak())
-      ],
-      [
-        #box(image("../svgs/magic.svg", height: 2em))
-        #linebreak()
-        Holy Symbol
-      ],
-    ),
-    size: 10pt,
+  #proficiencies(
+    armorProficiencies: (armorProf.cloth, armorProf.leather, armorProf.hide, armorProf.chainmail),
+    weaponProficiencies: (weaponProf.simpleMelee, weaponProf.simpleRanged),
+    implementProficiencies: (implementProf.holySymbol)
   );
 
-  = Defenses & Health
-  #text(
-    table(
-      columns: (1fr, 1fr),
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: center,
-      fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-      inset: 8pt,
-      [
-        #box(image("../svgs/shield.svg", height: 2em))
-        #linebreak()
-        #("Fortitude: 11", "Will: 13", "Reflex: 11").join(linebreak())
-      ],
-      [
-        #box(image("../svgs/heart.svg", height: 2em))
-        #linebreak()
-        #("Health: 22", "Health on level-up: 5", "Healing Surges: 7").join(linebreak())
-      ],
-    ),
-    size: 10pt,
-  );
+  #defensesAndHealth(fortitude: 11, will: 13, reflex: 11, health: 22, healthOnLevelUp: 5, healingSurges: 7)
 
-  = Abilities
-  Your abilities decide what your character will specialise in. Depending on your playstyle, you want to focus on different abilities.
-  == Main Ability
-  Choose either *Strength* or *Wisdom*, that characteristic has 4 points and is your main characteristic.
-
-  == Assign points
-  Assign 6 points to any combination of abilities that aren't your main ability. You can assign a maximum of 4 points to any single ability.
-
-  Most Cleric powers use either *Strength* or *Wisdom* for accuracy, while sometimes benefitting from *Intelligence* or *Charisma* for extra effects.
-
-  #text(
-    table(
-      columns: (1fr, 1fr, 1fr),
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: left,
-      fill: (col, row) => if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-      inset: 8pt,
-      [
-        #align(center)[=== Dexterity
-          #("+1 Reflex", "+1 Initiative").join(linebreak())]
-      ],
-      [
-        #align(center)[=== Strength
-          +1 Fortitude]
-      ],
-      [
-        #align(center)[=== Constitution
-          #("+1 Fortitude", "+1 Surge", "+2 Health").join(linebreak())]
-      ],
-
-      [
-        #align(center)[=== Intelligence
-          +1 Reflex]
-      ],
-      [
-        #align(center)[=== Wisdom
-          +1 Will]
-      ],
-      [
-        #align(center)[=== Charisma
-          +1 Will
-          #linebreak()
-          ‌‌
-          #linebreak()
-          ‌‌ ]
-      ],
-    ),
-    size: 10pt,
-  );
+  #abilities(
+    mainAbility: "Strength",
+    mainAbility2: "Wisdom",
+    additionalInfo: [Most Cleric powers use either *Strength* or *Wisdom* for accuracy, while sometimes benefitting from *Intelligence* or *Charisma* for extra effects.]);
 
   = Lore
   Some Cleric's specialised in the text of renewal and soothing, while others specialised in conquest and warfare. Choose one of the options below.
@@ -337,7 +250,9 @@ Choose a divine domain that has a 1st level domain feature associated with it, s
 #choiceBox("Word of Retaliation")
 When you use healing word, the target regains extra hit points equal to the number of enemies adjacent to him or her.
 #choiceBox("Pacifist Healer")
-When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed. The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
+When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed.
+
+The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
 #choiceBox("Pacifist's Reward")
 When you hit with an attack that doesn't deal damage, if you didn't deal any damage on your turn, gain 2 temporary hit points at the end of the turn. The temporary hit points increase to 3 at 11th level, and to 4 at 21st level.
 

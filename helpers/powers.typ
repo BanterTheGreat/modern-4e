@@ -16,6 +16,7 @@
   minor: "Minor Action",
   free: "Free Action",
   reaction: "Reaction",
+  noAction: "No Action",
 )
 
 #let attackType = (
@@ -48,7 +49,7 @@
   )
 }
 
-#let power = (title: str, description: str, type: powerType, range: content, traits: str, action: actionType, target: none, offenseStat: none, defenseStat: none, additionalRows: (content), isSpecial: false, attackType: attackType.default) => {
+#let power = (title: str, description: none, type: powerType, range: content, traits: str, action: actionType, target: none, offenseStat: none, defenseStat: none, additionalRows: (content), isSpecial: false, attackType: attackType.default) => {
   
   let color = (
     "At-will": at-will-color,
@@ -75,9 +76,7 @@
       [
         #text(weight: 700, size: 11pt)[#title]
       ],
-      [
-        _#text(description)_
-      ],
+      ..if description != none { ([_#text(description)_],) } else { () },
       [
         *#type#if isSpecial [ (Special)]   ✦     #traits* #linebreak()
         *#action* #h(10%) #range #if target != none [ #linebreak()

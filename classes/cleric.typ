@@ -68,7 +68,7 @@
       [
         #box(image("../svgs/shield.svg", height: 2em))
         #linebreak()
-        #("Fortitude: 11", "Willpower: 13", "Reflex: 11").join(linebreak())
+        #("Fortitude: 11", "Will: 13", "Reflex: 11").join(linebreak())
       ],
       [
         #box(image("../svgs/heart.svg", height: 2em))
@@ -115,11 +115,11 @@
       ],
       [
         #align(center)[=== Wisdom
-          +1 Willpower]
+          +1 Will]
       ],
       [
         #align(center)[=== Charisma
-          +1 Willpower
+          +1 Will
           #linebreak()
           ‌‌
           #linebreak()
@@ -146,7 +146,9 @@
     description: "You utter a soothing word that mends wounds of the body and spirit.",
     type: powers.powerType.encounter,
     action: powers.actionType.minor,
+    traits: "Healing",
     target: "You or one ally in the burst",
+    range: [*Close* burst 5 (10 at 11th level, 15 at 21st level)],
     isSpecial: true,
     additionalRows: (
       text[*Effect*: The target can spend a healing surge and regain 1d6 additional hit points.
@@ -157,40 +159,5 @@
       - Level 26: 6d6 additional hit points.],
       text[*Special:* You can use this power twice per encounter, but only once per round. At 16th level, you can use this power three times per round.],
     )
-  );
-
-  #text(
-    table(
-      columns: 1fr,
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: left,
-      fill: (col, row) => if row == 0 { rgb("#f38e83") } else {
-        if calc.rem(row, 2) == 0 { rgb("#F0E3C7") } else { rgb("#E8DBB7") }
-      },
-      inset: 6pt,
-      [
-        #text(weight: 700, size: 11pt)[Healing Word]
-      ],
-      [
-        _You utter a soothing word that mends wounds of the body and spirit._
-      ],
-      [
-        *Encounter (Special)   ✦     Healing* #linebreak()
-        *Minor Action* #h(10%) *Close* burst 5 (10 at 11th level, 15 at 21st level) #linebreak()
-        *Target:* You or one ally in the burst
-      ],
-      [
-        *Effect:* The target can spend a healing surge and regain 1d6 additional hit points.
-          - Level 6: 2d6 additional hit points.
-          - Level 11: 3d6 additional hit points.
-          - Level 16: 4d6 additional hit points.
-          - Level 21: 5d6 additional hit points.
-          - Level 26: 6d6 additional hit points
-      ],
-      [
-        *Special:* You can use this power twice per encounter, but only once per round. At 16th level, you can use this power three times per round.
-      ]
-    ),
-    size: 10pt,
   );
 ]

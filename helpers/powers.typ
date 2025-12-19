@@ -18,7 +18,37 @@
   reaction: "Reaction",
 )
 
-#let power = (title: str, description: str, type: powerType, action: actionType, target: str, additionalRows: (content), isSpecial: false) => {
+#let attackType = (
+  default: "Default",
+  primary: "Primary Attack",
+  secondary: "Secondary Attack",
+)
+
+#let offense = (
+  strength: "Strength",
+  dexterity: "Dexterity",
+  constitution: "Constitution",
+  wisdom: "Wisdom",
+  intelligence: "Intelligence",
+  charisma: "Charisma",
+)
+
+#let defense = (
+  ac: "AC",
+  will: "Will",
+  reflex: "Reflex",
+  fortitude: "Fortitude",
+)
+
+#let createAttack = (offense: str, defense: str) => {
+  return (
+    offense: offense,
+    defense: defense,
+    display: () => offense + " vs. " + defense
+  )
+}
+
+#let power = (title: str, description: str, type: powerType, range: content, traits: str, action: actionType, target: none, offenseStat: none, defenseStat: none, additionalRows: (content), isSpecial: false, attackType: attackType.default) => {
   
   let color = (
     "At-will": at-will-color,
@@ -26,6 +56,12 @@
     "Daily": daily-color,
     "Utility": utility-color
   ).at(type, default: at-will-color)
+
+  let targetLabel = (
+    "Primary Attack": "Primary Target:",
+    "Secondary Attack": "Secondary Target:",
+    "Default": "Target:",
+  ).at(attackType, default: "Target:")
 
   return text(
     table(
@@ -43,9 +79,10 @@
         _#text(description)_
       ],
       [
-        *#type#if isSpecial [ (Special)]   ✦     Healing* #linebreak()
-        *#action* #h(10%) *Close* burst 5 (10 at 11th level, 15 at 21st level) #linebreak()
-        *Target:* #target
+        *#type#if isSpecial [ (Special)]   ✦     #traits* #linebreak()
+        *#action* #h(10%) #range #if target != none [ #linebreak()
+        *#targetLabel* #target]#if offenseStat != none and defenseStat != none [ #linebreak()
+        *Attack:* #offenseStat vs. #defenseStat]
       ],
       ..additionalRows
     ),

@@ -1,5 +1,5 @@
 #import "../helpers/shared.typ": center-color, choiceBox, edge-color, header-color, header2-color;
-#include "../helpers/shared.typ";
+#import "../helpers/powers.typ";
 
 #set page(
   paper: "a4",
@@ -141,7 +141,24 @@
   = Healing Word
   Using the healing word power, clerics can grant their comrades additional resilience with nothing more than a short prayer.
 
-  // Single-column info table: first row red, then alternating
+  #powers.power(
+    title: "Healing Word",
+    description: "You utter a soothing word that mends wounds of the body and spirit.",
+    type: powers.powerType.encounter,
+    action: powers.actionType.minor,
+    target: "You or one ally in the burst",
+    isSpecial: true,
+    additionalRows: (
+      text[*Effect*: The target can spend a healing surge and regain 1d6 additional hit points.
+      - Level 6: 2d6 additional hit points.
+      - Level 11: 3d6 additional hit points.
+      - Level 16: 4d6 additional hit points.
+      - Level 21: 5d6 additional hit points.
+      - Level 26: 6d6 additional hit points.],
+      text[*Special:* You can use this power twice per encounter, but only once per round. At 16th level, you can use this power three times per round.],
+    )
+  );
+
   #text(
     table(
       columns: 1fr,

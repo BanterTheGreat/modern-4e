@@ -1,6 +1,16 @@
+#let edge-color = rgb("#D4C4A0")
+#let center-color = rgb("#F0E3C700")
+
 #set page(
   paper: "a4",
   margin: (top: 1cm, rest: 2cm),
+  fill: rgb("#F0E3C7"),
+  background: {
+    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(edge-color, center-color, angle: 90deg)))
+    place(bottom + left, rect(width: 100%, height: 15%, fill: gradient.linear(center-color, edge-color, angle: 90deg)))
+    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(edge-color, center-color, angle: 0deg)))
+    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(center-color, edge-color, angle: 0deg)))
+  }
 )
 
 #align(center)[
@@ -51,34 +61,39 @@
 
   #align(center)[= *#underline("Abilities")*]
   == Main Ability
-  Choose either Strength or Wisdom, that characteristic has 4 points and is your main characteristic.
+  Choose either *Strength* or *Wisdom*, that characteristic has 4 points and is your main characteristic.
 
   == Assign points
-  Assign 6 points to any ability that isn't your main, you may assign up to 4 in a single one.
+  Assign 6 points to any ability that isn't your main, you may assign up to 4 in a single one. 
 
-  #columns(3)[
-    === Dexterity
-    #("+1 Reflex", "+1 Initiative").join(linebreak())
+  Most powers of the Acolyte use either *Strength* or *Wisdom* for accuracy, while benefitting from *Intelligence* or *Charisma* for extra effects.
 
-    #colbreak()
-    === Strength
-    #("+1 Fortitude", "+1 to hit on some powers.").join(linebreak())
+  #table(
+    columns: 3,
+    stroke: none,
+    align: left,
+    [
+      === Dexterity
+      #("+1 Reflex", "+1 Initiative").join(linebreak())
+    ],
+    [
+      === Strength
+      +1 Fortitude
+    ],
+    [
+      === Constitution
+      #("+1 Fortitude", "+1 Healing Surge", "+2 Health").join(linebreak())
+    ],
 
-    #colbreak()
-    === Constitution
-    #("+1 Fortitude", "+1 Healing Surge", "+2 Health").join(linebreak())
-  ]
-
-  #columns(3)[
-    === Intelligence
-    #("+1 Reflex", "+1 to an effect on some powers.").join(linebreak())
-
-    #colbreak()
-    === Wisdom
-    #("+1 Willpower", "+1 to hit on some powers.").join(linebreak())
-
-    #colbreak()
-    === Charisma
-    #("+1 Willpower", "+1 to an effect on some powers.").join(linebreak())
-  ]
+    [=== Intelligence
+      +1 Reflex
+    ],
+    [
+      === Wisdom
+      +1 Willpower
+    ],
+    [=== Charisma
+      +1 Willpower
+    ],
+  )
 ]

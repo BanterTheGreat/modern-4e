@@ -5,32 +5,6 @@
 #let header-color = rgb("#D4C4A0")
 #let header2-color = rgb("#dfd3b6")
 
-#let armorProf = (
-  cloth: "Cloth (L)",
-  leather: "Leather (L)",
-  hide: "Hide (L)",
-  chainmail: "Chainmail (H)",
-  scale: "Scale (H)",
-  plate: "Plate (H)",
-)
-
-#let weaponProf = (
-  simpleMelee: "Simple Melee",
-  simpleRanged: "Simple Ranged",
-  militaryMelee: "Military Melee",
-  militaryRanged: "Military Ranged",
-  superiorMelee: "Superior Melee",
-  superiorRanged: "Superior Ranged",
-)
-
-#let implementProf = (
-  holySymbol: "Holy Symbol",
-  orb: "Orb",
-  staff: "Staff",
-  wand: "Wand",
-  tome: "Tome",
-)
-
 #let choiceBox(content) = {
   return box(
     align(center)[
@@ -44,146 +18,12 @@
   )
 }
 
-
-#let proficiencies(
-  armorProficiencies: (armorProf),
-  weaponProficiencies: (weaponProf),
-  implementProficiencies: (implementProf),
-) = {
-  // Make a nice list if it is an array, otherwise use as is
-  let armorContent = if type(armorProficiencies) == array { armorProficiencies.join(linebreak()) } else {
-    armorProficiencies
-  }
-  let weaponContent = if type(weaponProficiencies) == array { weaponProficiencies.join(linebreak()) } else {
-    weaponProficiencies
-  }
-  let implementContent = if type(implementProficiencies) == array { implementProficiencies.join(linebreak()) } else {
-    implementProficiencies
-  }
-
-
-  return [
-    = Proficiencies
-    #text(
-      table(
-        columns: (1fr, 1fr, 1fr),
-        stroke: 0.5pt + rgb("#D4C4A0"),
-        align: center,
-        fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        [
-          #box(image("../svgs/armor.svg", height: 2em))
-          #linebreak()
-          #armorContent
-        ],
-        [
-          #box(image("../svgs/sword.svg", height: 2em))
-          #linebreak()
-          #weaponContent
-        ],
-        [
-          #box(image("../svgs/magic.svg", height: 2em))
-          #linebreak()
-          #implementContent
-        ],
-      ),
-      size: 10pt,
-    );
+#let pageTitle(title: str, additional: none) = {
+  return align(center)[
+    #text(heading(title, numbering: "1."), size: 16pt);
+    #if additional != none [
+      #linebreak()
+      #additional
+    ]
   ]
-}
-
-#let defensesAndHealth(
-  fortitude: int,
-  will: int,
-  reflex: int,
-  health: int,
-  healthOnLevelUp: int,
-  healingSurges: int,
-) = {
-  return [
-    = Defenses & Health
-    #text(
-    table(
-      columns: (1fr, 1fr),
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: center,
-      fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-      inset: 8pt,
-      [
-        #box(image("../svgs/shield.svg", height: 2em))
-        #linebreak()
-        #("Fortitude: " + str(fortitude), "Will: " + str(will), "Reflex: " + str(reflex)).join(linebreak())
-      ],
-      [
-        #box(image("../svgs/heart.svg", height: 2em))
-        #linebreak()
-        #(
-          "Health: " + str(health),
-          "Health on level-up: " + str(healthOnLevelUp),
-          "Healing Surges: " + str(healingSurges),
-        ).join(linebreak())
-      ],
-    ),
-    size: 10pt,
-  )];
-}
-
-#let abilities(mainAbility: str, mainAbility2: none, additionalInfo: content) = {
-  let mainAbilityText = if mainAbility2 != none {
-    "Choose either " + [*#mainAbility*] + " or " + [*#mainAbility2*] + ", that ability has 4 points and is your main ability."
-  } else {
-    "Your main ability is " + [*#mainAbility*] + ", which has 4 points."
-  }
-  
-  return [ 
-    = Abilties
-    Your abilities decide what your character will specialise in. Depending on your playstyle, you want to focus on different abilities.
-
-    == Main Ability
-    #mainAbilityText
-
-    == Assign points
-    Assign 6 points to any combination of abilities that aren't your main ability. You can assign a maximum of 4 points to any single ability.
-
-    #additionalInfo
-
-    #text(
-      table(
-        columns: (1fr, 1fr, 1fr),
-        stroke: 0.5pt + rgb("#D4C4A0"),
-        align: left,
-        fill: (col, row) => if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        [
-          #align(center)[=== Dexterity
-            #("+1 Reflex", "+1 Initiative").join(linebreak())]
-        ],
-        [
-          #align(center)[=== Strength
-            +1 Fortitude]
-        ],
-        [
-          #align(center)[=== Constitution
-            #("+1 Fortitude", "+1 Heal Surge", "+2 Health").join(linebreak())]
-        ],
-
-        [
-          #align(center)[=== Intelligence
-            #("+1 Reflex", "+1 Initiative").join(linebreak())]
-        ],
-        [
-          #align(center)[=== Wisdom
-            +1 Will]
-        ],
-        [
-          #align(center)[=== Charisma
-            +1 Will
-            #linebreak()
-            ‌‌
-            #linebreak()
-            ‌‌ ]
-        ],
-      ),
-      size: 10pt,
-    );]
 }

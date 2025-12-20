@@ -4,6 +4,7 @@
 #import "./classes/cleric.typ";
 
 #import "./ancestries/goblin.typ";
+#import "./ancestries/halfling.typ";
 
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
@@ -45,6 +46,7 @@
 
 #showPages(
   pages: (
+    halfling.halflingPage(),
     goblin.goblinPage(),
     creationAndAdvancement.creationAndAdvancementPage(),
     utility.utilityPage(),

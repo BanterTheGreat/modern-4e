@@ -1,5 +1,6 @@
 #import "../helpers/shared.typ";
 #import "../helpers/powers.typ";
+#import "../helpers/ancestries.typ";
 
 #let goblinPage() = {
   return [
@@ -7,38 +8,13 @@
 
     #columns(2)[
       = Attributes
-      #table(
-        columns: (1fr, 1fr),
-        stroke: 0.5pt + rgb("#D4C4A0"),
-        align: left,
-        fill: (col, row) => if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        [
-          #align(center)[
-            === Size
-            Small
-          ]
-        ],
-        [
-          #align(center)[
-            === Speed
-            6 squares
-          ]
-        ],
-        [
-          
-          #align(center)[
-            === Vision
-            Low-Light]
-          
-        ],
-        [
-          #align(center)[
-            === Languages
-            Common, Goblin
-          ]
-        ],
-      );
+
+      #ancestries.attributes(
+        size: "Small",
+        speed: 6,
+        vision: "Low-Light",
+        languages: "Common, Goblin"
+      )
 
       = Traits
       == Slippery
@@ -64,7 +40,8 @@
       #colbreak();
       #image("../images/goblin.png", height: 300pt)
     ]
-    = Feats
+
+    = Goblin Feats
     #columns(2)[
       #shared.choiceBox("Ankle Biter")
       You gain a +1 feat bonus to damage rolls against creatures larger than you. This bonus increases to +2 at 11th level and to +3 at 21st level.

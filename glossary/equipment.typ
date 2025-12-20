@@ -5,13 +5,7 @@
     columns: (1fr, 1fr, 1fr, 1fr, 1fr),
     stroke: 0.5pt + rgb("#D4C4A0"),
     align: left,
-    fill: (col, row) => if row == 0 {
-      rgb("#D4C4A0")
-    } else if calc.rem(row, 2) == 0 {
-      rgb("#E8DBB7")
-    } else {
-      rgb("#F0E3C7")
-    },
+    fill: (col, row) => shared.defaultTableStyle()(col, row),
     inset: 8pt,
     [*Weapon*],
     [*Proficiency Bonus*],

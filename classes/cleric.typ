@@ -161,10 +161,10 @@
     You may choose a level 1 or 2 Divine Technique, you master it.
 
     = Powers
-    You may choose 2 At-Will, 1 Encounter and 2 Daily acolyte Powers.
+    You may choose 2 At-Will, 1 Encounter and 2 Daily Cleric Powers.
 
     = Feats
-    You gain access to the Acolyte feat list
+    You gain access to the Cleric feat list
 
     #pagebreak()
 

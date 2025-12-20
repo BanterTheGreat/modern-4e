@@ -22,6 +22,7 @@
   staff: "Staff",
   wand: "Wand",
   tome: "Tome",
+  rod: "Rod",
 )
 
 #let proficiencies(

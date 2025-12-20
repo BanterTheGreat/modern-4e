@@ -69,9 +69,6 @@
 
 #showPages(
   pages: (
-    techniques.techniquesPage(),
-
-
     creationAndAdvancement.creationAndAdvancementPage(),
     ancestries.ancestriesPage(),
     classes.classesPage(),
@@ -81,5 +78,6 @@
     feats.featsPage(),
     utility.utilityPage(),
     skillChecks.skillChecksPage(),
+    techniques.techniquesPage(),
   ),
 );

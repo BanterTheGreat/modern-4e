@@ -2,11 +2,13 @@
 
 
 #import "./cleric.typ";
+#import "./artificer.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
   return (
     cleric.clericPage(),
+    artificer.artificerPage(),
   ).join(pagebreak())
 }
 

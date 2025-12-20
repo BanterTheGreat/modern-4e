@@ -1,20 +1,8 @@
 
 #import "./helpers/shared.typ": centerColor, edgeColor, headerColor, pageTitle;
 
-#import "./classes/cleric.typ";
-
-#import "./ancestries/goblin.typ";
-#import "./ancestries/halfling.typ";
-#import "./ancestries/dragonborn.typ";
-#import "./ancestries/dwarf.typ";
-#import "./ancestries/elf.typ";
-#import "./ancestries/kobold.typ";
-#import "./ancestries/human.typ";
-#import "./ancestries/goliath.typ";
-#import "./ancestries/warforged.typ";
-#import "./ancestries/revenant.typ";
-#import "./ancestries/orc.typ";
-#import "./ancestries/tiefling.typ";
+#import "./ancestries/root.typ" as ancestries;
+#import "./classes/root.typ" as classes;
 
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
@@ -26,23 +14,6 @@
 
 #let showPages(pages: (())) = {
   pages.join(pagebreak())
-}
-
-#let getAncestryPages() = {
-  return (
-    orc.orcPage(),
-    revenant.revenantPage(),
-    tiefling.tieflingPage(),
-    warforged.warforgedPage(),
-    goliath.goliathPage(),
-    human.humanPage(),
-    kobold.koboldPage(),
-    elf.elfPage(),
-    dwarf.dwarfPage(),
-    dragonborn.dragonbornPage(),
-    halfling.halflingPage(),
-    goblin.goblinPage(),
-  ).join(pagebreak());
 }
 
 #set page(
@@ -74,14 +45,14 @@
 
 #showPages(
   pages: (
-    skillChecks.skillChecksPage(),
-    getAncestryPages(),
     creationAndAdvancement.creationAndAdvancementPage(),
-    utility.utilityPage(),
+    ancestries.ancestriesPage(),
+    classes.classesPage(),
     backgrounds.backgroundPage(),
-    feats.featsPage(),
     equipment.equipmentPage(),
     themes.themesPage(),
-    cleric.classPage(),
+    feats.featsPage(),
+    utility.utilityPage(),
+    skillChecks.skillChecksPage(),
   ),
 );

@@ -4,9 +4,9 @@
 
 #import "../helpers/powers.typ";
 
-#let classPage() = {
-  [
-    #shared.pageTitle(
+#let clericPage() = {
+  return [
+    #shared.subPageTitle(
       title: "The Cleric",
       additional:[ _Their prayers burn, and the unholy tremble._
       #linebreak()

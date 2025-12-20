@@ -30,7 +30,17 @@
 
 #let pageTitle(title: str, additional: none) = {
   return align(center)[
-    #text(heading(title, numbering: "1."), size: 16pt);
+    #text(heading(title, numbering: "1.", level: 1), size: 16pt);
+    #if additional != none [
+      #linebreak()
+      #additional
+    ]
+  ]
+}
+
+#let subPageTitle(title: str, additional: none) = {
+  return align(center)[
+    #text(heading(title, numbering: "1.", level: 2), size: 16pt);
     #if additional != none [
       #linebreak()
       #additional

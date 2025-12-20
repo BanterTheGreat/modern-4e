@@ -4,7 +4,7 @@
 
 #let goliathPage() = {
   return [
-    #shared.pageTitle(title: "Goliath");
+    #shared.subPageTitle(title: "Goliath");
 
     #columns(2)[
       = Attributes

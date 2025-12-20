@@ -4,7 +4,7 @@
 
 #let dwarfPage() = {
   return [
-    #shared.pageTitle(title: "Dwarf");
+    #shared.subPageTitle(title: "Dwarf");
 
     #columns(2)[
       = Attributes

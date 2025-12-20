@@ -5,7 +5,7 @@
 
 #let tieflingPage() = {
   return [
-    #shared.pageTitle(title: "Tiefling");
+    #shared.subPageTitle(title: "Tiefling");
 
     #columns(2)[
       = Attributes

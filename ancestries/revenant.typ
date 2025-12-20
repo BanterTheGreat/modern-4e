@@ -4,7 +4,7 @@
 
 #let revenantPage() = {
   return [
-    #shared.pageTitle(title: "Revenant");
+    #shared.subPageTitle(title: "Revenant");
 
     #columns(2)[
       = Attributes

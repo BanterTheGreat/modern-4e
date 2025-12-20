@@ -4,7 +4,7 @@
 
 #let warforgedPage() = {
   return [
-    #shared.pageTitle(title: "Warforged");
+    #shared.subPageTitle(title: "Warforged");
 
     #columns(2)[
       = Attributes

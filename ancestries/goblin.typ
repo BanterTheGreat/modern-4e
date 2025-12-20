@@ -4,7 +4,7 @@
 
 #let goblinPage() = {
   return [
-    #shared.pageTitle(title: "Goblin");
+    #shared.subPageTitle(title: "Goblin");
 
     #columns(2)[
       = Attributes

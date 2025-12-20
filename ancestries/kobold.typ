@@ -4,7 +4,7 @@
 
 #let koboldPage() = {
   return [
-    #shared.pageTitle(title: "Kobold");
+    #shared.subPageTitle(title: "Kobold");
 
     #columns(2)[
       = Attributes

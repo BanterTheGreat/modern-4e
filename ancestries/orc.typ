@@ -4,7 +4,7 @@
 
 #let orcPage() = {
   return [
-    #shared.pageTitle(title: "Orc");
+    #shared.subPageTitle(title: "Orc");
 
     #columns(2)[
       = Attributes

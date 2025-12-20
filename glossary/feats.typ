@@ -3,7 +3,7 @@
 
 #let featsPage() = {
   return [
-    #shared.pageTitle(title: "Feats");
+    #shared.pageTitle(title: "General Feats");
     #columns(2)[
       = Heroic Feats
       #shared.choiceBox("Alchemist")

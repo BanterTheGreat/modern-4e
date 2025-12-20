@@ -4,7 +4,7 @@
 
 #let humanPage() = {
   return [
-    #shared.pageTitle(title: "Human");
+    #shared.subPageTitle(title: "Human");
 
     #columns(2)[
       = Attributes

@@ -4,7 +4,7 @@
 
 #let elfPage() = {
   return [
-    #shared.pageTitle(title: "Elf");
+    #shared.subPageTitle(title: "Elf");
 
     #columns(2)[
       = Attributes

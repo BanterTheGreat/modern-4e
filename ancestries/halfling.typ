@@ -4,7 +4,7 @@
 
 #let halflingPage() = {
   return [
-    #shared.pageTitle(title: "Halfling");
+    #shared.subPageTitle(title: "Halfling");
 
     #columns(2)[
       = Attributes

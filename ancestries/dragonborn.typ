@@ -4,7 +4,7 @@
 
 #let dragonbornPage() = {
   return [
-    #shared.pageTitle(title: "Dragonborn");
+    #shared.subPageTitle(title: "Dragonborn");
 
     #columns(2)[
       = Attributes

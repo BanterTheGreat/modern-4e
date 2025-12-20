@@ -4,16 +4,25 @@
   return [
     #shared.pageTitle(title: "Character Creation & Advancement");
     = Character Creation
-    == Ancestry
+  A character can be created in 6 simple steps:
+
+    == 1. Choose an Ancestry
     Choose a ancestry from Ancestries, this will give you 2 passive abilities and an encounter power.
-    == Class
-    Choose a class from Classes, this will decide your main playstyle during combat. Make sure you write down any choices you make during class selection, such as powers selected.
-    == Feat
-    You may select 1 Feat from either your Ancestry, your Class or the general Feats list.
-    == Theme
-    Select a theme from Themes. You may ignore the flavor.
-    == Background & Title
+
+    == 2. Create a Background for your Character and write a Title.
     Think of your character’s Backgrounds and write some of his prior experiences down. You have 6 points to assign total, with a maximum of 5 in a single background entry. Make sure to make it evocative and not too broad. For your title, write down a short piece of text which would be used to refer to your legend in a way. Once again, make sure it is not too broad.
+
+    == 3. Choose a Class
+    Choose a class from Classes, this will decide your main playstyle during combat. Make sure you write down any choices you make during class selection, such as powers selected.
+
+    == 4. Gather your Equipment
+    Choose your starting equipment from Equipment. Make sure to write down any choices you make during equipment selection, such as weapon types. You may select a weapon, an armor, a shield and if proficient an implement.
+
+    == 5. Choose a Theme
+    Themes are a kind subtrack you can pick which come with some benefits. You may choose one.
+    
+    == 6. Choose a Feat
+    You may choose 1 Feat from either your Ancestry, Class or the general Feats list.
 
     #pagebreak()
     = Character Advancement

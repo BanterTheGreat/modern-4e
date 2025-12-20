@@ -1,5 +1,4 @@
-
-#import "./helpers/shared.typ": centerColor, edgeColor, headerColor, pageTitle;
+#import "helpers/shared.typ";
 
 #import "./ancestries/root.typ" as ancestries;
 #import "./classes/root.typ" as classes;
@@ -22,14 +21,14 @@
   margin: (top: 1cm, rest: 2cm),
   fill: rgb("#F0E3C7"),
   background: {
-    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(edgeColor, centerColor, angle: 90deg)))
+    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(shared.edgeColor, shared.centerColor, angle: 90deg)))
     place(bottom + left, rect(width: 100%, height: 15%, fill: gradient.linear(
-      centerColor,
-      edgeColor,
+      shared.centerColor,
+      shared.edgeColor,
       angle: 90deg,
     )))
-    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(edgeColor, centerColor, angle: 0deg)))
-    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(centerColor, edgeColor, angle: 0deg)))
+    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(shared.edgeColor, shared.centerColor, angle: 0deg)))
+    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(shared.centerColor, shared.edgeColor, angle: 0deg)))
   },
 )
 
@@ -37,15 +36,25 @@
   it,
   width: 100%,
   inset: 6pt,
-  fill: headerColor,
+  fill: shared.headerColor,
 )]);
 
-#show heading.where(level: 2): it => box(align(center)[#box(
+#show heading.where(numbering: "1.", level: 2): it => box(align(center)[#box(
   it,
   width: 100%,
   inset: 6pt,
-  fill: headerColor,
+  fill: shared.headerColor,
 )]);
+
+
+#box(align(center)[#box(
+  text([*Debloated Fourth Edition*], size: 32pt),
+  width: 100%,
+  inset: 6pt,
+  fill: shared.headerColor,
+)]);
+#image("./images/cover.jpg");
+#pagebreak();
 
 #outline(target: heading.where(numbering: "1."));
 #pagebreak();

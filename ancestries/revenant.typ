@@ -37,7 +37,7 @@
         defenseStat: none,
         trigger: "A creature within 5 squares of you is reduced to 0 hit points",
         additionalRows: (
-          [*Effect:* One creature of your choice that you hit with an attack before the end of your next turn takes extra necrotic damage equal to 1d8 + your main characteristic.],
+          [*Effect:* One creature of your choice that you hit with an attack before the end of your next turn takes extra necrotic damage equal to 1d8 + your main ability.],
         ),
         traits: "Necrotic",
       );

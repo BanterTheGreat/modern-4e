@@ -38,16 +38,16 @@
         range: "Close blast 3",
         action: powers.actionType.minor,
         target: "Each creature in the blast",
-        offenseStat: "Main Characteristic",
+        offenseStat: "Main Ability",
         defenseStat: "Reflex",
         bonusAttackText: [You gain a +2 bonus to the attack roll. 
         - Level 11: The bonus increases to +4. 
         - Level 21: The bonus increases to +6.],
         trigger: none,
         additionalRows: (
-          [*Hit:* 1d6 + Main Characteristic damage.
-          - Level 11: 2d6 + Main Characteristic damage.
-          - Level 21: 3d6 + Main Characteristic damage.],
+          [*Hit:* 1d6 + Main Ability damage.
+          - Level 11: 2d6 + Main Ability damage.
+          - Level 21: 3d6 + Main Ability damage.],
           [*Special:* The damage type is the same as the type you choose for Dragonborn Scales.],
         ),
         traits: "Varies"
@@ -63,7 +63,7 @@
         range: "Close burst 5 (increase to close burst 10 at 21st level)",
         action: powers.actionType.minor,
         target: "Each enemy in the burst",
-        offenseStat: "Main Characteristic",
+        offenseStat: "Main Ability",
         defenseStat: "Will",
         bonusAttackText: [You gain a +2 bonus to the attack roll. 
         - Level 11: The bonus increases to +4. 

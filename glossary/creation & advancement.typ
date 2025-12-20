@@ -20,7 +20,7 @@
 
     == 5. Choose a Theme
     Themes are a kind subtrack you can pick which come with some benefits. You may choose one.
-    
+
     == 6. Choose a Feat
     You may choose 1 Feat from either your Ancestry, Class or the general Feats list.
 
@@ -34,7 +34,7 @@
     align: left,
     fill: (col, row) => shared.defaultTableStyle()(col, row),
     inset: 8pt,
-    [*Level*], [*Characteristics*], [*Powers and Features*], [*Feats*], [*Techniques*], [*Total Powers (A/E/D/U)*],
+    [*Level*], [*Ability Increases*], [*Powers and Features*], [*Feats*], [*Techniques*], [*Total Powers (A/E/D/U)*],
 
     [1st], [See class], [class features; racial traits; gain 1 feat; gain 6 background points; gain 2 at-will attack powers; gain 1 encounter attack power; gain 1 daily attack power], [1], [0], [2/1/2/0],
     [2nd], [—], [gain 1 utility power; gain 1 feat; gain 1 technique], [2], [1], [2/1/2/1],

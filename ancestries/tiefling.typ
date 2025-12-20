@@ -32,13 +32,13 @@
         range: "Close burst 10",
         action: powers.actionType.free,
         target: "The triggering enemy in the burst",
-        offenseStat: "Main Characteristic",
+        offenseStat: "Main Ability",
         defenseStat: none,
         trigger: "An enemy within 10 squares of you hits you.",
         additionalRows: (
-          [*Effect:* The target takes 1d6 + Main Characteristic fire damage.
-            - Level 11: 2d6 + Main Characteristic fire damage.
-            - Level 21: 3d6 + Main Characteristic fire damage.
+          [*Effect:* The target takes 1d6 + Main Ability fire damage.
+            - Level 11: 2d6 + Main Ability fire damage.
+            - Level 21: 3d6 + Main Ability fire damage.
           ],
         ),
         traits: "Fire",
@@ -62,7 +62,7 @@
 
 
       #shared.choiceBox("Imperious Majesty")
-      When you hit a creature that has not yet acted in an encounter with an attack, it takes a penalty to attack rolls against you equal to your Main Characteristic until the end of your next turn.
+      When you hit a creature that has not yet acted in an encounter with an attack, it takes a penalty to attack rolls against you equal to your Main Ability until the end of your next turn.
 
       #shared.choiceBox("Mammon's Theft of Health")
       When you use your Second Wind, you can choose for an ally within 5 squares of you to lose a healing surge. If you do, you regain extra hit points equal to your healing surge value.

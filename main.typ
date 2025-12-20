@@ -8,6 +8,9 @@
 #import "./ancestries/dragonborn.typ";
 #import "./ancestries/dwarf.typ";
 #import "./ancestries/elf.typ";
+#import "./ancestries/kobold.typ";
+#import "./ancestries/human.typ";
+#import "./ancestries/goliath.typ";
 
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
@@ -22,6 +25,9 @@
 
 #let getAncestryPages() = {
   return (
+    goliath.goliathPage(),
+    human.humanPage(),
+    kobold.koboldPage(),
     elf.elfPage(),
     dwarf.dwarfPage(),
     dragonborn.dragonbornPage(),

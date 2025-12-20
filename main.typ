@@ -40,6 +40,13 @@
   fill: headerColor,
 )]);
 
+#show heading.where(level: 2): it => box(align(center)[#box(
+  it,
+  width: 100%,
+  inset: 6pt,
+  fill: headerColor,
+)]);
+
 #outline(target: heading.where(numbering: "1."));
 #pagebreak();
 

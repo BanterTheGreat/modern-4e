@@ -4,7 +4,7 @@
 #import "./cleric.typ";
 
 #let classesPage() = {
-  let _getClassPages() = {
+  let _getLeaderPages() = {
   return (
     cleric.clericPage(),
   ).join(pagebreak())
@@ -14,7 +14,10 @@
     #shared.pageTitle(title: "Classes")
     #image("../images/classes_parent.jpg", width: 100%);
     #pagebreak();
-    #_getClassPages();
+
+    #shared.subPageTitle(title: "Leaders")
+    #pagebreak();
+    #_getLeaderPages();
   ]
 }
 

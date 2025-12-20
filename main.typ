@@ -10,6 +10,7 @@
 #import "glossary/utility.typ";
 #import "glossary/creation & advancement.typ" as creationAndAdvancement;
 #import "glossary/skill_checks.typ" as skillChecks;
+#import "glossary/techniques.typ" as techniques;
 
 #let showPages(pages: (())) = {
   pages.join(pagebreak())
@@ -46,6 +47,13 @@
   fill: shared.headerColor,
 )]);
 
+#show heading.where(numbering: "1.", level: 3): it => box(align(center)[#box(
+  it,
+  width: 100%,
+  inset: 6pt,
+  fill: shared.headerColor,
+)]);
+
 
 #box(align(center)[#box(
   text([*Debloated Fourth Edition*], size: 32pt),
@@ -61,6 +69,9 @@
 
 #showPages(
   pages: (
+    techniques.techniquesPage(),
+
+
     creationAndAdvancement.creationAndAdvancementPage(),
     ancestries.ancestriesPage(),
     classes.classesPage(),

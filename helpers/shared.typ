@@ -3,7 +3,7 @@
 #let centerColor = rgb("#F0E3C700")
 
 #let headerColor = rgb("#D4C4A0")
-#let header2Color = rgb("#dfd3b6")
+#let header2Color = rgb("#c9bda3")
 
 #let defaultTableStyle() = {
   return (col, row) => if row == 0 {
@@ -41,6 +41,26 @@
 #let subPageTitle(title: str, additional: none) = {
   return align(center)[
     #text(heading(title, numbering: "1.", level: 2), size: 16pt);
+    #if additional != none [
+      #linebreak()
+      #additional
+    ]
+  ]
+}
+
+#let subSectionTitle(title: str, additional: none) = {
+  return align(center)[
+    #text(heading(title, numbering: "1.", level: 3), size: 16pt);
+    #if additional != none [
+      #linebreak()
+      #additional
+    ]
+  ]
+}
+
+#let classTitle(title: str, additional: none) = {
+  return align(center)[
+    #text(heading(title, numbering: "1.", level: 3), size: 24pt);
     #if additional != none [
       #linebreak()
       #additional

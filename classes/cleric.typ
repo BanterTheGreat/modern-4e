@@ -6,7 +6,7 @@
 
 #let clericPage() = {
   return [
-    #shared.subPageTitle(
+    #shared.classTitle(
       title: "The Cleric",
       additional:[ _Their prayers burn, and the unholy tremble._
       #linebreak()

@@ -49,7 +49,7 @@
     ]
 
     #pagebreak();
-    = Feats
+    = Goliath Feats
 
     #columns(2)[
       #shared.choiceBox("Brute Force")

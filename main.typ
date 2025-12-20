@@ -11,6 +11,10 @@
 #import "./ancestries/kobold.typ";
 #import "./ancestries/human.typ";
 #import "./ancestries/goliath.typ";
+#import "./ancestries/warforged.typ";
+#import "./ancestries/revenant.typ";
+#import "./ancestries/orc.typ";
+#import "./ancestries/tiefling.typ";
 
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
@@ -25,6 +29,10 @@
 
 #let getAncestryPages() = {
   return (
+    orc.orcPage(),
+    revenant.revenantPage(),
+    tiefling.tieflingPage(),
+    warforged.warforgedPage(),
     goliath.goliathPage(),
     human.humanPage(),
     kobold.koboldPage(),

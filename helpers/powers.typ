@@ -1,6 +1,6 @@
-#let at-will-color = rgb("#a5d676")
-#let encounter-color = rgb("#f38e83")
-#let daily-color = rgb("#413f3f")
+#let at-will-color = rgb("#a6d37b")
+#let encounter-color = rgb("#e6958c")
+#let daily-color = rgb("#969090")
 #let utility-color = rgb("#5e84b4")
 
 #let powerType = (
@@ -17,6 +17,8 @@
   free: "Free Action",
   reaction: "Reaction",
   noAction: "No Action",
+  immediateInterrupt: "Immediate Interrupt",
+  immediateReaction: "Immediate Reaction",
 )
 
 #let attackType = (
@@ -49,7 +51,22 @@
   )
 }
 
-#let power = (title: str, description: none, type: powerType, range: content, traits: str, action: actionType, target: none, offenseStat: none, defenseStat: none, additionalRows: (content), isSpecial: false, attackType: attackType.default) => {
+#let power = (
+  title: str,
+  description: none,
+  type: powerType,
+  range: content,
+  traits: none,
+  action: actionType,
+  target: none,
+  offenseStat: none,
+  defenseStat: none,
+  additionalRows: (content),
+  isSpecial: false,
+  attackType: attackType.default,
+  trigger: none,
+  requirement: none,
+) => {
   
   let color = (
     "At-will": at-will-color,
@@ -78,9 +95,12 @@
       ],
       ..if description != none { ([_#text(description)_],) } else { () },
       [
-        *#type#if isSpecial [ (Special)]   ✦     #traits* #linebreak()
+        *#type#if isSpecial [ (Special)]#if traits != none [   ✦     #traits]* #linebreak()
         *#action* #h(10%) #range #if target != none [ #linebreak()
-        *#targetLabel* #target]#if offenseStat != none and defenseStat != none [ #linebreak()
+        *#targetLabel* #target]
+        #if requirement != none [#linebreak() *Requirement:* #requirement #linebreak()]
+        #if trigger != none [#linebreak()   *Trigger:* #trigger #linebreak()]
+        #if offenseStat != none and defenseStat != none [ #linebreak()
         *Attack:* #offenseStat vs. #defenseStat]
       ],
       ..additionalRows

@@ -3,9 +3,14 @@
 
 #import "./classes/cleric.typ";
 
+#import "./ancestries/goblin.typ";
+
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
 #import "glossary/feats.typ";
+#import "glossary/backgrounds.typ";
+#import "glossary/utility.typ";
+#import "glossary/creation & advancement.typ" as creationAndAdvancement;
 
 #let showPages(pages: (())) = {
   pages.join(pagebreak())
@@ -40,6 +45,10 @@
 
 #showPages(
   pages: (
+    goblin.goblinPage(),
+    creationAndAdvancement.creationAndAdvancementPage(),
+    utility.utilityPage(),
+    backgrounds.backgroundPage(),
     feats.featsPage(),
     equipment.equipmentPage(),
     themes.themesPage(),

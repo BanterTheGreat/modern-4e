@@ -44,7 +44,7 @@
       == Slippery
       You gain a +2 racial bonus to your AC against Attack of Opportunities.
       == Goblin Reflexes
-      You gain a +1 racial bonus to your Reflex Defense.
+      You gain a +1 racial bonus to your Reflex defense.
       == Goblin Tactics
       You gain the Goblin Tactics power.
 

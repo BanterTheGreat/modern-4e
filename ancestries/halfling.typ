@@ -54,6 +54,9 @@
       The first time you use your second chance racial power in an encounter, you regain the use of the power if the attack still hits you.
       #shared.choiceBox("River-Born Ritualist")
       You have mastered the Animal Messenger and Water Walk rituals, and can perform them as if you had the Ritual Caster feat. You can use these rituals without paying the component cost, each once per day.
+
+      #colbreak();
+      
       #shared.choiceBox("Second Step")
       When you use your second chance racial power, and the enemy rerolling its attack is larger than you, you can shift half your speed as a free action after the attack is completed.
 

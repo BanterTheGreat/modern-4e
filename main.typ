@@ -5,6 +5,9 @@
 
 #import "./ancestries/goblin.typ";
 #import "./ancestries/halfling.typ";
+#import "./ancestries/dragonborn.typ";
+#import "./ancestries/dwarf.typ";
+#import "./ancestries/elf.typ";
 
 #import "glossary/themes.typ";
 #import "glossary/equipment.typ";
@@ -15,6 +18,16 @@
 
 #let showPages(pages: (())) = {
   pages.join(pagebreak())
+}
+
+#let getAncestryPages() = {
+  return (
+    elf.elfPage(),
+    dwarf.dwarfPage(),
+    dragonborn.dragonbornPage(),
+    halfling.halflingPage(),
+    goblin.goblinPage(),
+  ).join(pagebreak());
 }
 
 #set page(
@@ -46,8 +59,7 @@
 
 #showPages(
   pages: (
-    halfling.halflingPage(),
-    goblin.goblinPage(),
+    getAncestryPages(),
     creationAndAdvancement.creationAndAdvancementPage(),
     utility.utilityPage(),
     backgrounds.backgroundPage(),

@@ -34,6 +34,7 @@
   wisdom: "Wisdom",
   intelligence: "Intelligence",
   charisma: "Charisma",
+  mainCharacteristic: "Main Characteristic",
 )
 
 #let defense = (
@@ -59,6 +60,7 @@
   traits: none,
   action: actionType,
   target: none,
+  bonusAttackText: none,
   offenseStat: none,
   defenseStat: none,
   additionalRows: (content),
@@ -101,7 +103,8 @@
         #if requirement != none [#linebreak() *Requirement:* #requirement #linebreak()]
         #if trigger != none [#linebreak()   *Trigger:* #trigger #linebreak()]
         #if offenseStat != none and defenseStat != none [ #linebreak()
-        *Attack:* #offenseStat vs. #defenseStat]
+        *Attack:* #offenseStat vs. #defenseStat#if bonusAttackText != none [.]]
+        #if bonusAttackText != none [ #bonusAttackText ]
       ],
       ..additionalRows
     ),

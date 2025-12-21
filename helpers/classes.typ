@@ -216,7 +216,7 @@
     );]
 }
 
-#let powerLinks(className: str) = [
+#let powerLinks(className: str, extraContent: none) = [
   #align(center)[
     = #className Powers
   ]
@@ -257,6 +257,8 @@
   }
 
   #columns(2)[
+    #extraContent;
+
     = At-Will
     #getLinks(power: powerType.at-will, level: 1)
 

@@ -19,6 +19,7 @@
   noAction: "No Action",
   immediateInterrupt: "Immediate Interrupt",
   immediateReaction: "Immediate Reaction",
+  opportunity: "Opportunity Action",
 )
 
 #let attackType = (

@@ -96,12 +96,12 @@
       offenseStat: powers.offense.strength,
       defenseStat: powers.defense.ac,
       additionalRows: (
-        text[*Hit*: 2[W] + Strength radiant damage, and the target is immobilized until the end of your next turn.
+        [*Hit*: 2[W] + Strength radiant damage, and the target is immobilized until the end of your next turn.
           - Level 11: 3[W] damage.
           - Level 21: 4[W] damage.
         ],
-        text[*Effect*: Make the secondary attack.],
-        text[*Channel Divinity*: You can use only one channel divinity power per encounter],
+        [*Effect*: Make the secondary attack.],
+        [*Channel Divinity*: You can use only one channel divinity power per encounter],
       ),
     )
 

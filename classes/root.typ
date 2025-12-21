@@ -6,6 +6,7 @@
 #import "./wizard.typ";
 #import "./fighter.typ";
 #import "./warlord.typ";
+#import "./invoker.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -18,6 +19,7 @@
 
   let _getControllerPages() = {
     return (
+      invoker.invokerPage(),
       wizard.wizardPage(),
     ).join(pagebreak())
   }

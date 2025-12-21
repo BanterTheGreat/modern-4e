@@ -94,6 +94,7 @@
       You gain a bonus to opportunity attacks equal to either your *Wisdom* or *Dexterity*. An enemy struck by your opportunity attack stops moving, If a move provoked the attack. If it still has actions remaining, it can use them to resume moving.
 
       = Fighter Specialization
+      As a Fighter, you specialise in a specific way of fighting. Choose one of the options below.
 
       #theme.choiceBox("One-Handed Weapon Talent")
       You gain a +1 bonus to weapon attack rolls with one-handed weapons.
@@ -104,7 +105,7 @@
       #theme.choiceBox("Battlerager Constitution")
       Whenever you hit an enemy with a melee or a close attack, you gain temporary hit points equal to your *Constitution*, plus any temporary hit points normally granted by the power. You gain the hit points only after the attack is resolved.
 
-      If you use an invigorating Bastion attack power and miss every target with it, you gain temporary hit points equal to your *Constitution*.
+      If you use an invigorating Fighter attack power and miss every target with it, you gain temporary hit points equal to your *Constitution*.
       When wearing light armor or chainmail, you gain a +2 bonus to damage rolls with melee and close weapon attacks whenever you have temporary hit points.
 
       = Powers
@@ -156,8 +157,8 @@
       #theme.choiceBox("Shield Push")
       If you hit a foe while using a shield with an attack granted by your Combat Challenge feature, you push the target 1 square after dealing damage.
 
-      #theme.choiceBox("Wary Bastion")
-      You use your *Wisdom* instead of your *Dexterity* for determining your Initiative Bonus.  
+      #theme.choiceBox("Wary Fighter")
+      You use your *Wisdom* instead of your *Dexterity* for determining your Initiative Bonus.
 
       #theme.choiceBox("Pin Down")
       *Requirements: 4 Constitution* #linebreak();

@@ -9,8 +9,8 @@
 #let classesPage() = {
   let _getLeaderPages() = {
     return (
-      cleric.clericPage(),
       artificer.artificerPage(),
+      cleric.clericPage(),
     ).join(pagebreak())
   }
 
@@ -22,9 +22,14 @@
 
   let _getStrikerPages() = {
     return (
-      fighter.fighterPage(),
     ).join(pagebreak())
   }
+
+  let _getDefenderPages() = {
+  return (
+    fighter.fighterPage(),
+  ).join(pagebreak())
+}
 
   return [
     #theme.pageTitle(title: "Classes")
@@ -46,6 +51,11 @@
     #align(center)[#image("../images/striker_parent.jpg", width: 95%)];
     #pagebreak();
     #_getStrikerPages();
+    #pagebreak();
+
+    #theme.subPageTitle(title: "Defenders")
+    #pagebreak();
+    #_getDefenderPages();
     #pagebreak();
   ]
 }

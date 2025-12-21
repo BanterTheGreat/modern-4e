@@ -1,3 +1,5 @@
+#import "shared.typ";
+
 #let armorProf = (
   cloth: "Cloth (L)",
   leather: "Leather (L)",
@@ -111,18 +113,6 @@
   )];
 }
 
-#let join_with_or(input: array) = {
-  if input.len() == 0 {
-    ""
-  } else if input.len() == 1 {
-    input.at(0)
-  } else if input.len() == 2 {
-    input.at(0) + " or " + input.at(1)
-  } else {  
-    input.slice(0, input.len()-1).join(", ") + " or " + input.at(input.len()-1)
-  }
-}
-
 #let abilities(mainAbilities: (str), class: str, extraAbilities: (str)) = {
   let boldedMainAbilities = if type(mainAbilities) == array {
     mainAbilities.map(content => [*#content*])
@@ -139,17 +129,17 @@
   let mainAbilityText = if type(boldedMainAbilities) != array {
     [Your main ability is *#boldedMainAbilities*, which has 4 points.]
   } else {
-    [Choose either #join_with_or(input: boldedMainAbilities), that ability has 4 points and is your main ability.]
+    [Choose either #shared.join_with_or(input: boldedMainAbilities), that ability has 4 points and is your main ability.]
   }
 
   let extraAbilitiesText = if type(boldedExtraAbilities) == array {
-    join_with_or(input: boldedExtraAbilities)
+    shared.join_with_or(input: boldedExtraAbilities)
   } else {
     boldedExtraAbilities
   }
 
   let additionalInfo = [
-    All #class powers use #if type(boldedMainAbilities) == array {[ either #join_with_or(input:boldedMainAbilities) ]} else {[ *#boldedMainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
+    All #class powers use #if type(boldedMainAbilities) == array {[ either #shared.join_with_or(input:boldedMainAbilities) ]} else {[ *#boldedMainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
   ]
 
   return [ 

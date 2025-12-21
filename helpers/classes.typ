@@ -150,7 +150,7 @@
     #mainAbilityText
 
     == Assign points
-    Assign 6 points to any combination of abilities that aren't your main ability. You can assign a maximum of 3 points to any single ability.
+    Assign 6 points across non-main abilities, up to 3 per ability. You can assign a maximum of 3 points to any single ability.
 
     #additionalInfo;
 

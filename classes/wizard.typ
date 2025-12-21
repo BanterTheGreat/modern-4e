@@ -4,10 +4,12 @@
 
 #import "../helpers/powers.typ";
 
+#let className = "Wizard";
+
 #let wizardPage() = {
   return [
     #theme.classTitle(
-      title: "The Wizard",
+      title: [The #className],
       additional: [ _Knowledge is their weapon, and magic bends to their will._
         #linebreak()
         #text(size: 10pt)[Arcane Controller]],
@@ -25,7 +27,7 @@
       #abilities(
         mainAbilities: ("Intelligence"),
         extraAbilities: ("Wisdom", "Constitution"),
-        class: "Wizard",
+        class: className,
       );
 
       = Spellbook
@@ -310,46 +312,46 @@
       You gain the Technique Mastery feat for Arcane Techniques.
 
       = Powers
-      You may choose 2 At-Will, 1 Encounter and 2 Daily Wizard Powers.
+      You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
 
       = Feats
-      You gain access to the Wizard feat list
+      You gain access to the #className feat list
     ]
 
 
     #set page(columns: 1)
 
     #align(center)[
-      = Wizard Powers
+      = #className Powers
     ]
 
     #columns(2)[
       = At-Will
-      #link("https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20At-Will")[
+      #link("https://iws.mx/dnd/?list.full.power=%22Wizard%20Attack%201%22%20-%22Wizard%20Attack%201*%22%20At-Will%20-%22Daily%22%20-%22Encounter%22")[
         Link to Level 1 At-Wills
       ]
       = Encounter
       #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
+        "https://iws.mx/dnd/?list.full.power=%22Wizard%20Attack%201%22%20-%22Wizard%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
       )[
         Link to Level 1 Encounters
       ]
 
       #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%203%22%20-%22Cleric%20Attack%203*%22%20%22Encounter%22%20-%22Daily%22",
+        "https://iws.mx/dnd/?list.full.power=%22Wizard%20Attack%203%22%20-%22Wizard%20Attack%203*%22%20%22Encounter%22%20-%22Daily%22",
       )[
         Link to Level 3 Encounters
       ]
       = Daily
 
       #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20%22Daily%22",
+        "https://iws.mx/dnd/?list.full.power=%22Wizard%20Attack%201%22%20-%22Wizard%20Attack%201*%22%20%22Daily%22",
       )[
         Link to Level 1 Dailies
       ]
       = Utility
       #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Utility%202%22%20-%22Cleric%20Utility%202*%22%20%22Utility%22",
+        "https://iws.mx/dnd/?list.full.power=%22Wizard%20Utility%202%22%20-%22Wizard%20Utility%202*%22%20%22Utility%22",
       )[
         Link to Level 2 Utilities
       ]
@@ -358,7 +360,7 @@
     #pagebreak()
 
     #align(center)[
-      = Heroic Wizard Feats
+      = Heroic #className Feats
     ]
 
     #columns(2)[

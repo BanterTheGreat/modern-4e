@@ -4,10 +4,12 @@
 
 #import "../helpers/powers.typ";
 
+#let className = "Artificer";
+
 #let artificerPage() = {
   return [
     #theme.classTitle(
-      title: "The Artificer",
+      title: [The #className],
       additional: [ _Using magical elixirs and contraptions, artificers bolster their allies and confound their enemies._
         #linebreak()
         #text(size: 10pt)[Arcane Leader]],
@@ -23,9 +25,9 @@
       #defensesAndHealth(fortitude: 12, will: 12, reflex: 15, health: 22, healthOnLevelUp: 5, healingSurges: 6)
 
       #abilities(
-        mainAbilities: ("Intelligence"),
+        mainAbilities: "Intelligence",
         extraAbilities: ("Wisdom", "Constitution"),
-        class: "Artificer",
+        class: className,
       );
 
       = Arcane Empowerment
@@ -84,14 +86,15 @@
         traits: "Arcane",
       );
       #colbreak();
-          = Techniques
-    You master the Alchemical Synthesis and Brew Potion techniques and gain the Technique Mastery feat.
 
-    = Powers
-    You may choose 2 At-Will, 1 Encounter and 2 Daily Artificer Powers.
+      = Techniques
+      You master the Alchemical Synthesis and Brew Potion techniques and gain the Technique Mastery feat.
 
-    = Feats
-    You gain access to the Artificer feat list
+      = Powers
+      You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
+
+      = Feats
+      You gain access to the #className feat list
     ]
 
     #pagebreak()
@@ -99,14 +102,16 @@
     #set page(columns: 1)
 
     #align(center)[
-      = Artificer Powers
+      = #className Powers
     ]
 
     #columns(2)[
       = At-Will
-      #link("https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificer%20Attack%201*%22%20At-Will%20-%22Encounter%22")[
+      #link(
+        "https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificer%20Attack%201*%22%20At-Will%20-%22Encounter%22",
+      )[
         Link to Level 1 At-Wills
-      ] 
+      ]
       = Encounter
       #link(
         "https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificer%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
@@ -125,12 +130,12 @@
     #pagebreak()
 
     #align(center)[
-      = Heroic Artificer Feats
+      = Heroic #className Feats
     ]
 
     #columns(2)[
       #theme.choiceBox("Accurate Magic Weapon")
-      Whenever you use an Artficer power that targets a weapon or an implement, the next attack roll with that weapon or implement before the end of the encounter gains a +1 bonus.
+      Whenever you use an Artificer power that targets a weapon or an implement, the next attack roll with that weapon or implement before the end of the encounter gains a +1 bonus.
 
       #theme.choiceBox("Arcane Trapsmith")
       You can use your knowledge of the Arcane during Skill Checks to disable traps or open locks. You gain a +4 feat bonus to checks related to arcane traps or hazards.

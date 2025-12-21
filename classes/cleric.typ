@@ -4,10 +4,12 @@
 
 #import "../helpers/powers.typ";
 
+#let className = "Cleric";
+
 #let clericPage() = {
   return [
     #theme.classTitle(
-      title: "The Cleric",
+      title: [The #className],
       additional:[ _Their prayers burn, and the unholy tremble._
       #linebreak()
       #text(size: 10pt)[Divine Leader]])
@@ -24,7 +26,7 @@
       #abilities(
         mainAbilities: ("Strength", "Wisdom"),
         extraAbilities: ("Intelligence", "Charisma"),
-        class: "Cleric",
+        class: className,
       );
 
       = Lore
@@ -161,17 +163,17 @@
     You may choose a level 1 or 2 Divine Technique, you master it.
 
     = Powers
-    You may choose 2 At-Will, 1 Encounter and 2 Daily Cleric Powers.
+    You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
 
     = Feats
-    You gain access to the Cleric feat list
+    You gain access to the #className feat list
 
     #pagebreak()
 
     #set page(columns: 1)
 
     #align(center)[
-      = Cleric Powers
+      = #className Powers
     ]
 
     #columns(2)[
@@ -209,7 +211,7 @@
     #pagebreak()
 
     #align(center)[
-      = Heroic Cleric Feats
+      = Heroic #className Feats
     ]
 
     #columns(2)[

@@ -1,0 +1,57 @@
+#import "../helpers/theme.typ";
+#import "../helpers/classes.typ";
+#import "../helpers/powers.typ";
+
+#let className = "Barbarian";
+// THIS IS VERY WIP, PURELY HERE TO REMIND MYSELF :)
+#let barbarianPage() = {
+  return [
+    #theme.classTitle(
+      title: [The #className],
+      additional: [ _TODO_
+        #linebreak()
+        #text(size: 10pt)[Role]],
+    )
+
+    #columns(2)[
+      #classes.proficiencies(
+        armorProficiencies: (),
+        weaponProficiencies: (),
+        implementProficiencies: (),
+      );
+
+      #classes.defensesAndHealth(fortitude: 12, will: 12, reflex: 15, health: 22, healthOnLevelUp: 5, healingSurges: 6)
+
+      #classes.abilities(
+        mainAbilities: "MainAbility",
+        extraAbilities: ("SecondaryAbility", "SecondaryAbility2"),
+        class: className,
+      );
+
+      #colbreak();
+      = Features
+      Feature 1
+
+      = Powers
+      You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
+
+      = Feats
+      You gain access to the #className feat list
+    ]
+
+    #pagebreak()
+
+    #set page(columns: 1)
+
+    #classes.powerLinks(className: className);
+
+    #pagebreak()
+
+    #align(center)[
+      = Heroic #className Feats
+    ]
+
+    #columns(2)[
+    ]
+  ]
+}

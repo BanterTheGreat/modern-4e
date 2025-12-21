@@ -33,7 +33,7 @@
       Some Cleric's specialised in the text of renewal and soothing, while others specialised in conquest and warfare. Choose one of the options below.
 
       #theme.choiceBox("Healer’s Lore")
-      When you let a creature spend a healing surge to regain hit points with one of your cleric powers that has the healing keyword, add your Wisdom to the hit points the recipient regains.
+      When you let a creature spend a healing surge to regain hit points with one of your cleric powers that has the healing keyword, add your *Wisdom* to the hit points the recipient regains.
 
       #theme.choiceBox("Battlepriest's Lore")
       You gain a +2 shield bonus to AC, and you have proficiency with scale armor. In addition, whenever you use a cleric healing power to allow a target to spend a healing surge, that target gains a +2 bonus to attack rolls until the end of your turn.

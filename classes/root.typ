@@ -5,12 +5,14 @@
 #import "./artificer.typ";
 #import "./wizard.typ";
 #import "./fighter.typ";
+#import "./warlord.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
     return (
       artificer.artificerPage(),
       cleric.clericPage(),
+      warlord.warlordPage(),
     ).join(pagebreak())
   }
 

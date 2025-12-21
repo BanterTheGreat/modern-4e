@@ -26,7 +26,7 @@
 
     #pagebreak()
     = Character Advancement
-    When your character levels up, you gain new features & abilities. In this table you can find what you get.
+    When your character levels up, you gain new features & abilities. This table shows what you gain each level.
 
     #table(
     columns: (0.5fr, 1fr, 1fr, 0.75fr, 0.75fr, 1fr),

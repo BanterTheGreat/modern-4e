@@ -187,33 +187,44 @@
 
       #theme.choiceBox("Battle Healer")
       When you use your healing word, you regain hit points equal to your Strength.
+
       #theme.choiceBox("Defensive Grace")
       *Requirements: Healer's Mercy* #linebreak()
       When you use your healer’s mercy, you gain a power bonus equal to your Charisma to all defenses until the end of your next turn.
+
       #theme.choiceBox("Defensive Healing Word")
       When you use your healing word, the target also gains a power bonus to all defenses equal to your Charisma against the next attack made against him or her before the end of your next turn.
+
       #theme.choiceBox("Shielding Word")
       Targets of your healing word class feature also gain a +2 bonus to all defenses until the start of your next turn.
+
       #theme.choiceBox("Sturdy Faith")
       When you use your healing word on an ally, you gain temporary hit points equal to your Constitution.
+
       #theme.choiceBox("Greater Turning")
       *Requirements: Turn Undead* #linebreak()
       Whenever you miss a target when using turn undead, the target is pushed a number of squares equal to your Charisma. The target takes no damage and is not immobilized.
+
       #theme.choiceBox("Harbinger of Rebirth")
       Any ally within 5 squares of you gains a +5 feat bonus to death saving throws.
+
       #theme.choiceBox("Healer's Implement")
       When you let a creature spend a healing surge to regain hit points with any of your cleric healing powers, add your holy symbol's enhancement bonus to the hit points the recipient regains.
 
       #colbreak();
       #theme.choiceBox("Templar's Domain")
       *Requirements: Healer's Lore* #linebreak()
+
       Choose a divine domain that has a 1st level domain feature associated with it, such as the storm or the sun domain of the warpriest. You lose Healer's Lore and gain that 1st level domain feature. If the feature grants powers, you don't gain them.
+
       #theme.choiceBox("Word of Retaliation")
       When you use healing word, the target regains extra hit points equal to the number of enemies adjacent to him or her.
+
       #theme.choiceBox("Pacifist Healer")
       When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed.
 
       The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
+      
       #theme.choiceBox("Pacifist's Reward")
       When you hit with an attack that doesn't deal damage, if you didn't deal any damage on your turn, gain 2 temporary hit points at the end of the turn. The temporary hit points increase to 3 at 11th level, and to 4 at 21st level.
     ]

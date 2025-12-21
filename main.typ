@@ -55,12 +55,8 @@
 )]);
 
 
-#box(align(center)[#box(
-  text([*Debloated Fourth Edition*], size: 32pt),
-  width: 100%,
-  inset: 6pt,
-  fill: shared.headerColor,
-)]);
+#align(center)[
+  #text([== *Slimmer Fourth Edition*], size: 32pt)];
 #image("./images/cover.jpg");
 #pagebreak();
 

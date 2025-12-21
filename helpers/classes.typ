@@ -14,6 +14,9 @@
   militaryRanged: "Military Ranged",
   superiorMelee: "Superior Melee",
   superiorRanged: "Superior Ranged",
+
+  dagger: "Dagger",
+  quarterstaff: "Quarterstaff",
 )
 
 #let implementProf = (

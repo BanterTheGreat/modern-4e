@@ -1,4 +1,5 @@
 #import "shared.typ";
+#import "powers.typ" : powerType;
 
 #let armorProf = (
   cloth: "Cloth (L)",
@@ -16,7 +17,6 @@
   militaryRanged: "Military Ranged",
   superiorMelee: "Superior Melee",
   superiorRanged: "Superior Ranged",
-
   dagger: "Dagger",
   quarterstaff: "Quarterstaff",
 )
@@ -88,29 +88,29 @@
   return [
     = Defenses & Health
     #text(
-    table(
-      columns: (1fr, 1fr),
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: center,
-      fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-      inset: 8pt,
-      [
-        #box(image("../svgs/shield.svg", height: 2em))
-        #linebreak()
-        #("Fortitude: " + str(fortitude), "Will: " + str(will), "Reflex: " + str(reflex)).join(linebreak())
-      ],
-      [
-        #box(image("../svgs/heart.svg", height: 2em))
-        #linebreak()
-        #(
-          "Health: " + str(health),
-          "Health on level-up: " + str(healthOnLevelUp),
-          "Healing Surges: " + str(healingSurges),
-        ).join(linebreak())
-      ],
-    ),
-    size: 10pt,
-  )];
+      table(
+        columns: (1fr, 1fr),
+        stroke: 0.5pt + rgb("#D4C4A0"),
+        align: center,
+        fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
+        inset: 8pt,
+        [
+          #box(image("../svgs/shield.svg", height: 2em))
+          #linebreak()
+          #("Fortitude: " + str(fortitude), "Will: " + str(will), "Reflex: " + str(reflex)).join(linebreak())
+        ],
+        [
+          #box(image("../svgs/heart.svg", height: 2em))
+          #linebreak()
+          #(
+            "Health: " + str(health),
+            "Health on level-up: " + str(healthOnLevelUp),
+            "Healing Surges: " + str(healingSurges),
+          ).join(linebreak())
+        ],
+      ),
+      size: 10pt,
+    )]
 }
 
 #let abilities(mainAbilities: (str), class: str, extraAbilities: (str)) = {
@@ -139,10 +139,10 @@
   }
 
   let additionalInfo = [
-    All #class powers use #if type(boldedMainAbilities) == array {[ either #shared.join_with_or(input:boldedMainAbilities) ]} else {[ *#boldedMainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
+    All #class powers use #if type(boldedMainAbilities) == array { [ either #shared.join_with_or(input: boldedMainAbilities) ] } else { [ *#boldedMainAbilities* ] } for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
   ]
 
-  return [ 
+  return [
     = Abilities
     Your abilities decide what your character will specialise in. Depending on your playstyle, you want to focus on different abilities.
 
@@ -194,3 +194,83 @@
       size: 10pt,
     );]
 }
+
+#let powerLinks(className: str) = [
+  #align(center)[
+    = #className Powers
+  ]
+
+  #let getLink = (power: powerType, level: (int)) => {
+    let baseUrl = if power == powerType.at-will {
+      return "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%20__Level__%22%20-%22__ClassName__%20Attack%20__Level__*%22%20At-Will%20-%22Daily%22%20-%22Encounter%22";
+    } else if power == powerType.encounter {
+      return "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%20__Level__%22%20-%22__ClassName__%20Attack%20__Level__*%22%20%22Encounter%22%20-%22Daily%22";
+    } else if power == powerType.daily {
+      return "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%20__Level__%22%20-%22__ClassName__%20Attack%20__Level__*%22%20%22Daily%22";
+    } else if power == powerType.utility {
+      return "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Utility%20__Level__%22%20-%22__ClassName__%20Utility%20__Level__*%22%20%22Utility%22";
+    }
+
+    let urlWithClass = baseUrl
+    .replace(
+      "__ClassName__",
+      className,
+    );
+
+    
+  }
+
+  #columns(2)[
+    = At-Will
+    #link(
+      "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%201%22%20-%22__ClassName__%20Attack%201*%22%20At-Will%20-%22Daily%22%20-%22Encounter%22"
+      .replace(
+        "__ClassName__",
+        className,
+      ),
+    )[
+      Link to Level 1 At-Wills
+    ]
+    = Encounter
+    #link(
+      "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%201%22%20-%22__ClassName__%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22"
+      .replace(
+        "__ClassName__",
+        className,
+      ),
+    )[
+      Link to Level 1 Encounters
+    ]
+
+    #link(
+      "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%203%22%20-%22__ClassName__%20Attack%203*%22%20%22Encounter%22%20-%22Daily%22"
+      .replace(
+        "__ClassName__",
+        className,
+      ),
+    )[
+      Link to Level 3 Encounters
+    ]
+    = Daily
+
+    #link(
+      "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Attack%201%22%20-%22__ClassName__%20Attack%201*%22%20%22Daily%22"
+      .replace(
+        "__ClassName__",
+        className,
+      ),
+    )[
+      Link to Level 1 Dailies
+    ]
+    = Utility
+    #link(
+      "https://iws.mx/dnd/?list.full.power=%22__ClassName__%20Utility%202%22%20-%22__ClassName__%20Utility%202*%22%20%22Utility%22"
+      .replace(
+        "__ClassName__",
+        className,
+      ),
+    )[
+      Link to Level 2 Utilities
+    ]
+  ]
+]

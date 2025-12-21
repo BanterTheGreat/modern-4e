@@ -22,9 +22,9 @@
       #defensesAndHealth(fortitude: 11, will: 13, reflex: 11, health: 22, healthOnLevelUp: 5, healingSurges: 7)
 
       #abilities(
-        mainAbility: "Strength",
-        mainAbility2: "Wisdom",
-        additionalInfo: [Most Cleric powers use either *Strength* or *Wisdom* for accuracy, while sometimes benefitting from *Intelligence* or *Charisma* for extra effects.],
+        mainAbilities: ("Strength", "Wisdom"),
+        extraAbilities: ("Intelligence", "Charisma"),
+        class: "Cleric",
       );
 
       = Lore

@@ -23,8 +23,9 @@
       #defensesAndHealth(fortitude: 12, will: 12, reflex: 15, health: 22, healthOnLevelUp: 5, healingSurges: 6)
 
       #abilities(
-        mainAbility: "Intelligence",
-        additionalInfo: [All Artificer powers use *Intelligence* for accuracy, while sometimes benefitting from *Wisdom* or *Constituton* for extra effects.],
+        mainAbilities: ("Intelligence"),
+        extraAbilities: ("Wisdom", "Constitution"),
+        class: "Artificer",
       );
 
       = Arcane Empowerment

@@ -48,7 +48,7 @@
   return (
     offense: offense,
     defense: defense,
-    display: () => offense + " vs. " + defense
+    display: () => offense + " vs. " + defense,
   )
 }
 
@@ -69,12 +69,11 @@
   trigger: none,
   requirement: none,
 ) => {
-  
   let color = (
     "At-will": at-will-color,
     "Encounter": encounter-color,
     "Daily": daily-color,
-    "Utility": utility-color
+    "Utility": utility-color,
   ).at(type, default: at-will-color)
 
   let targetLabel = (
@@ -83,31 +82,34 @@
     "Default": "Target:",
   ).at(attackType, default: "Target:")
 
-  return text(
-    table(
-      columns: 1fr,
-      stroke: 0.5pt + rgb("#D4C4A0"),
-      align: left,
-      fill: (col, row) => if row == 0 { color } else {
-        if calc.rem(row, 2) == 0 { rgb("#F0E3C7") } else { rgb("#E8DBB7") }
-      },
-      inset: 6pt,
-      [
-        #text(weight: 700, size: 11pt)[#title]
-      ],
-      ..if description != none { ([_#text(description)_],) } else { () },
-      [
-        *#type#if isSpecial [ (Special)]#if traits != none [   ✦     #traits]* #linebreak()
-        *#action* #h(10%) #range #if target != none [ #linebreak()
-        *#targetLabel* #target]
-        #if requirement != none [#linebreak() *Requirement:* #requirement #linebreak()]
-        #if trigger != none [#linebreak()   *Trigger:* #trigger #linebreak()]
-        #if offenseStat != none and defenseStat != none [ #linebreak()
-        *Attack:* #offenseStat vs. #defenseStat#if bonusAttackText != none [.]]
-        #if bonusAttackText != none [ #bonusAttackText ]
-      ],
-      ..additionalRows
-    ),
-    size: 10pt,
-  );
+  return block(
+    [#text(
+      table(
+        columns: 1fr,
+        stroke: 0.5pt + rgb("#D4C4A0"),
+        align: left,
+        fill: (col, row) => if row == 0 { color } else {
+          if calc.rem(row, 2) == 0 { rgb("#F0E3C7") } else { rgb("#E8DBB7") }
+        },
+        inset: 6pt,
+        [
+          #text(weight: 700, size: 11pt)[#title]
+        ],
+        ..if description != none { ([_#text(description)_],) } else { () },
+        [
+          *#type#if isSpecial [ (Special)]#if traits != none [   ✦     #traits]* #linebreak()
+          *#action* #h(10%) #range #if target != none [ #linebreak()
+            *#targetLabel* #target]
+          #if requirement != none [#linebreak() *Requirement:* #requirement #linebreak()]
+          #if trigger != none [#linebreak()   *Trigger:* #trigger #linebreak()]
+          #if offenseStat != none and defenseStat != none [ #linebreak()
+            *Attack:* #offenseStat vs. #defenseStat#if bonusAttackText != none [.]]
+          #if bonusAttackText != none [ #bonusAttackText ]
+        ],
+        ..additionalRows
+      ),
+      size: 10pt,
+    )],
+    breakable: false,
+  )
 }

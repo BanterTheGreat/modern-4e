@@ -111,13 +111,23 @@
   )];
 }
 
-#let abilities(mainAbility: str, mainAbility2: none, additionalInfo: content) = {
-  let mainAbilityText = if mainAbility2 != none {
-    "Choose either " + [*#mainAbility*] + " or " + [*#mainAbility2*] + ", that ability has 4 points and is your main ability."
+#let abilities(mainAbilities: (str), class: str, extraAbilities: (str)) = {
+  let mainAbilityText = if type(mainAbilities) != array {
+    [Your main ability is *#mainAbilities*, which has 4 points.]
   } else {
-    "Your main ability is " + [*#mainAbility*] + ", which has 4 points."
+    [Choose either #mainAbilities.map(content => [*#content*]).join(", "), that ability has 4 points and is your main ability.]
   }
-  
+
+  let extraAbilitiesText = if type(extraAbilities) == array {
+    extraAbilities.join(", ");
+  } else {
+    extraAbilities;
+  }
+
+  let additionalInfo = [
+    All #class powers use #if type(mainAbilities) == array {[ either #mainAbilities.map(content => [*#content*]).join(", ") ]} else {[ *#mainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
+  ]
+
   return [ 
     = Abilities
     Your abilities decide what your character will specialise in. Depending on your playstyle, you want to focus on different abilities.
@@ -128,7 +138,7 @@
     == Assign points
     Assign 6 points to any combination of abilities that aren't your main ability. You can assign a maximum of 3 points to any single ability.
 
-    #additionalInfo
+    #additionalInfo;
 
     #text(
       table(

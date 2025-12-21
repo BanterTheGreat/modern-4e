@@ -1,6 +1,6 @@
 #import "../helpers/shared.typ";
 
-#import "../helpers/classes.typ": abilities, defensesAndHealth, proficiencies, armorProf, weaponProf, implementProf;
+#import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf;
 
 #import "../helpers/powers.typ";
 
@@ -8,9 +8,10 @@
   return [
     #shared.classTitle(
       title: "The Wizard",
-      additional:[ _Knowledge is their weapon, and magic bends to their will._
-      #linebreak()
-      #text(size: 10pt)[Divine Leader]])
+      additional: [ _Knowledge is their weapon, and magic bends to their will._
+        #linebreak()
+        #text(size: 10pt)[Arcane Controller]],
+    )
 
     #columns(2)[
       #proficiencies(
@@ -22,155 +23,304 @@
       #defensesAndHealth(fortitude: 11, will: 13, reflex: 15, health: 20, healthOnLevelUp: 4, healingSurges: 6)
 
       #abilities(
-        mainAbility: "Intelligence",
-        additionalInfo: [Most Cleric powers use either *Strength* or *Wisdom* for accuracy, while sometimes benefitting from *Intelligence* or *Charisma* for extra effects.],
+        mainAbilities: ("Intelligence"),
+        extraAbilities: ("Wisdom", "Constitution"),
+        class: "Wizard",
       );
 
-      = Lore
-      Some Cleric's specialised in the text of renewal and soothing, while others specialised in conquest and warfare. Choose one of the options below.
+      = Spellbook
+      You possess a spellbook, a book full of mystic lore in which you store your rituals and your daily and utility spells.
 
-      #shared.choiceBox("Healer’s Lore")
-      When you let a creature spend a healing surge to regain hit points with one of your cleric powers that has the healing keyword, add your Wisdom to the hit points the recipient regains.
+      == Daily and Utility Powers
+      Your spellbook holds your wizard daily attack powers and wizard utility powers (not including your cantrips). You begin with two daily attack powers in your spellbook, one of which you can use on any given day. Each time you gain a level that lets you select a wizard daily attack power or a wizard utility power, choose two different powers of that type at that level and add them to your book.
+      After each extended rest, you can prepare a number of daily attack powers and utility powers according to what you can use per day for your level (see the Wizard Powers Prepared per Day table). You can't prepare the same power twice on the same day.
 
-      #shared.choiceBox("Battlepriest's Lore")
-      You gain a +2 shield bonus to AC, and you have proficiency with scale armor. In addition, whenever you use a cleric healing power to allow a target to spend a healing surge, that target gains a +2 bonus to attack rolls until the end of your turn.
+      If you replace a power because of gaining a level or through retraining, the previous power vanishes from your spellbook and is replaced by the new power.
 
-      = Healing Word
-      Using the healing word power, clerics can grant their comrades additional resilience with nothing more than a short prayer.
+      == Techniques
+      Your book also contains three 1st-level magic Techniques of your choice that you have mastered.
+      At 5th level, and again at 11th, 15th, 21st, and 25th level, you master two more Techniques of your choice and add them to your spellbook. When you choose the Techniques , they must be your level or lower.
+
+      == Capacity
+      A typical spellbook has 128 pages. Each power takes up 1 page. A Techniques takes up a number of pages equal to its level.
+
+      #block(
+        [
+          *Wizard powers prepared per day*
+          #table(
+            columns: (1fr, 1fr, 1fr),
+            stroke: 0.5pt + rgb("#D4C4A0"),
+            align: left,
+            fill: (col, row) => shared.defaultTableStyle()(col, row),
+            inset: 8pt,
+            [*Level*], [*Daily*], [*Utility*],
+            [1], [1], [-],
+            [2-4], [1], [1],
+            [5], [2], [1],
+            [6-8], [2], [2],
+            [9], [3], [2],
+            [10-15], [3], [3],
+            [16-21], [3], [4],
+            [22-30], [3], [5],
+          )],
+        breakable: false,
+      )
+
+      = Arcane Implement Mastery
+      You specialize in the use of one kind of implement to gain additional abilities when you wield it. Choose one of the following forms of implement mastery below.
+
+      #shared.choiceBox("Orb of Imposition");
+      Once per encounter, you can use your Orb of Imposition power.
 
       #powers.power(
-        title: "Healing Word",
-        description: "You utter a soothing word that mends wounds of the body and spirit.",
+        title: "Orb of Imposition",
         type: powers.powerType.encounter,
-        action: powers.actionType.minor,
-        traits: "Healing",
-        target: "You or one ally in the burst",
-        range: [*Close* burst 5 (10 at 11th level, 15 at 21st level)],
-        isSpecial: true,
+        action: powers.actionType.free,
+        traits: "Implement",
+        range: "Special",
+        requirement: "You must wield an orb to use this ability.",
         additionalRows: (
-          text[*Effect*: The target can spend a healing surge and regain 1d6 additional hit points.
-            - Level 6: 2d6 additional hit points.
-            - Level 11: 3d6 additional hit points.
-            - Level 16: 4d6 additional hit points.
-            - Level 21: 5d6 additional hit points.
-            - Level 26: 6d6 additional hit points.
-          ],
-          text[*Special:* You can use this power twice per encounter, but only once per round. At 16th level, you can use this power three times per round.],
+          [
+            *Effect:* You can use your orb to gain one of the following two effects.
+
+            You can designate one creature you have cast a wizard spell upon that has an effect that lasts until the subject succeeds on a saving throw. That creature takes a penalty to its next saving throw against that effect equal to your Wisdom.
+
+            Alternatively, you can choose to extend the duration of an effect created by a wizard at-will spell (such as cloud of daggers or ray of frost) that would otherwise end at the end of your current turn. The effect instead ends at the end of your next turn.],
+        ),
+      )
+
+      #colbreak();
+
+      #shared.choiceBox("Staff of Defense");
+      A staff of defense grants you a +1 bonus to AC. In addition, once per encounter, you can use the Staff of Defense power.
+
+      #powers.power(
+        title: "Staff of Defense",
+        type: powers.powerType.encounter,
+        action: powers.actionType.immediateInterrupt,
+        traits: "Implement",
+        range: "Special",
+        requirement: "You must wield your staff.",
+        additionalRows: (
+          [
+            *Effect:* You gain a bonus to defense against one attack equal to your Constitution. You can declare the bonus after the Dungeon Master has already told you the damage total.],
+        ),
+      )
+
+      #shared.choiceBox("Wand of Accuracy");
+      Once per encounter, you can use your Wand of Accuracy power.
+
+      #powers.power(
+        title: "Wand of Accuracy",
+        type: powers.powerType.encounter,
+        action: powers.actionType.free,
+        traits: "Implement",
+        range: "Special",
+        requirement: "You must wield your wand.",
+        additionalRows: (
+          [
+            *Effect:* You gain a bonus to a single attack roll equal to your Intelligence.],
+        ),
+      )
+
+      #shared.choiceBox("Orb of Deception");
+      Once per encounter, you can use your Orb of Deception power.
+      #powers.power(
+        title: "Orb of Deception",
+        type: powers.powerType.encounter,
+        action: powers.actionType.free,
+        traits: "Implement",
+        range: "Special",
+        trigger: "When you miss an enemy with a wizard illusion power",
+        requirement: "You must wield an orb to use this ability.",
+        additionalRows: (
+          [
+            *Effect:* Choose another enemy within 3 squares of the missed target. The chosen enemy cannot also be a target of the original attack. Repeat the attack against this new target, with a bonus to the attack roll equal to your Wisdom.],
+        ),
+      )
+
+      #shared.choiceBox("Tome of Binding");
+      Once per encounter, as a free action, if you use your tome when using an arcane summoning power, all creatures summoned by that power gain a bonus to damage rolls equal to your Constitution.
+
+      You must wield a tome to benefit from this feature.
+
+      #block(
+        [
+          #shared.choiceBox("Tome of Readiness");
+          When you select this form of implement mastery, choose a wizard encounter attack power of your level or lower that you don't already know. That power is now stored and available for your use at a later time.
+
+          Once per encounter as a free action, you can use the stored power by expending another unused wizard encounter attack power of its level or higher. You must still take the normal action required to use the stored power.
+
+          Each time you reach a level that lets you choose an encounter power, you can replace the stored power with a new wizard encounter attack power of your level or lower that you do not already know.
+
+          You must wield a tome to benefit from this feature.
+        ],
+        breakable: false,
+      )
+
+      = Cantrips
+      You may choose 4 cantrips from the options below.
+
+      #shared.choiceBox("Chameleon's Mask")
+
+      #powers.power(
+        title: "Chameleon's Mask",
+        description: "You pull strands of shadow, blending your colors and sounds with your surroundings to help you hide from your enemy's sight and hearing.",
+        type: powers.powerType.encounter,
+        range: "Personal",
+        action: powers.actionType.free,
+        traits: "Arcane, Illusion",
+        trigger: "You make a Skill Check to sneak or hide.",
+        additionalRows: (
+          [*Effect:* You may use your knowledge about Arcana for the check instead.],
         ),
       );
+
+      #shared.choiceBox("Spook")
+      #powers.power(
+        title: "Spook",
+        description: "You gather the shadows to yourself, so that when you speak, your words drip with menace.",
+        type: powers.powerType.encounter,
+        range: "Personal",
+        action: powers.actionType.free,
+        traits: "Arcane, Nethermancy, Shadow",
+        trigger: "You would make a Skill Check to intimidate or coerce someone.",
+        additionalRows: (
+          [*Effect:* You may use your knowledge about Arcana for the check instead.],
+        ),
+      );
+
+      #colbreak();
+
+      #shared.choiceBox("Suggestion")
+      #powers.power(
+        title: "Suggestion",
+        description: "You weave arcane power through your words, infusing each phrase with persuasive magic.",
+        type: powers.powerType.encounter,
+        range: "Personal",
+        action: powers.actionType.free,
+        traits: "Arcane",
+        trigger: "You would make a Skill Check to persuade someone.",
+        additionalRows: (
+          [*Effect:* You may use your knowledge about Arcana for the check instead.],
+        ),
+      );
+
+      #shared.choiceBox("Water Stride")
+      #powers.power(
+        title: "Water Stride",
+        description: "You speed across a liquid surface as if it were solid ground.",
+        type: powers.powerType.encounter,
+        range: "Personal",
+        action: powers.actionType.minor,
+        traits: "Arcane",
+        additionalRows: (
+          [*Effect:* Until the end of your next turn, you can treat liquid surfaces as if they were solid ground but difficult terrain.],
+        ),
+      );
+
+      #shared.choiceBox("Whispering Wind");
+      #powers.power(
+        title: "Whispering Wind",
+        description: "You speak a message to the wind and let it carry your words to an audience you choose.",
+        type: powers.powerType.encounter,
+        range: "Personal",
+        action: powers.actionType.standard,
+        traits: "Arcane",
+        additionalRows: (
+          [*Effect:* You cause a breeze to carry a message of up to 25 words or a sound up to 6 seconds long to a place you choose. The destination must be within a number of miles equal to your Intelligence and must be familiar to you, and it must be a location that the wind can reach. Once you complete the message or the sound, the wind travels at speed 5 (or 1 mile per hour) until it reaches the destination, where it conveys the message or the sound regardless of whether anyone hears it.],
+        ),
+      );
+
+      #colbreak();
+
+      #shared.choiceBox("Ghost Sound");
+      #powers.power(
+        title: "Ghost Sound",
+        description: "With a wink, you create an illusory sound that emanates from a distant location.",
+        type: powers.powerType.at-will,
+        range: "Ranged 10",
+        action: powers.actionType.standard,
+        traits: "Arcane, Illusion",
+        target: "One object or unoccupied square",
+        additionalRows: (
+          [*Effect:* You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target. You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you whisper, you can whisper quietly enough that only creatures adjacent to the target can hear your words.],
+        ),
+      );
+
+      #shared.choiceBox("Light");
+      #powers.power(
+        title: "Light",
+        description: "With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space.",
+        type: powers.powerType.at-will,
+        range: "Ranged 5",
+        action: powers.actionType.minor,
+        traits: "Arcane",
+        target: "One object or unoccupied square",
+        additionalRows: (
+          [*Effect:* The target sheds bright light until the end of the encounter or until you use this power again. The light fills the target's space and all squares within 4 squares of it. Putting out the light is a free action.],
+        ),
+      );
+
+      #colbreak();
+
+      #shared.choiceBox("Prestidigitation");
+      #powers.power(
+        title: "Prestidigitation",
+        description: "You perform an amusing magical trick, such as creating a dancing wisp of light, freshening a wilting flower, making a coin invisible, or warming a cold drink.",
+        type: powers.powerType.at-will,
+        range: "Ranged 2",
+        action: powers.actionType.standard,
+        traits: "Arcane",
+        additionalRows: (
+          [*Effect:* Use this cantrip to accomplish one of the effects given below:
+            - Change the color of items in 1 cubic foot.
+            - Create a harmless sensory effect, such as a shower of sparks, a puff of wind, faint music, or a strong odor.
+            - Clean or soil items in 1 cubic foot.
+            - Instantly light (or snuff out) a candle, a torch, or a small campfire.
+            - Chill, warm, or flavor up to 1 pound of nonliving material for up to 1 hour.
+            - Make a small mark or symbol appear on a surface for up to 1 hour.
+            - Produce out of nothingness a small item or image that exists until the end of your next turn.
+            - Make a small, handheld item invisible until the end of your next turn.
+          ],
+        ),
+      );
+
+      #shared.choiceBox("Mage Hand");
+      #powers.power(
+        title: "Mage Hand",
+        description: "You gesture toward an object nearby, and a spectral floating hand lifts the object into the air and moves it where you wish.",
+        type: powers.powerType.at-will,
+        range: "Ranged 5",
+        action: powers.actionType.minor,
+        traits: "Arcane, Conjuration",
+        additionalRows: (
+          [*Effect:* You conjure a spectral, floating hand in an unoccupied square within range. The hand lasts until the end of your next turn or until you use this power again. If you are holding an object when you use this power, the hand can move the object into a pack, a pouch, a sheath, or a similar container and simultaneously move any one object carried or worn anywhere on your body into your hand. While the hand persists, you can take the following actions.
+
+            *Minor Action:* The hand picks up or manipulates an object weighing 20 pounds or less. It can hold only one object at a time.
+
+            *Move Action:* The hand moves up to 5 squares in any direction, carrying the object it holds.
+
+            *Free Action:* The hand drops the object it is holding.
+            *Sustain Minor:* The hand persists until the end of your next turn.],
+        ),
+      );
+
+      = Arcane Techniques
+      You gain the Technique Mastery feat for Arcane Techniques.
+
+      = Powers
+      You may choose 2 At-Will, 1 Encounter and 2 Daily Wizard Powers.
+
+      = Feats
+      You gain access to the Wizard feat list
     ]
 
-    #set page(columns: 2)
-
-    = Channel Divinity
-    Once per encounter you can invoke divine power, filling yourself with the strength of your patron deity. With the divine strength you invoke you can wield special powers. You can also learn other uses for this feature; for instance, the divinity feats grant characters with access to the Channel Divinity class feature the ability to use additional special powers.
-    *Regardless of how many different uses for Channel Divinity you know, you can use only one such ability per encounter.* The special ability or power you invoke works just like your other powers. You gain the Favor of the Gods Channel Divinity power.
-
-    #powers.power(
-      title: "Favor of the Gods",
-      description: "When luck runs against you, you beseech the gods for aid to turn chance in your favor.",
-      type: powers.powerType.encounter,
-      action: powers.actionType.minor,
-      traits: "Channel Divinity, Divine",
-      target: "One creature in the burst",
-      range: [*Close* burst 3],
-      additionalRows: (
-        text[*Effect*: The next time the target misses with an attack roll before the end of your next turn, it can reroll that attack roll. It must use the new result, even if it is lower.],
-      ),
-    );
-
-    Additionally, choose one of the Channel Divinity powers below:
-
-    #shared.choiceBox("Punish the Profane")
-    #powers.power(
-      title: "Punish the Profane",
-      description: "You channel divine energy into your weapon, causing it to release a burst of radiance when you strike an undead foe.",
-      type: powers.powerType.encounter,
-      action: powers.actionType.standard,
-      traits: "Channel Divinity, Divine, Radiant, Weapon",
-      target: "One undead creature",
-      range: "Melee weapon",
-      offenseStat: powers.offense.strength,
-      defenseStat: powers.defense.ac,
-      additionalRows: (
-        text[*Hit*: 2[W] + Strength radiant damage, and the target is immobilized until the end of your next turn.
-          - Level 11: 3[W] damage.
-          - Level 21: 4[W] damage.
-        ],
-        text[*Effect*: Make the secondary attack.],
-        text[*Channel Divinity*: You can use only one channel divinity power per encounter],
-      ),
-    )
-
-    #colbreak();
-
-    #powers.power(
-      title: "Punish the Profane Secondary Attack",
-      type: powers.powerType.encounter,
-      action: powers.actionType.noAction,
-      traits: "",
-      range: [*Close* burst 3],
-      target: "Each undead enemy in the burst other than the primary target",
-      offenseStat: powers.offense.strength,
-      defenseStat: powers.defense.will,
-      additionalRows: (
-        text[*Hit*: Charisma radiant damage. In addition, you push the secondary target a number of squares up to 3 + your Charisma],
-      ),
-      isSpecial: true,
-    )
-
-    #shared.choiceBox("Turn undead")
-    #powers.power(
-      title: "Turn Undead",
-      description: "You sear undead foes, push them back, and root them in place.",
-      type: powers.powerType.encounter,
-      action: powers.actionType.standard,
-      traits: "Channel Divinity, Divine, Implement, Radiant",
-      target: "Each undead creature in burst",
-      range: [*Close* burst 2 (3 at 11th level, 5 at 21st level)],
-      offenseStat: powers.offense.wisdom,
-      defenseStat: powers.defense.will,
-      additionalRows: (
-        text[*Hit*: 1d10 + Wisdom radiant damage, and you push the target a number of squares up to 3 + your Charisma. The target is immobilized until the end of your next turn.
-          - Level 11: 2d10 + Wisdom radiant damage.
-          - Level 21: 3d10 + Wisdom radiant damage.
-        ],
-        text[*Channel Divinity*: You can use only one channel divinity power per encounter],
-      ),
-    )
-
-    #shared.choiceBox("Healer's Mercy")
-    #powers.power(
-      title: "Healer's Mercy",
-      description: "Strength flows out from you to your injured comrades, rekindling their resolve to see the battle to its end.",
-      type: powers.powerType.encounter,
-      action: powers.actionType.standard,
-      traits: "Channel Divinity, Divine, Healing",
-      target: "Each bloodied ally in the burst",
-      range: [*Close* burst 5],
-      additionalRows: (
-        text[*Effect*: Each target can spend a healing surge. You are weakened until the end of your next turn.],
-        text[*Channel Divinity*: You can use only one channel divinity power per encounter],
-      ),
-    );
-
-    #pagebreak();
-
-    = Divine Technique
-    You may choose a level 1 or 2 Divine Technique, you master it.
-
-    = Powers
-    You may choose 2 At-Will, 1 Encounter and 2 Daily Cleric Powers.
-
-    = Feats
-    You gain access to the Cleric feat list
-
-    #pagebreak()
 
     #set page(columns: 1)
 
     #align(center)[
-      = Cleric Powers
+      = Wizard Powers
     ]
 
     #columns(2)[
@@ -208,45 +358,59 @@
     #pagebreak()
 
     #align(center)[
-      = Heroic Cleric Feats
+      = Heroic Wizard Feats
     ]
 
     #columns(2)[
-      #shared.choiceBox("Battlepriest's Armanents")
-      *Requirements: 3 Strength* #linebreak()
-      You gain proficiency with light shields and with one military weapon of your choice.
+      #shared.choiceBox("Phantom Echoes");
+      *Requirements: 2 Wisdom* #linebreak();
+      When you use an arcane illusion power and hit a target, you gain combat advantage against that target until the end of your next turn. If the illusion power has an effect that a save can end, you instead gain combat advantage against the target until it saves against that effect.
 
-      #shared.choiceBox("Battle Healer")
-      When you use your healing word, you regain hit points equal to your Strength.
-      #shared.choiceBox("Defensive Grace")
-      *Requirements: Healer's Mercy* #linebreak()
-      When you use your healer’s mercy, you gain a power bonus equal to your Charisma to all defenses until the end of your next turn.
-      #shared.choiceBox("Defensive Healing Word")
-      When you use your healing word, the target also gains a power bonus to all defenses equal to your Charisma against the next attack made against him or her before the end of your next turn.
-      #shared.choiceBox("Shielding Word")
-      Targets of your healing word class feature also gain a +2 bonus to all defenses until the start of your next turn.
-      #shared.choiceBox("Sturdy Faith")
-      When you use your healing word on an ally, you gain temporary hit points equal to your Constitution.
-      #shared.choiceBox("Greater Turning")
-      *Requirements: Turn Undead* #linebreak()
-      Whenever you miss a target when using turn undead, the target is pushed a number of squares equal to your Charisma. The target takes no damage and is not immobilized.
-      #shared.choiceBox("Harbinger of Rebirth")
-      Any ally within 5 squares of you gains a +5 feat bonus to death saving throws.
-      #shared.choiceBox("Healer's Implement")
-      When you let a creature spend a healing surge to regain hit points with any of your cleric healing powers, add your holy symbol's enhancement bonus to the hit points the recipient regains.
+      #shared.choiceBox("Careful Summoner");
+      *Requirements: 2 Constitution* #linebreak();
+      Creatures created by your arcane summoning powers gain a +1 bonus to all defenses.
+
+      #shared.choiceBox("Destructive Wizardry");
+      *Requirements: 2 Dexterity* #linebreak();
+      When you use an arcane attack power and hit two or more creatures, you gain a +2 bonus to that power's damage rolls. This bonus increases to +3 at 11th level and to +4 at 21st level.
+
+      #shared.choiceBox("Enlarge Spell");
+      *Requirements: 2 Wisdom* #linebreak();
+      Before using a wizard at-will or encounter attack power, you can choose to take a -2 penalty to each die of damage rolled with the power to increase the size of its blast or its burst by 1. 
+      
+      You can't use this feat on a power that doesn't roll dice for damage.
+
+      #shared.choiceBox("Expanded Spellbook");
+      *Requirements: 2 Wisdom* #linebreak();
+      Choose one daily wizard attack spell of every level you know. Add this spell to your spellbook. Each time you gain a new level of daily wizard attack spells, you learn one extra spell of that level (in other words, add three spells to your spellbook instead of only two). 
+      
+      This feat doesn't change the number of daily attack spells you can prepare each day.
+
+      #shared.choiceBox("Bitter Cold");
+      When you hit a creature with a cold wizard power, that creature also takes a -2 penalty to its Fortitude until the end of your next turn.
 
       #colbreak();
-      #shared.choiceBox("Templar's Domain")
-      *Requirements: Healer's Lore* #linebreak()
-      Choose a divine domain that has a 1st level domain feature associated with it, such as the storm or the sun domain of the warpriest. You lose Healer's Lore and gain that 1st level domain feature. If the feature grants powers, you don't gain them.
-      #shared.choiceBox("Word of Retaliation")
-      When you use healing word, the target regains extra hit points equal to the number of enemies adjacent to him or her.
-      #shared.choiceBox("Pacifist Healer")
-      When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed.
 
-      The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
-      #shared.choiceBox("Pacifist's Reward")
-      When you hit with an attack that doesn't deal damage, if you didn't deal any damage on your turn, gain 2 temporary hit points at the end of the turn. The temporary hit points increase to 3 at 11th level, and to 4 at 21st level.
+      #shared.choiceBox("Burn Everything");
+      Your arcane fire powers ignore an amount of fire resistance equal to your Intelligence. The fire resistance you ignore increases to 5 + your Intelligence at 11th level and to 10 + your Intelligence at 21st level. If the creature is immune to fire, instead treat that creature as having resist fire 25.
+
+      #shared.choiceBox("Far Spell");
+      If a wizard power has a range of 10 squares or fewer, increase the power's normal range by 2 squares. If a wizard power has a range of 11–20 squares, increase the power's normal range by 5 squares. This also applies to area powers, so an area burst 1 within 10 becomes an area burst 1 within 12.
+
+      #shared.choiceBox("Immolate the Masses");
+      When you use a wizard power, you gain 1 temporary hit point for each minion you reduce to 0 hit points with that power.
+
+      #shared.choiceBox("Stoking the Fire");
+      When you hit a target with a fire attack, you gain a +2 power bonus to your next damage roll with a fire attack against that target before the end of your next turn.
+
+      #shared.choiceBox("Sympathy of Flame");
+      You gain a +2 feat bonus to damage rolls with arcane fire attacks against creatures taking ongoing fire damage. This bonus increases to +4 at 11th level and +6 at 21st level.
+
+      #shared.choiceBox("Illusionary Stealth");
+      Whenever you use a wizard illusion power and you hit a target, you gain a feat bonus to Skill Checks to hide or sneak equal to your Intelligence until the end of your next turn.
+
+      #shared.choiceBox("Arcane Fire");
+      When you hit a target with an arcane fire power, that target gains vulnerable 5 cold against the first arcane attack power you use against it before the end of your next turn.
     ]
   ]
 }

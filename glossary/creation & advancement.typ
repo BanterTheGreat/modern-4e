@@ -52,7 +52,7 @@
     [14th], [—], [gain 1 feat; gain 1 technique], [9], [7], [2/4/4/4],
     [15th], [—], [replace 1 daily attack power], [9], [7], [2/4/4/4],
     [16th], [+1 to all], [paragon path feature; gain 1 feat; gain 1 background point; gain 1 technique], [10], [8], [2/4/4/5],
-    [17th], [—], [gain 1 utility power; gain 1 feat], [10], [8], [2/4/4/5],
+    [17th], [—], [gain 1 utility power; gain 1 encounter power; gain 1 feat], [10], [8], [2/4/4/5],
     [18th], [—], [gain 1 feat; gain 1 technique], [11], [9], [2/4/4/5],
     [19th], [—], [replace 1 daily attack power], [11], [9], [2/4/4/5],
     [20th], [+1 to main], [gain 1 paragon path daily attack power; gain 1 feat; gain 1 technique], [12], [10], [2/4/4/5],

@@ -1,6 +1,6 @@
 #import "../helpers/theme.typ" as theme;
 
-#import "../helpers/classes.typ": abilities, defensesAndHealth, proficiencies, armorProf, weaponProf, implementProf;
+#import "../helpers/classes.typ": abilities, defensesAndHealth, proficiencies, armorProf, weaponProf, implementProf, powerLinks;
 
 #import "../helpers/powers.typ";
 
@@ -172,41 +172,7 @@
 
     #set page(columns: 1)
 
-    #align(center)[
-      = #className Powers
-    ]
-
-    #columns(2)[
-      = At-Will
-      #link("https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20At-Will")[
-        Link to Level 1 At-Wills
-      ]
-      = Encounter
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
-      )[
-        Link to Level 1 Encounters
-      ]
-
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%203%22%20-%22Cleric%20Attack%203*%22%20%22Encounter%22%20-%22Daily%22",
-      )[
-        Link to Level 3 Encounters
-      ]
-      = Daily
-
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Attack%201%22%20-%22Cleric%20Attack%201*%22%20%22Daily%22",
-      )[
-        Link to Level 1 Dailies
-      ]
-      = Utility
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Cleric%20Utility%202%22%20-%22Cleric%20Utility%202*%22%20%22Utility%22",
-      )[
-        Link to Level 2 Utilities
-      ]
-    ]
+    #powerLinks(className: className);
 
     #pagebreak()
 

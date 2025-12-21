@@ -1,6 +1,6 @@
 #import "../helpers/theme.typ" as theme;
 
-#import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf;
+#import "../helpers/classes.typ";
 
 #import "../helpers/powers.typ";
 

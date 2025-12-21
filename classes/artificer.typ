@@ -1,6 +1,6 @@
 #import "../helpers/theme.typ" as theme;
 
-#import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf;
+#import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf, powerLinks;
 
 #import "../helpers/powers.typ";
 
@@ -101,31 +101,7 @@
 
     #set page(columns: 1)
 
-    #align(center)[
-      = #className Powers
-    ]
-
-    #columns(2)[
-      = At-Will
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificer%20Attack%201*%22%20At-Will%20-%22Encounter%22",
-      )[
-        Link to Level 1 At-Wills
-      ]
-      = Encounter
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificer%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
-      )[
-        Link to Level 1 Encounters
-      ]
-      = Daily
-
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Artificer%20Attack%201%22%20-%22Artificier%20Attack%201*%22%20%22Daily%22",
-      )[
-        Link to Level 1 Dailies
-      ]
-    ]
+    #powerLinks(className: className);
 
     #pagebreak()
 

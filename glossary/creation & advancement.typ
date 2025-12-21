@@ -46,6 +46,8 @@
     [8th], [+1 to main], [gain 1 feat; gain 1 technique], [5], [4], [2/3/3/2],
     [9th], [—], [replace 1 daily attack power], [5], [4], [2/3/3/2],
     [10th], [—], [gain 1 utility power; gain 1 feat; gain 1 technique], [6], [5], [2/3/3/3],
+
+    // Anything below this is not truly error-proof;
     [11th], [—], [#block("paragon path features; gain 1 paragon path encounter attack power; gain 1 feat; gain 1 background point", breakable: false)], [7], [5], [2/4/3/3],
     [12th], [+1 to non-main], [gain 1 paragon path utility power; gain 1 feat; gain 1 technique], [8], [6], [2/4/3/4],
     [13th], [—], [gain 1 encounter attack power], [8], [6], [2/4/4/4],

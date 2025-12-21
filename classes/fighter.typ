@@ -1,78 +1,54 @@
-#import "../helpers/theme.typ" as theme;
-
+#import "../helpers/theme.typ";
 #import "../helpers/classes.typ";
-
 #import "../helpers/powers.typ";
+
+#let className = "Fighter";
 
 #let fighterPage() = {
   return [
     #theme.classTitle(
-      title: "The Fighter",
-      additional: [ _Using magical elixirs and contraptions, artificers bolster their allies and confound their enemies._
+      title: [The #className],
+      additional: [_They are up against a wall: You_
         #linebreak()
-        #text(size: 10pt)[Arcane Leader]],
+        #text(size: 10pt)[martial Defender]],
     )
 
     #columns(2)[
-      #proficiencies(
-        armorProficiencies: (armorProf.cloth, armorProf.leather),
-        weaponProficiencies: (weaponProf.simpleMelee, weaponProf.simpleRanged),
-        implementProficiencies: (implementProf.rod, implementProf.wand, implementProf.staff),
+      #classes.proficiencies(
+        armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather, classes.armorProf.hide, classes.armorProf.chainmail, classes.armorProf.scale, classes.armorProf.lightShield, classes.armorProf.heavyShield),
+        weaponProficiencies: (classes.weaponProf.simpleMelee, classes.weaponProf.simpleRanged, classes.weaponProf.militaryMelee, classes.weaponProf.militaryRanged),
+        implementProficiencies: (),
       );
 
-      #defensesAndHealth(fortitude: 12, will: 12, reflex: 15, health: 22, healthOnLevelUp: 5, healingSurges: 6)
+      #classes.defensesAndHealth(fortitude: 17, will: 11, reflex: 11, health: 25, healthOnLevelUp: 7, healingSurges: 9)
 
-      #abilities(
-        mainAbilities: "Intelligence",
-        extraAbilities: ("Wisdom", "Constitution"),
-        class: "Artificer",
+      #classes.abilities(
+        mainAbilities: "Strength",
+        extraAbilities: ("Constitution", "Dexterity", "Wisdom"),
+        class: className,
       );
 
       #colbreak();
-      = Techniques
-      You master the Alchemical Synthesis and Brew Potion techniques and gain the Technique Mastery feat.
+      = Features
+      Feature 1
 
       = Powers
-      You may choose 2 At-Will, 1 Encounter and 2 Daily Artificer Powers.
+      You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
 
       = Feats
-      You gain access to the Artificer feat list
+      You gain access to the #className feat list
     ]
 
     #pagebreak()
 
     #set page(columns: 1)
 
-    #align(center)[
-      = Artificer Powers
-    ]
-
-    #columns(2)[
-      = At-Will
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Fighter%20Attack%201%22%20-%22Fighter%20Attack%201*%22%20At-Will%20-%22Encounter%22",
-      )[
-        Link to Level 1 At-Wills
-      ]
-      = Encounter
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Fighter%20Attack%201%22%20-%22Fighter%20Attack%201*%22%20%22Encounter%22%20-%22Daily%22",
-      )[
-        Link to Level 1 Encounters
-      ]
-      = Daily
-
-      #link(
-        "https://iws.mx/dnd/?list.full.power=%22Fighter%20Attack%201%22%20-%22Fighter%20Attack%201*%22%20%22Daily%22",
-      )[
-        Link to Level 1 Dailies
-      ]
-    ]
+    #classes.powerLinks(className: className);
 
     #pagebreak()
 
     #align(center)[
-      = Heroic Fighter Feats
+      = Heroic #className Feats
     ]
 
     #columns(2)[

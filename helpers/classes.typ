@@ -1,5 +1,5 @@
 #import "shared.typ";
-#import "powers.typ" : powerType;
+#import "powers.typ": powerType;
 
 #let armorProf = (
   cloth: "Cloth (L)",
@@ -8,6 +8,8 @@
   chainmail: "Chainmail (H)",
   scale: "Scale (H)",
   plate: "Plate (H)",
+  lightShield: "Light Shield",
+  heavyShield: "Heavy Shield",
 )
 
 #let weaponProf = (
@@ -47,30 +49,49 @@
   }
 
 
+  let rows = ();
+  if armorContent != none {
+    rows.push([
+      #box(image("../svgs/armor.svg", height: 2em))
+      #linebreak()
+      #armorContent
+    ]);
+  }
+
+  if weaponContent != none {
+    rows.push([
+      #box(image("../svgs/sword.svg", height: 2em))
+      #linebreak()
+      #weaponContent
+    ]);
+  }
+
+  if implementContent != none {
+    rows.push([
+      #box(image("../svgs/magic.svg", height: 2em))
+      #linebreak()
+      #implementContent
+    ])
+  }
+  
   return [
     = Proficiencies
     #text(
       table(
-        columns: (1fr, 1fr, 1fr),
+        columns: (
+          {
+            let cols = ();
+            for i in range(0, rows.len()) {
+              cols.push(1fr);
+            }
+            cols
+          }
+        ),
         stroke: 0.5pt + rgb("#D4C4A0"),
         align: center,
         fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
         inset: 8pt,
-        [
-          #box(image("../svgs/armor.svg", height: 2em))
-          #linebreak()
-          #armorContent
-        ],
-        [
-          #box(image("../svgs/sword.svg", height: 2em))
-          #linebreak()
-          #weaponContent
-        ],
-        [
-          #box(image("../svgs/magic.svg", height: 2em))
-          #linebreak()
-          #implementContent
-        ],
+        ..rows
       ),
       size: 10pt,
     );
@@ -144,13 +165,13 @@
 
   return [
     = Abilities
-    Your abilities decide what your character will specialise in. Depending on your playstyle, you want to focus on different abilities.
+    Your abilities decide what your character will specialise in. Depending on your playstyle, you will want to focus on different abilities.
 
     == Main Ability
     #mainAbilityText
 
     == Assign points
-    Assign 6 points across non-main abilities, up to 3 per ability. You can assign a maximum of 3 points to any single ability.
+    Assign 6 points across non-main abilities, up to 3 per ability.
 
     #additionalInfo;
 
@@ -224,21 +245,20 @@
     // If level is an array, generate a link for each
     if type(level) == array {
       let links = level.map(l => {
-        let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(l));
+        let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(l))
         link(url)[Link to Level #str(l) #str(powerText)]
       })
 
-      return links.join(linebreak());
-
+      return links.join(linebreak())
     } else {
-      let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(level));
+      let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(level))
       return link(url)[Link to Level #str(level) #str(powerText)]
     }
   }
 
   #columns(2)[
     = At-Will
-    #getLinks(power: powerType.at-will, level: (1))
+    #getLinks(power: powerType.at-will, level: 1)
 
     = Encounter
     #getLinks(power: powerType.encounter, level: (1, 3, 7, 13, 17, 23, 27));

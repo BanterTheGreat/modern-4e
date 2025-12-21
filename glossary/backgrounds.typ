@@ -1,8 +1,8 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #let backgroundPage() = {
   return [
-    #shared.pageTitle(title: "Backgrounds & Skill Checks")
+    #theme.pageTitle(title: "Backgrounds & Skill Checks")
     = Backgrounds
     Backgrounds represent an adventurer’s past, training, and unique skills. They provide bonuses to skill checks when relevant to the situation.
 

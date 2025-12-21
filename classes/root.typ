@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 
 #import "./cleric.typ";
@@ -20,15 +20,15 @@
   }
 
   return [
-    #shared.pageTitle(title: "Classes")
+    #theme.pageTitle(title: "Classes")
     #image("../images/classes_parent.jpg", width: 100%);
     #pagebreak();
 
-    #shared.subPageTitle(title: "Leaders")
+    #theme.subPageTitle(title: "Leaders")
     #pagebreak();
     #_getLeaderPages();
 
-    #shared.subPageTitle(title: "Controllers")
+    #theme.subPageTitle(title: "Controllers")
     #pagebreak();
     #_getControllerPages();
   ]

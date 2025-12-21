@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let koboldPage() = {
   return [
-    #shared.subPageTitle(title: "Kobold");
+    #theme.subPageTitle(title: "Kobold");
 
     #columns(2)[
       = Attributes
@@ -45,18 +45,18 @@
 
     = Feats
     #columns(2)[
-      #shared.choiceBox("Kobold in a Corner")
+      #theme.choiceBox("Kobold in a Corner")
       You gain a +1 bonus to damage rolls against creatures that have combat advantage against you. This bonus increases to +2 at 11th level and +3 at 21st level.
 
-      #shared.choiceBox("Strength in Numbers")
+      #theme.choiceBox("Strength in Numbers")
       You gain a bonus to melee rolls against a target equal to the number of allies adjacent to it.
 
       #colbreak();
 
-      #shared.choiceBox("Trap Safety")
+      #theme.choiceBox("Trap Safety")
       A trap will never accidentally trigger while you fail a Skill Check to disarm it.
 
-      #shared.choiceBox("Group Sneak")
+      #theme.choiceBox("Group Sneak")
       Allies within 5 squares of you have a +2 on Skill Checks to sneak or hide.
     ]
   ]

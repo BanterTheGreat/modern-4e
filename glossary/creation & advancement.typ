@@ -1,8 +1,8 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #let creationAndAdvancementPage() = {
   return [
-    #shared.pageTitle(title: "Character Creation & Advancement");
+    #theme.pageTitle(title: "Character Creation & Advancement");
     = Character Creation
   A character can be created in 6 simple steps:
 
@@ -32,7 +32,7 @@
     columns: (0.5fr, 1fr, 1fr, 0.75fr, 0.75fr, 1fr),
     stroke: 0.5pt + rgb("#D4C4A0"),
     align: left,
-    fill: (col, row) => shared.defaultTableStyle()(col, row),
+    fill: (col, row) => theme.defaultTableStyle()(col, row),
     inset: 8pt,
     [*Level*], [*Ability Increases*], [*Powers and Features*], [*Feats*], [*Techniques*], [*Total Powers (A/E/D/U)*],
 

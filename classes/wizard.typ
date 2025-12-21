@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf;
 
@@ -6,7 +6,7 @@
 
 #let wizardPage() = {
   return [
-    #shared.classTitle(
+    #theme.classTitle(
       title: "The Wizard",
       additional: [ _Knowledge is their weapon, and magic bends to their will._
         #linebreak()
@@ -51,7 +51,7 @@
             columns: (1fr, 1fr, 1fr),
             stroke: 0.5pt + rgb("#D4C4A0"),
             align: left,
-            fill: (col, row) => shared.defaultTableStyle()(col, row),
+            fill: (col, row) => theme.defaultTableStyle()(col, row),
             inset: 8pt,
             [*Level*], [*Daily*], [*Utility*],
             [1], [1], [-],
@@ -69,7 +69,7 @@
       = Arcane Implement Mastery
       You specialize in the use of one kind of implement to gain additional abilities when you wield it. Choose one of the following forms of implement mastery below.
 
-      #shared.choiceBox("Orb of Imposition");
+      #theme.choiceBox("Orb of Imposition");
       Once per encounter, you can use your Orb of Imposition power.
 
       #powers.power(
@@ -91,7 +91,7 @@
 
       #colbreak();
 
-      #shared.choiceBox("Staff of Defense");
+      #theme.choiceBox("Staff of Defense");
       A staff of defense grants you a +1 bonus to AC. In addition, once per encounter, you can use the Staff of Defense power.
 
       #powers.power(
@@ -107,7 +107,7 @@
         ),
       )
 
-      #shared.choiceBox("Wand of Accuracy");
+      #theme.choiceBox("Wand of Accuracy");
       Once per encounter, you can use your Wand of Accuracy power.
 
       #powers.power(
@@ -123,7 +123,7 @@
         ),
       )
 
-      #shared.choiceBox("Orb of Deception");
+      #theme.choiceBox("Orb of Deception");
       Once per encounter, you can use your Orb of Deception power.
       #powers.power(
         title: "Orb of Deception",
@@ -139,14 +139,14 @@
         ),
       )
 
-      #shared.choiceBox("Tome of Binding");
+      #theme.choiceBox("Tome of Binding");
       Once per encounter, as a free action, if you use your tome when using an arcane summoning power, all creatures summoned by that power gain a bonus to damage rolls equal to your Constitution.
 
       You must wield a tome to benefit from this feature.
 
       #block(
         [
-          #shared.choiceBox("Tome of Readiness");
+          #theme.choiceBox("Tome of Readiness");
           When you select this form of implement mastery, choose a wizard encounter attack power of your level or lower that you don't already know. That power is now stored and available for your use at a later time.
 
           Once per encounter as a free action, you can use the stored power by expending another unused wizard encounter attack power of its level or higher. You must still take the normal action required to use the stored power.
@@ -161,7 +161,7 @@
       = Cantrips
       You may choose 4 cantrips from the options below.
 
-      #shared.choiceBox("Chameleon's Mask")
+      #theme.choiceBox("Chameleon's Mask")
 
       #powers.power(
         title: "Chameleon's Mask",
@@ -176,7 +176,7 @@
         ),
       );
 
-      #shared.choiceBox("Spook")
+      #theme.choiceBox("Spook")
       #powers.power(
         title: "Spook",
         description: "You gather the shadows to yourself, so that when you speak, your words drip with menace.",
@@ -192,7 +192,7 @@
 
       #colbreak();
 
-      #shared.choiceBox("Suggestion")
+      #theme.choiceBox("Suggestion")
       #powers.power(
         title: "Suggestion",
         description: "You weave arcane power through your words, infusing each phrase with persuasive magic.",
@@ -206,7 +206,7 @@
         ),
       );
 
-      #shared.choiceBox("Water Stride")
+      #theme.choiceBox("Water Stride")
       #powers.power(
         title: "Water Stride",
         description: "You speed across a liquid surface as if it were solid ground.",
@@ -219,7 +219,7 @@
         ),
       );
 
-      #shared.choiceBox("Whispering Wind");
+      #theme.choiceBox("Whispering Wind");
       #powers.power(
         title: "Whispering Wind",
         description: "You speak a message to the wind and let it carry your words to an audience you choose.",
@@ -234,7 +234,7 @@
 
       #colbreak();
 
-      #shared.choiceBox("Ghost Sound");
+      #theme.choiceBox("Ghost Sound");
       #powers.power(
         title: "Ghost Sound",
         description: "With a wink, you create an illusory sound that emanates from a distant location.",
@@ -248,7 +248,7 @@
         ),
       );
 
-      #shared.choiceBox("Light");
+      #theme.choiceBox("Light");
       #powers.power(
         title: "Light",
         description: "With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space.",
@@ -264,7 +264,7 @@
 
       #colbreak();
 
-      #shared.choiceBox("Prestidigitation");
+      #theme.choiceBox("Prestidigitation");
       #powers.power(
         title: "Prestidigitation",
         description: "You perform an amusing magical trick, such as creating a dancing wisp of light, freshening a wilting flower, making a coin invisible, or warming a cold drink.",
@@ -286,7 +286,7 @@
         ),
       );
 
-      #shared.choiceBox("Mage Hand");
+      #theme.choiceBox("Mage Hand");
       #powers.power(
         title: "Mage Hand",
         description: "You gesture toward an object nearby, and a spectral floating hand lifts the object into the air and moves it where you wish.",
@@ -362,54 +362,54 @@
     ]
 
     #columns(2)[
-      #shared.choiceBox("Phantom Echoes");
+      #theme.choiceBox("Phantom Echoes");
       *Requirements: 2 Wisdom* #linebreak();
       When you use an arcane illusion power and hit a target, you gain combat advantage against that target until the end of your next turn. If the illusion power has an effect that a save can end, you instead gain combat advantage against the target until it saves against that effect.
 
-      #shared.choiceBox("Careful Summoner");
+      #theme.choiceBox("Careful Summoner");
       *Requirements: 2 Constitution* #linebreak();
       Creatures created by your arcane summoning powers gain a +1 bonus to all defenses.
 
-      #shared.choiceBox("Destructive Wizardry");
+      #theme.choiceBox("Destructive Wizardry");
       *Requirements: 2 Dexterity* #linebreak();
       When you use an arcane attack power and hit two or more creatures, you gain a +2 bonus to that power's damage rolls. This bonus increases to +3 at 11th level and to +4 at 21st level.
 
-      #shared.choiceBox("Enlarge Spell");
+      #theme.choiceBox("Enlarge Spell");
       *Requirements: 2 Wisdom* #linebreak();
       Before using a wizard at-will or encounter attack power, you can choose to take a -2 penalty to each die of damage rolled with the power to increase the size of its blast or its burst by 1. 
       
       You can't use this feat on a power that doesn't roll dice for damage.
 
-      #shared.choiceBox("Expanded Spellbook");
+      #theme.choiceBox("Expanded Spellbook");
       *Requirements: 2 Wisdom* #linebreak();
       Choose one daily wizard attack spell of every level you know. Add this spell to your spellbook. Each time you gain a new level of daily wizard attack spells, you learn one extra spell of that level (in other words, add three spells to your spellbook instead of only two). 
       
       This feat doesn't change the number of daily attack spells you can prepare each day.
 
-      #shared.choiceBox("Bitter Cold");
+      #theme.choiceBox("Bitter Cold");
       When you hit a creature with a cold wizard power, that creature also takes a -2 penalty to its Fortitude until the end of your next turn.
 
       #colbreak();
 
-      #shared.choiceBox("Burn Everything");
+      #theme.choiceBox("Burn Everything");
       Your arcane fire powers ignore an amount of fire resistance equal to your Intelligence. The fire resistance you ignore increases to 5 + your Intelligence at 11th level and to 10 + your Intelligence at 21st level. If the creature is immune to fire, instead treat that creature as having resist fire 25.
 
-      #shared.choiceBox("Far Spell");
+      #theme.choiceBox("Far Spell");
       If a wizard power has a range of 10 squares or fewer, increase the power's normal range by 2 squares. If a wizard power has a range of 11–20 squares, increase the power's normal range by 5 squares. This also applies to area powers, so an area burst 1 within 10 becomes an area burst 1 within 12.
 
-      #shared.choiceBox("Immolate the Masses");
+      #theme.choiceBox("Immolate the Masses");
       When you use a wizard power, you gain 1 temporary hit point for each minion you reduce to 0 hit points with that power.
 
-      #shared.choiceBox("Stoking the Fire");
+      #theme.choiceBox("Stoking the Fire");
       When you hit a target with a fire attack, you gain a +2 power bonus to your next damage roll with a fire attack against that target before the end of your next turn.
 
-      #shared.choiceBox("Sympathy of Flame");
+      #theme.choiceBox("Sympathy of Flame");
       You gain a +2 feat bonus to damage rolls with arcane fire attacks against creatures taking ongoing fire damage. This bonus increases to +4 at 11th level and +6 at 21st level.
 
-      #shared.choiceBox("Illusionary Stealth");
+      #theme.choiceBox("Illusionary Stealth");
       Whenever you use a wizard illusion power and you hit a target, you gain a feat bonus to Skill Checks to hide or sneak equal to your Intelligence until the end of your next turn.
 
-      #shared.choiceBox("Arcane Fire");
+      #theme.choiceBox("Arcane Fire");
       When you hit a target with an arcane fire power, that target gains vulnerable 5 cold against the first arcane attack power you use against it before the end of your next turn.
     ]
   ]

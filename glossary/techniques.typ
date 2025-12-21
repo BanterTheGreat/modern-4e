@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #let techniqueEntry(
   level: int,
@@ -15,7 +15,7 @@
         keywords
       }
 
-      #shared.choiceBox(title);
+      #theme.choiceBox(title);
 
       *Level:* #str(level) #linebreak()
       *Time:* #time #linebreak()
@@ -32,7 +32,7 @@
 
 #let techniquesPage() = {
   return [
-    #shared.pageTitle(title: "Techniques");
+    #theme.pageTitle(title: "Techniques");
     Techniques are various manouvers and rituals your character is able to perform which provide various boosts and benefits.
 
     == Gaining Techniques
@@ -48,7 +48,7 @@
 
     #pagebreak();
 
-    #shared.subPageTitle(title: "Crafting Techniques")
+    #theme.subPageTitle(title: "Crafting Techniques")
 
     #columns(2)[
       #techniqueEntry(
@@ -164,10 +164,10 @@
 
     #pagebreak();
 
-    #shared.subPageTitle(title: "Magic Techniques")
+    #theme.subPageTitle(title: "Magic Techniques")
 
     #columns(2)[
-      #shared.subSectionTitle(title: "Arcane");
+      #theme.subSectionTitle(title: "Arcane");
 
       #techniqueEntry(
         level: 1,
@@ -497,7 +497,7 @@
         ],
       );
 
-      #shared.subSectionTitle(title: "Primal");
+      #theme.subSectionTitle(title: "Primal");
       #techniqueEntry(
         level: 1,
         title: "Animal Messenger",
@@ -749,7 +749,7 @@
         description: [You dramatically alter the climate within a 2-mile radius (e.g., desert to snowstorm, rainforest to badlands, summer to winter, or create a monsoon). You cannot directly control specific weather, but the area shifts to the new climate. If maintained for a year and a day, the change becomes permanent and you no longer need to commit a healing surge.],
       );
 
-      #shared.subSectionTitle(title: "Divine");
+      #theme.subSectionTitle(title: "Divine");
       #techniqueEntry(
         level: 1,
         title: "Bodily Purity Meditation",
@@ -922,7 +922,7 @@
       );
 
       #colbreak();
-      #shared.subSectionTitle(title: "Necromancy");
+      #theme.subSectionTitle(title: "Necromancy");
       #techniqueEntry(
         level: 7,
         title: "Spirit Idol",
@@ -951,9 +951,9 @@
     ]
 
     #pagebreak();
-    #shared.subPageTitle(title: "Physical Techniques")
+    #theme.subPageTitle(title: "Physical Techniques")
     #columns(2)[
-      #shared.subSectionTitle(title: "Agility");
+      #theme.subSectionTitle(title: "Agility");
       #techniqueEntry(
         level: 1,
         title: "Vigilant Spotter",
@@ -1063,7 +1063,7 @@
         keywords: ("Arete", "Exploration"),
         description: "You can run up walls, stand upside down on horizontal surfaces, and even lay flat against ceilings. The focus required to maintain this technique is intense, and so if you make an attack or use a power it ends immediately.",
       )
-      #shared.subSectionTitle(title: "Might");
+      #theme.subSectionTitle(title: "Might");
       #techniqueEntry(
         level: 1,
         title: "Desperate Conversion",
@@ -1163,7 +1163,7 @@
         keywords: ("Arete", "Exploration", "Travel"),
         description: "This technique functions as Racing Hare Method, except as above and that it increases the speed of an entire group you lead.",
       )
-      #shared.subSectionTitle(title: "Sneaking");
+      #theme.subSectionTitle(title: "Sneaking");
       #techniqueEntry(
         level: 1,
         title: "Fog Guardian",
@@ -1238,7 +1238,7 @@
         description: [ "You can hide from Fate itself. Any effect that attempts to obtain information from Fate about you or your activities instead informs the user that no such individual exists. Any effect that relies on Fate to locate its target cannot target you. This technique may also provide similar protections against similar effects, at the DM’s discretion." ],
       )
 
-      #shared.subSectionTitle(title: "Thievery");
+      #theme.subSectionTitle(title: "Thievery");
       #techniqueEntry(
         level: 2,
         title: "Use Rope",
@@ -1319,9 +1319,9 @@
 
     #pagebreak();
 
-    #shared.subPageTitle(title: "Social Techniques")
+    #theme.subPageTitle(title: "Social Techniques")
     #columns(2)[
-      #shared.subSectionTitle(title: "Deception")
+      #theme.subSectionTitle(title: "Deception")
       #techniqueEntry(
         level: 1,
         title: "Glibness",
@@ -1465,7 +1465,7 @@
           You superimpose multiple disguises atop each other, creating different views from different angles. This technique functions as Alter Ego, except the disguised creature is given two different appearances, and can decide which disguise each witness sees.
         ],
       )
-      #shared.subSectionTitle(title: "Diplomacy")
+      #theme.subSectionTitle(title: "Diplomacy")
       #techniqueEntry(
         level: 1,
         title: "Small Manners",
@@ -1574,7 +1574,7 @@
         ],
       )
 
-      #shared.subSectionTitle(title: "Deduction");
+      #theme.subSectionTitle(title: "Deduction");
       #techniqueEntry(
         level: 1,
         title: "Humble Approach",
@@ -1659,7 +1659,7 @@
         ],
       )
 
-      #shared.subSectionTitle(title: "Intimidation");
+      #theme.subSectionTitle(title: "Intimidation");
       #techniqueEntry(
         level: 1,
         title: "Browbeat",
@@ -1738,7 +1738,7 @@
         ],
       )
 
-      #shared.subSectionTitle(title: "Society");
+      #theme.subSectionTitle(title: "Society");
       #techniqueEntry(
         level: 1,
         title: "Guise of Vulnerability",
@@ -1789,7 +1789,7 @@
     ]
 
     #pagebreak();
-    #shared.subPageTitle(title: "Medical Techniques")
+    #theme.subPageTitle(title: "Medical Techniques")
     #columns(2)[
       #techniqueEntry(
         level: 2,
@@ -1889,7 +1889,7 @@
     ]
 
     #pagebreak();
-    #shared.subPageTitle(title: "Lore Techniques")
+    #theme.subPageTitle(title: "Lore Techniques")
     #columns(2)[
       #techniqueEntry(
         level: 1,
@@ -1995,7 +1995,7 @@
     ]
 
     #pagebreak();
-    #shared.subPageTitle(title: "Observation Techniques")
+    #theme.subPageTitle(title: "Observation Techniques")
     #columns(2)[
       #techniqueEntry(
         level: 1,

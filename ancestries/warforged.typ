@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let warforgedPage() = {
   return [
-    #shared.subPageTitle(title: "Warforged");
+    #theme.subPageTitle(title: "Warforged");
 
     #columns(2)[
       = Attributes
@@ -47,23 +47,23 @@
       = Warforged Feats
     #columns(2)[
 
-      #shared.choiceBox("Alchemical Affinity")
+      #theme.choiceBox("Alchemical Affinity")
       Once per attack when you hit an enemy using a consumable alchemical item attack power, you gain temporary hit points equal to your Constitution.
 
-      #shared.choiceBox("Alchemical Blood")
+      #theme.choiceBox("Alchemical Blood")
       Choose a damage type—acid, cold, fire, lightning, necrotic, poison, or thunder. When you use an attack power or alchemical item attack power with that keyword, you gain a +1 feat bonus to the damage roll. The bonus increases to +2 at 11th level and to +3 at 21st level.
       While you have any temporary hit points, you gain an additional +1 bonus to your damage rolls with alchemical item attack powers.
 
       #colbreak();
 
-      #shared.choiceBox("Improved Warforged Resolve")
+      #theme.choiceBox("Improved Warforged Resolve")
       When you use your warforged resolve racial power, you gain 5 extra temporary hit points.
 
-      #shared.choiceBox("Warforged Tactics")
+      #theme.choiceBox("Warforged Tactics")
       You gain a +1 bonus to melee attack rolls against an enemy that is adjacent to an ally.
 
 
-      #shared.choiceBox("Immutability")
+      #theme.choiceBox("Immutability")
       Requirement: Improved Warforged Resolve #linebreak();
       When you use your warforged resolve racial power, you can make a saving throw against any effect instead of only against an effect that deals ongoing damage. You gain a +2 feat bonus to that saving throw.
     ]

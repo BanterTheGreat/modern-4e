@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let orcPage() = {
   return [
-    #shared.subPageTitle(title: "Orc");
+    #theme.subPageTitle(title: "Orc");
 
     #columns(2)[
       = Attributes
@@ -45,21 +45,21 @@
 
     = Orc Feats
     #columns(2)[
-      #shared.choiceBox("Anger Unleashed")
+      #theme.choiceBox("Anger Unleashed")
       The first time you are bloodied during an encounter, you gain a +2 bonus to attack rolls until the end of your next turn.
 
-      #shared.choiceBox("Savage Assault")
+      #theme.choiceBox("Savage Assault")
       When you use furious assault, the enemy you hit also takes a -1 penalty to all defenses until the end of your next turn.
 
       #colbreak();
 
-      #shared.choiceBox("Thirst for Battle")
+      #theme.choiceBox("Thirst for Battle")
       You gain a +3 feat bonus to initiative checks, and your number of healing surges increases by one.
 
-      #shared.choiceBox("Vengeance!")
+      #theme.choiceBox("Vengeance!")
       When you drop to 0 hit points or fewer you may make a free melee attack before gaining the dying condition.
 
-      #shared.choiceBox("Pain Gain")
+      #theme.choiceBox("Pain Gain")
       The first time you are bloodied during an encounter, you gain a +5 bonus to damage rolls until the end of your next turn.
     ]
   ]

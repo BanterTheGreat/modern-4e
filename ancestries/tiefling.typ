@@ -1,11 +1,11 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 
 #let tieflingPage() = {
   return [
-    #shared.subPageTitle(title: "Tiefling");
+    #theme.subPageTitle(title: "Tiefling");
 
     #columns(2)[
       = Attributes
@@ -54,35 +54,35 @@
     #columns(2)[
 
 
-      #shared.choiceBox("Bloodhunter's Dread")
+      #theme.choiceBox("Bloodhunter's Dread")
       When you hit a bloodied foe, the target takes a -2 penalty to attack rolls against you until the end of your next turn.
 
-      #shared.choiceBox("Bloodseeker")
+      #theme.choiceBox("Bloodseeker")
       You gain a +2 bonus to damage rolls against bloodied enemies marked by you.
 
 
-      #shared.choiceBox("Imperious Majesty")
+      #theme.choiceBox("Imperious Majesty")
       When you hit a creature that has not yet acted in an encounter with an attack, it takes a penalty to attack rolls against you equal to your Main Ability until the end of your next turn.
 
-      #shared.choiceBox("Mammon's Theft of Health")
+      #theme.choiceBox("Mammon's Theft of Health")
       When you use your Second Wind, you can choose for an ally within 5 squares of you to lose a healing surge. If you do, you regain extra hit points equal to your healing surge value.
 
-      #shared.choiceBox("Tail Slide")
+      #theme.choiceBox("Tail Slide")
       When you shift, you can also slide an ally adjacent to your starting square 1 square.
 
       #colbreak();
 
-      #shared.choiceBox("Renewed Wrath")
+      #theme.choiceBox("Renewed Wrath")
       Whenever you use your Second Wind or spend an Action Point, you regain the use of your Infernal Wrath.
 
-      #shared.choiceBox("Hellish Defiance")
+      #theme.choiceBox("Hellish Defiance")
       When you use Infernal Wrath, the target provokes opportunity attacks from your allies when it attacks you until the end of its next turn.
 
 
-      #shared.choiceBox("Infernal Warrior")
+      #theme.choiceBox("Infernal Warrior")
       When an enemy scores a critical hit against you, you can use your Infernal Wrath power even if you have already used the power this encounter.
 
-      #shared.choiceBox("Unbalancing Wrath")
+      #theme.choiceBox("Unbalancing Wrath")
       The target of your Infernal Wrath grants combat advantage to your allies until the end of the target’s next turn.
     ]
   ]

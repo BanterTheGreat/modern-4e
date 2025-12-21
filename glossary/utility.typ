@@ -1,9 +1,9 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 
 #let utilityPage() = {
   return [
-    #shared.pageTitle(title: "Utility");
+    #theme.pageTitle(title: "Utility");
     = Level 2
     #columns(2)[
       #powers.power(

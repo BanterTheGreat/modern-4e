@@ -1,4 +1,4 @@
-#import "helpers/shared.typ";
+#import "helpers/theme.typ" as theme;
 
 #import "./ancestries/root.typ" as ancestries;
 #import "./classes/root.typ" as classes;
@@ -22,14 +22,14 @@
   margin: (top: 1cm, rest: 2cm),
   fill: rgb("#F0E3C7"),
   background: {
-    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(shared.edgeColor, shared.centerColor, angle: 90deg)))
+    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(theme.edgeColor, theme.centerColor, angle: 90deg)))
     place(bottom + left, rect(width: 100%, height: 15%, fill: gradient.linear(
-      shared.centerColor,
-      shared.edgeColor,
+      theme.centerColor,
+      theme.edgeColor,
       angle: 90deg,
     )))
-    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(shared.edgeColor, shared.centerColor, angle: 0deg)))
-    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(shared.centerColor, shared.edgeColor, angle: 0deg)))
+    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(theme.edgeColor, theme.centerColor, angle: 0deg)))
+    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(theme.centerColor, theme.edgeColor, angle: 0deg)))
   },
 )
 
@@ -37,21 +37,21 @@
   it,
   width: 100%,
   inset: 6pt,
-  fill: shared.headerColor,
+  fill: theme.headerColor,
 )]);
 
 #show heading.where(numbering: "1.", level: 2): it => box(align(center)[#box(
   it,
   width: 100%,
   inset: 6pt,
-  fill: shared.headerColor,
+  fill: theme.headerColor,
 )]);
 
 #show heading.where(numbering: "1.", level: 3): it => box(align(center)[#box(
   it,
   width: 100%,
   inset: 6pt,
-  fill: shared.headerColor,
+  fill: theme.headerColor,
 )]);
 
 

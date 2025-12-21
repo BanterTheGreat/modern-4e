@@ -1,8 +1,8 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #let skillChecksPage() = {
   return [
-    #shared.pageTitle(title: "Skill Checks");
+    #theme.pageTitle(title: "Skill Checks");
 
     Whenever an adventurer tries to do something while outside of combat, the GM may call for a Skill Check. The GM will say what Ability fits the action the most and then the adventurer rolls a 1D20 + half the value of said Ability and any background or title bonus should they apply.
 
@@ -19,7 +19,7 @@
       columns: (1fr, 1fr, 1fr, 1fr),
       stroke: 0.5pt + rgb("#D4C4A0"),
       align: left,
-      fill: (col, row) => shared.defaultTableStyle()(col, row),
+      fill: (col, row) => theme.defaultTableStyle()(col, row),
       inset: 8pt,
       [*Level*],
       [*Easy*],

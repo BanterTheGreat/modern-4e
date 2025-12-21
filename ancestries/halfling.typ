@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let halflingPage() = {
   return [
-    #shared.subPageTitle(title: "Halfling");
+    #theme.subPageTitle(title: "Halfling");
 
     #columns(2)[
       = Attributes
@@ -44,26 +44,26 @@
     #pagebreak()
     = Halfling Feats
     #columns(2)[
-      #shared.choiceBox("Indomitable")
+      #theme.choiceBox("Indomitable")
       You gain a +1 feat bonus to Will while bloodied. In addition, the bonus from your Bold racial feature also applies to saving throws against charm effects and ongoing psychic damage.
 
-      #shared.choiceBox("Know When to Fold")
+      #theme.choiceBox("Know When to Fold")
       While you're bloodied, the first time you leave a square on your turn, you don't provoke opportunity attacks from that movement.
 
-      #shared.choiceBox("Rigged Chance")
+      #theme.choiceBox("Rigged Chance")
       The first time you use your second chance racial power in an encounter, you regain the use of the power if the attack still hits you.
-      #shared.choiceBox("River-Born Ritualist")
+      #theme.choiceBox("River-Born Ritualist")
       You have mastered the Animal Messenger and Water Walk rituals, and can perform them as if you had the Ritual Caster feat. You can use these rituals without paying the component cost, each once per day.
 
       #colbreak();
       
-      #shared.choiceBox("Second Step")
+      #theme.choiceBox("Second Step")
       When you use your second chance racial power, and the enemy rerolling its attack is larger than you, you can shift half your speed as a free action after the attack is completed.
 
-      #shared.choiceBox("Nimble Dodge")
+      #theme.choiceBox("Nimble Dodge")
       When you make an enemy reroll an attack roll using your second chance racial power, the enemy takes a -5 penalty to the second attack roll and can't score a critical hit on that roll.
 
-      #shared.choiceBox("Bloodied Thriumph")
+      #theme.choiceBox("Bloodied Thriumph")
       When you use second chance while bloodied, you and your allies gain combat advantage against the triggering attacker until the end of your next turn.
     ]
   ]

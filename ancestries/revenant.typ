@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let revenantPage() = {
   return [
-    #shared.subPageTitle(title: "Revenant");
+    #theme.subPageTitle(title: "Revenant");
 
     #columns(2)[
       = Attributes
@@ -49,30 +49,30 @@
     #pagebreak();
     = Revenant Feats
     #columns(2)[
-      #shared.choiceBox("Spectral Reaping")
+      #theme.choiceBox("Spectral Reaping")
       You ignore insubstantial damage with all damage from an attack with which you deal the necrotic damage from your dark reaping racial power.
 
-      #shared.choiceBox("Past Soul")
+      #theme.choiceBox("Past Soul")
       You gain the racial power of the race you chose with your Past Life racial feature (if that race has more than one racial power, choose one of the powers, and you gain only that one). During each encounter, you can use either that power or dark reaping, not both.
 
-      #shared.choiceBox("Flashback of a Past Life")
+      #theme.choiceBox("Flashback of a Past Life")
       Before you roll initiative, you can take a -10 penalty to your roll. If you do so, you gain a +2 bonus to attack rolls and checks until the end of your first turn.
 
-      #shared.choiceBox("Empowered Reaping")
+      #theme.choiceBox("Empowered Reaping")
       You gain a +2 feat bonus to the damage dealt by your dark reaping. This bonus increases to +4 at 11th level and +6 at 21st level.
 
       #colbreak();
 
-      #shared.choiceBox("Death's Quickening")
+      #theme.choiceBox("Death's Quickening")
       If you drop to 0 or fewer hit points and choose to remain conscious due to Unnatural Vitality, you can take a minor action in addition to the standard action Unnatural Vitality allows.
 
-      #shared.choiceBox("Death's Blessing")
+      #theme.choiceBox("Death's Blessing")
       You no longer need to eat, drink, or breathe, you are no longer considered a living creature.
 
-      #shared.choiceBox("Dark Feasting")
+      #theme.choiceBox("Dark Feasting")
       When you deal damage with your dark reaping, you gain temporary hit points equal to the extra necrotic damage dealt to the target.
 
-      #shared.choiceBox("Chill of the Grave")
+      #theme.choiceBox("Chill of the Grave")
       Your dark reaping racial power deals cold and necrotic damage.
     ]
   ]

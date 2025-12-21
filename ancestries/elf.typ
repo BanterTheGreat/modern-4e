@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let elfPage() = {
   return [
-    #shared.subPageTitle(title: "Elf");
+    #theme.subPageTitle(title: "Elf");
 
     #columns(2)[
       = Attributes
@@ -29,7 +29,7 @@
     ]
 
     #columns(2)[
-      #shared.choiceBox("Elven Accuracy");
+      #theme.choiceBox("Elven Accuracy");
 
       #powers.power(
         title: "Elven Accuracy",
@@ -48,7 +48,7 @@
       );
 
       #colbreak();
-      #shared.choiceBox("Subtle Step");
+      #theme.choiceBox("Subtle Step");
       #powers.power(
         title: "Subtle Step",
         description: "Wild elves train for battle from the time they can walk, and their teachers place early emphasis on evasion and escape.",
@@ -69,36 +69,36 @@
 #pagebreak()
       = Elf Feats
       #columns(2)[
-      #shared.choiceBox("Elven Luck")
+      #theme.choiceBox("Elven Luck")
       *Requirements:* Elven Accuracy #linebreak();
       When you use your elven accuracy power, you gain a +1d4 bonus to the reroll.
 
-      #shared.choiceBox("Opportunistic Accuracy")
+      #theme.choiceBox("Opportunistic Accuracy")
       *Requirements:* Elven Accuracy #linebreak();
       If you use your elven accuracy racial power to reroll an opportunity attack and the second roll misses, you do not expend the power.
 
-      #shared.choiceBox("Elven Precision")
+      #theme.choiceBox("Elven Precision")
       *Requirements:* Elven Accuracy #linebreak();
       When you use the elven accuracy power, you gain a +2 to the new attack roll.
 
       #colbreak();
 
-      #shared.choiceBox("Shimmering Elf")
+      #theme.choiceBox("Shimmering Elf")
       *Requirements:* Elven Accuracy #linebreak();
       Immediately after you use elven accuracy, you can teleport up to 2 squares as a free action.
 
-      #shared.choiceBox("Elven Sidestep")
+      #theme.choiceBox("Elven Sidestep")
       When you move, the first square of your movement does not provoke opportunity attacks from enemies you have marked.
 
-      #shared.choiceBox("Eyes of the Forest")
+      #theme.choiceBox("Eyes of the Forest")
       Each ally affected by your Group Awareness trait doesn’t take the -2 penalty for attacking an enemy that has partial concealment.
 
       #colbreak();
 
-      #shared.choiceBox("Elven Empathy")
+      #theme.choiceBox("Elven Empathy")
       When one of your allies within 10 squares of you spends a healing surge to regain hit points, he or she regains 1 additional hit point. The additional hit points gained increase to 2 at 11th level, and 3 at 21st level.
 
-      #shared.choiceBox("Master Communicator")
+      #theme.choiceBox("Master Communicator")
       You master the Comprehend Languages ritual. In addition, you can perform it once per day without paying its component cost.
     ]
   ]

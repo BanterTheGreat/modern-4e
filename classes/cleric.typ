@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #import "../helpers/classes.typ": abilities, defensesAndHealth, proficiencies, armorProf, weaponProf, implementProf;
 
@@ -6,7 +6,7 @@
 
 #let clericPage() = {
   return [
-    #shared.classTitle(
+    #theme.classTitle(
       title: "The Cleric",
       additional:[ _Their prayers burn, and the unholy tremble._
       #linebreak()
@@ -30,10 +30,10 @@
       = Lore
       Some Cleric's specialised in the text of renewal and soothing, while others specialised in conquest and warfare. Choose one of the options below.
 
-      #shared.choiceBox("Healer’s Lore")
+      #theme.choiceBox("Healer’s Lore")
       When you let a creature spend a healing surge to regain hit points with one of your cleric powers that has the healing keyword, add your Wisdom to the hit points the recipient regains.
 
-      #shared.choiceBox("Battlepriest's Lore")
+      #theme.choiceBox("Battlepriest's Lore")
       You gain a +2 shield bonus to AC, and you have proficiency with scale armor. In addition, whenever you use a cleric healing power to allow a target to spend a healing surge, that target gains a +2 bonus to attack rolls until the end of your turn.
 
       = Healing Word
@@ -82,7 +82,7 @@
 
     Additionally, choose one of the Channel Divinity powers below:
 
-    #shared.choiceBox("Punish the Profane")
+    #theme.choiceBox("Punish the Profane")
     #powers.power(
       title: "Punish the Profane",
       description: "You channel divine energy into your weapon, causing it to release a burst of radiance when you strike an undead foe.",
@@ -120,7 +120,7 @@
       isSpecial: true,
     )
 
-    #shared.choiceBox("Turn undead")
+    #theme.choiceBox("Turn undead")
     #powers.power(
       title: "Turn Undead",
       description: "You sear undead foes, push them back, and root them in place.",
@@ -140,7 +140,7 @@
       ),
     )
 
-    #shared.choiceBox("Healer's Mercy")
+    #theme.choiceBox("Healer's Mercy")
     #powers.power(
       title: "Healer's Mercy",
       description: "Strength flows out from you to your injured comrades, rekindling their resolve to see the battle to its end.",
@@ -213,40 +213,40 @@
     ]
 
     #columns(2)[
-      #shared.choiceBox("Battlepriest's Armanents")
+      #theme.choiceBox("Battlepriest's Armanents")
       *Requirements: 3 Strength* #linebreak()
       You gain proficiency with light shields and with one military weapon of your choice.
 
-      #shared.choiceBox("Battle Healer")
+      #theme.choiceBox("Battle Healer")
       When you use your healing word, you regain hit points equal to your Strength.
-      #shared.choiceBox("Defensive Grace")
+      #theme.choiceBox("Defensive Grace")
       *Requirements: Healer's Mercy* #linebreak()
       When you use your healer’s mercy, you gain a power bonus equal to your Charisma to all defenses until the end of your next turn.
-      #shared.choiceBox("Defensive Healing Word")
+      #theme.choiceBox("Defensive Healing Word")
       When you use your healing word, the target also gains a power bonus to all defenses equal to your Charisma against the next attack made against him or her before the end of your next turn.
-      #shared.choiceBox("Shielding Word")
+      #theme.choiceBox("Shielding Word")
       Targets of your healing word class feature also gain a +2 bonus to all defenses until the start of your next turn.
-      #shared.choiceBox("Sturdy Faith")
+      #theme.choiceBox("Sturdy Faith")
       When you use your healing word on an ally, you gain temporary hit points equal to your Constitution.
-      #shared.choiceBox("Greater Turning")
+      #theme.choiceBox("Greater Turning")
       *Requirements: Turn Undead* #linebreak()
       Whenever you miss a target when using turn undead, the target is pushed a number of squares equal to your Charisma. The target takes no damage and is not immobilized.
-      #shared.choiceBox("Harbinger of Rebirth")
+      #theme.choiceBox("Harbinger of Rebirth")
       Any ally within 5 squares of you gains a +5 feat bonus to death saving throws.
-      #shared.choiceBox("Healer's Implement")
+      #theme.choiceBox("Healer's Implement")
       When you let a creature spend a healing surge to regain hit points with any of your cleric healing powers, add your holy symbol's enhancement bonus to the hit points the recipient regains.
 
       #colbreak();
-      #shared.choiceBox("Templar's Domain")
+      #theme.choiceBox("Templar's Domain")
       *Requirements: Healer's Lore* #linebreak()
       Choose a divine domain that has a 1st level domain feature associated with it, such as the storm or the sun domain of the warpriest. You lose Healer's Lore and gain that 1st level domain feature. If the feature grants powers, you don't gain them.
-      #shared.choiceBox("Word of Retaliation")
+      #theme.choiceBox("Word of Retaliation")
       When you use healing word, the target regains extra hit points equal to the number of enemies adjacent to him or her.
-      #shared.choiceBox("Pacifist Healer")
+      #theme.choiceBox("Pacifist Healer")
       When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed.
 
       The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
-      #shared.choiceBox("Pacifist's Reward")
+      #theme.choiceBox("Pacifist's Reward")
       When you hit with an attack that doesn't deal damage, if you didn't deal any damage on your turn, gain 2 temporary hit points at the end of the turn. The temporary hit points increase to 3 at 11th level, and to 4 at 21st level.
     ]
   ]

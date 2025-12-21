@@ -1,11 +1,11 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #let equipmentTable(equipment: ()) = {
   return table(
     columns: (1fr, 1fr, 1fr, 1fr, 1fr),
     stroke: 0.5pt + rgb("#D4C4A0"),
     align: left,
-    fill: (col, row) => shared.defaultTableStyle()(col, row),
+    fill: (col, row) => theme.defaultTableStyle()(col, row),
     inset: 8pt,
     [*Weapon*],
     [*Proficiency Bonus*],
@@ -18,7 +18,7 @@
 
 #let equipmentPage() = {
   return [
-    #shared.pageTitle(title: "Equipment");
+    #theme.pageTitle(title: "Equipment");
 
     = Weapons
     == Improvised One-Handed Melee Weapons

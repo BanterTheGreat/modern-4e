@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 
 #import "./goblin.typ";
@@ -33,7 +33,7 @@
 }
 
   return [
-    #shared.pageTitle(title: "Ancestries")
+    #theme.pageTitle(title: "Ancestries")
     #image("../images/ancestries_parent.png", width: 100%);
     #pagebreak();
     #_getAncestryPages();

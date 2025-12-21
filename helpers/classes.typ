@@ -111,21 +111,45 @@
   )];
 }
 
+#let join_with_or(input: array) = {
+  if input.len() == 0 {
+    ""
+  } else if input.len() == 1 {
+    input.at(0)
+  } else if input.len() == 2 {
+    input.at(0) + " or " + input.at(1)
+  } else {  
+    input.slice(0, input.len()-1).join(", ") + " or " + input.at(input.len()-1)
+  }
+}
+
 #let abilities(mainAbilities: (str), class: str, extraAbilities: (str)) = {
-  let mainAbilityText = if type(mainAbilities) != array {
-    [Your main ability is *#mainAbilities*, which has 4 points.]
+  let boldedMainAbilities = if type(mainAbilities) == array {
+    mainAbilities.map(content => [*#content*])
   } else {
-    [Choose either #mainAbilities.map(content => [*#content*]).join(", "), that ability has 4 points and is your main ability.]
+    [*#mainAbilities*]
   }
 
-  let extraAbilitiesText = if type(extraAbilities) == array {
-    extraAbilities.join(", ");
+  let boldedExtraAbilities = if type(extraAbilities) == array {
+    extraAbilities.map(content => [*#content*])
   } else {
-    extraAbilities;
+    [*#extraAbilities*]
+  }
+
+  let mainAbilityText = if type(boldedMainAbilities) != array {
+    [Your main ability is *#boldedMainAbilities*, which has 4 points.]
+  } else {
+    [Choose either #join_with_or(input: boldedMainAbilities), that ability has 4 points and is your main ability.]
+  }
+
+  let extraAbilitiesText = if type(boldedExtraAbilities) == array {
+    join_with_or(input: boldedExtraAbilities)
+  } else {
+    boldedExtraAbilities
   }
 
   let additionalInfo = [
-    All #class powers use #if type(mainAbilities) == array {[ either #mainAbilities.map(content => [*#content*]).join(", ") ]} else {[ *#mainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
+    All #class powers use #if type(boldedMainAbilities) == array {[ either #join_with_or(input:boldedMainAbilities) ]} else {[ *#boldedMainAbilities* ]} for accuracy, while sometimes benefitting from #extraAbilitiesText for extra effects.
   ]
 
   return [ 

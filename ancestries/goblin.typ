@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let goblinPage() = {
   return [
-    #shared.subPageTitle(title: "Goblin");
+    #theme.subPageTitle(title: "Goblin");
 
     #columns(2)[
       = Attributes
@@ -43,22 +43,22 @@
 
     = Goblin Feats
     #columns(2)[
-      #shared.choiceBox("Ankle Biter")
+      #theme.choiceBox("Ankle Biter")
       You gain a +1 feat bonus to damage rolls against creatures larger than you. This bonus increases to +2 at 11th level and to +3 at 21st level.
       Also, when you score a critical hit against a creature larger than you, the creature takes 1d6 extra damage.
 
-      #shared.choiceBox("Desperate Tactics")
+      #theme.choiceBox("Desperate Tactics")
       When you use goblin tactics while bloodied, you can shift up to 2 extra squares.
 
-      #shared.choiceBox("Goblin Feint")
+      #theme.choiceBox("Goblin Feint")
       When you use goblin tactics, you gain combat advantage against the enemy that missed you until the end of your next turn.
 
       #colbreak();
 
-      #shared.choiceBox("Wrist Biter")
+      #theme.choiceBox("Wrist Biter")
       When you use goblin tactics in response to an adjacent enemy's attack, the enemy takes 1d4 damage right before you shift. This damage increases to 2d4 at 11th level and 3d4 at 21st level.
 
-      #shared.choiceBox("Shadowcreeper")
+      #theme.choiceBox("Shadowcreeper")
       When you use Goblin Tactics, you can shift 1 extra square, and you gain partial concealment until the end of your next turn.
     ]
   ]

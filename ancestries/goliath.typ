@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let goliathPage() = {
   return [
-    #shared.subPageTitle(title: "Goliath");
+    #theme.subPageTitle(title: "Goliath");
 
     #columns(2)[
       = Attributes
@@ -52,29 +52,29 @@
     = Goliath Feats
 
     #columns(2)[
-      #shared.choiceBox("Brute Force")
+      #theme.choiceBox("Brute Force")
       When you hit an enemy with a melee weapon daily attack, you can also push the target 1 square and knock the target prone.
 
-      #shared.choiceBox("Cast Aside")
+      #theme.choiceBox("Cast Aside")
       Whenever a Medium or smaller creature succeeds in escaping from being grabbed by you, you can slide the creature 3 squares as an opportunity action.
 
-      #shared.choiceBox("Dutiful Servant")
+      #theme.choiceBox("Dutiful Servant")
       You gain a +1 bonus to attack rolls on attacks granted by your allies' powers.
 
-      #shared.choiceBox("Great Goliath")
+      #theme.choiceBox("Great Goliath")
       When you use your second wind, you gain +3 to all defenses instead of the normal +2.
 
       #colbreak();
-      #shared.choiceBox("Markings of the Blessed")
+      #theme.choiceBox("Markings of the Blessed")
       The first time you make a saving throw during each encounter, you can roll twice and use either result.
 
-      #shared.choiceBox("Markings of the Victor")
+      #theme.choiceBox("Markings of the Victor")
       The first time you make an attack roll during each encounter, you can roll twice and use either result.
 
-      #shared.choiceBox("Stone's Wrath")
+      #theme.choiceBox("Stone's Wrath")
       When you take damage from an attack while you are affected by your stone's endurance, your next melee attack before the end of your next turn deals 1d6 extra damage.
 
-      #shared.choiceBox("Kord's Resilience")
+      #theme.choiceBox("Kord's Resilience")
       While your stone's endurance racial power is active, allies adjacent to you have the same resistance that the power grants you.
     ]
   ]

@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let dragonbornPage() = {
   return [
-    #shared.subPageTitle(title: "Dragonborn");
+    #theme.subPageTitle(title: "Dragonborn");
 
     #columns(2)[
       = Attributes
@@ -29,7 +29,7 @@
       ]
 
       #columns(2)[
-      #shared.choiceBox("Dragon Breath")
+      #theme.choiceBox("Dragon Breath")
 
       #powers.power(
         title: "Dragon Breath",
@@ -54,7 +54,7 @@
       );
 
       #colbreak();
-      #shared.choiceBox("Dragonfear")
+      #theme.choiceBox("Dragonfear")
 
       #powers.power(
         title: "Dragonfear",
@@ -80,15 +80,15 @@
 
     = Dragonborn Feats
     #columns(2)[
-      #shared.choiceBox("Blood of Dragons")
+      #theme.choiceBox("Blood of Dragons")
       *Requirements:* Dragonfear #linebreak();
       You gain a +2 bonus to all defenses against fear attacks, or a +4 if the attacker is a dragon.
 
-      #shared.choiceBox("Draconic Guardian")
+      #theme.choiceBox("Draconic Guardian")
       *Requirements:* Dragonfear #linebreak();
       When you hit a creature with dragonfear, you can mark it until the end of your next turn.
 
-      #shared.choiceBox("Adaptable Breath")
+      #theme.choiceBox("Adaptable Breath")
       *Requirements:* Dragon Breath #linebreak();
       Choose a type of damage your dragon breath doesn't already deal from among acid, cold, fire, lightning, or poison, necrotic, radiant.
       When you use your dragon breath racial power, you can choose to use this damage type rather than the normal damage dealt by the power. Only one damage type applies for a given dragon breath attack.
@@ -97,20 +97,20 @@
 
       #colbreak();
 
-      #shared.choiceBox("Bolstering Breath")
+      #theme.choiceBox("Bolstering Breath")
       *Requirements:* Dragon Breath #linebreak();
       Your dragon breath power targets enemies in the area, instead of all creatures in the area.
       In addition, allies in the area of your dragon breath gain a +1 bonus to attack rolls until the end of your next turn.
 
-      #shared.choiceBox("Enlarged Dragon Breath")
+      #theme.choiceBox("Enlarged Dragon Breath")
       *Requirements:* Dragon Breath #linebreak();
       When you use the dragon breath power, you can choose to make it blast 5 instead of blast 3.
 
-      #shared.choiceBox("Hurl Breath")
+      #theme.choiceBox("Hurl Breath")
       *Requirements:* Dragon Breath #linebreak();
       When you use your dragon breath, you can choose to make it an area burst 2 within 10 squares instead of a close blast 3.
 
-      #shared.choiceBox("Surprising Breath")
+      #theme.choiceBox("Surprising Breath")
       *Requirements:* Dragon Breath #linebreak();
       When you hit a creature with your dragon breath, you gain combat advantage against that creature until the start of your next turn.
     ]

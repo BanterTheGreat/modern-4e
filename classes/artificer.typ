@@ -1,4 +1,4 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 #import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf;
 
@@ -6,7 +6,7 @@
 
 #let artificerPage() = {
   return [
-    #shared.classTitle(
+    #theme.classTitle(
       title: "The Artificer",
       additional: [ _Using magical elixirs and contraptions, artificers bolster their allies and confound their enemies._
         #linebreak()
@@ -129,27 +129,27 @@
     ]
 
     #columns(2)[
-      #shared.choiceBox("Accurate Magic Weapon")
+      #theme.choiceBox("Accurate Magic Weapon")
       Whenever you use an Artficer power that targets a weapon or an implement, the next attack roll with that weapon or implement before the end of the encounter gains a +1 bonus.
 
-      #shared.choiceBox("Arcane Trapsmith")
+      #theme.choiceBox("Arcane Trapsmith")
       You can use your knowledge of the Arcane during Skill Checks to disable traps or open locks. You gain a +4 feat bonus to checks related to arcane traps or hazards.
 
 
-      #shared.choiceBox("Crossbow Caster")
+      #theme.choiceBox("Crossbow Caster")
       You can use a crossbow as an implement for your Artificer powers and Artificer paragon path powers.
 
       #colbreak();
-      #shared.choiceBox("Defensive Minions")
+      #theme.choiceBox("Defensive Minions")
       A creature you summon using an Artificer summoning power has a +2 feat bonus to all defenses.
 
-      #shared.choiceBox("Master Mixer")
+      #theme.choiceBox("Master Mixer")
       You can make alchemical items of your level + 3 or lower. You must have the correct formula and an appropriate skill.
 
-      #shared.choiceBox("Potent Restorables")
+      #theme.choiceBox("Potent Restorables")
       Your Artificer healing powers restore 2 extra hit points. The extra hit points increase to 3 at 6th level, to 4 at 11th level, to 5 at 16th level, to 6 at 21st level, and to 7 at 26th level.
 
-      #shared.choiceBox("Improved Augment Energy")
+      #theme.choiceBox("Improved Augment Energy")
       The Augment Energy option of your Arcane Empowerment class feature grants a +4 bonus to the attack roll instead of +2.
     ]
   ]

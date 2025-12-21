@@ -1,10 +1,10 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 #import "../helpers/powers.typ";
 #import "../helpers/ancestries.typ";
 
 #let dwarfPage() = {
   return [
-    #shared.subPageTitle(title: "Dwarf");
+    #theme.subPageTitle(title: "Dwarf");
 
     #columns(2)[
       = Attributes
@@ -47,27 +47,27 @@
 #pagebreak();
       = Dwarf Feats
       #columns(2)[
-      #shared.choiceBox("Comeback")
+      #theme.choiceBox("Comeback")
       If you are reduced to 0 hit points or fewer and return to consciousness in the same encounter, you gain a +1 bonus to AC and attack rolls until the end of the encounter.
 
-      #shared.choiceBox("Knock Back")
+      #theme.choiceBox("Knock Back")
       When you succeed on a saving throw to avoid being knocked prone, you can knock prone one enemy of size Large or smaller that is adjacent to you.
 
-      #shared.choiceBox("Quick Steps")
+      #theme.choiceBox("Quick Steps")
       You gain a +1 feat bonus to speed.
 
-            #shared.choiceBox("Fearsome Toughness")
+            #theme.choiceBox("Fearsome Toughness")
       When you use Dwarven Resilience, each enemy adjacent to you is marked by you until the end of your next turn.
 
 #colbreak();
 
-      #shared.choiceBox("Shield The Fallen")
+      #theme.choiceBox("Shield The Fallen")
       When you are adjacent to a bloodied, unconscious, or helpless ally, that ally gains a +2 bonus to saving throws and all defenses. The benefit of this feat doesn't stack if more than one character with Shield the Fallen is adjacent to the same ally.
 
-      #shared.choiceBox("Solid Footing")
+      #theme.choiceBox("Solid Footing")
       You ignore difficult terrain that is the result of rubble, uneven stone, or earthen construction such as stairs.
 
-      #shared.choiceBox("Bones of Stone")
+      #theme.choiceBox("Bones of Stone")
       Whenever you take a critical hit, roll a d20. If you roll an 11 or higher, the critical hit turns into a normal hit.
 
       ]

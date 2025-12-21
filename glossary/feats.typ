@@ -1,105 +1,105 @@
-#import "../helpers/shared.typ";
+#import "../helpers/theme.typ" as theme;
 
 
 #let featsPage() = {
   return [
-    #shared.pageTitle(title: "General Feats");
+    #theme.pageTitle(title: "General Feats");
     #columns(2)[
       = Heroic Feats
-      #shared.choiceBox("Alchemist")
+      #theme.choiceBox("Alchemist")
       You master the Alchemical Synthesis technique, additionally, you learn a 
       formula of your level or lower at 1st level, 2nd level, and every even level thereafter.
 
       *Special*: You can take this feat instead of the Ritual Caster feat granted by your class feature.
 
-      #shared.choiceBox("Alertness")
+      #theme.choiceBox("Alertness")
       You can’t be surprised.
 
-      #shared.choiceBox("Implement Proficiency")
+      #theme.choiceBox("Implement Proficiency")
       Choose a kind of implement associated with your source. You can now use that kind of implement.
 
-      #shared.choiceBox("Armor Proficiency")
+      #theme.choiceBox("Armor Proficiency")
       You gain proficiency in the next tier of armor. Going from Cloth - Leather - Hide - Chainmail - Scale - Plate.
       #linebreak()
       *Special*: You may take this feat multiple times.
 
-      #shared.choiceBox("Blindfighting Warrior")
+      #theme.choiceBox("Blindfighting Warrior")
       Your melee attacks take no penalties due to partial or total concealment.
 
-      #shared.choiceBox("Blindfighting Warden")
+      #theme.choiceBox("Blindfighting Warden")
       You do not grant combat advantage to enemies invisible to you. While you are blinded, you do not take the penalty to checks which use your eyes.
 
-      #shared.choiceBox("Bloodied Fleetness")
+      #theme.choiceBox("Bloodied Fleetness")
       While you are bloodied, you gain a +1 bonus to speed.
 
-      #shared.choiceBox("Combat Medic")
+      #theme.choiceBox("Combat Medic")
       You can administer first aid to stabilize a dying creature as a minor action, instead of a standard action.
 
-      #shared.choiceBox("Coordinated Explosion")
+      #theme.choiceBox("Coordinated Explosion")
       When you use any implement power that targets creatures in a burst or a blast, you gain a +1 bonus to attack rolls against the power’s targets if at least one ally is within the burst or the blast.
 
-      #shared.choiceBox("Daring Duelist")
+      #theme.choiceBox("Daring Duelist")
       You gain combat advantage against enemies that have no creatures adjacent to them other than you.
 
-      #shared.choiceBox("Defensive Mobility")
+      #theme.choiceBox("Defensive Mobility")
       You gain a +2 bonus to AC against opportunity attacks.
 
-      #shared.choiceBox("Disciple of Death")
+      #theme.choiceBox("Disciple of Death")
       You gain a +5 feat bonus to death saving throws.
 
-      #shared.choiceBox("Distant Advantage")
+      #theme.choiceBox("Distant Advantage")
       You gain combat advantage for ranged or area attacks against any enemy flanked by your allies.
 
-      #shared.choiceBox("Durable")
+      #theme.choiceBox("Durable")
       Your number of healing surges increases by two.
 
-      #shared.choiceBox("Eager Advance")
+      #theme.choiceBox("Eager Advance")
       You gain a +4 feat bonus to speed on your first turn during an encounter.
 
-      #shared.choiceBox("Escape Artist")
+      #theme.choiceBox("Escape Artist")
       You can attempt to escape a grab as a minor action, instead of as a move action.
 
-      #shared.choiceBox("Expert Technique-ist")
+      #theme.choiceBox("Expert Technique-ist")
       You gain a +2 bonus to skill checks that you make while performing a technique.
 
-      #shared.choiceBox("Far Thought")
+      #theme.choiceBox("Far Thought")
       Once per day, you can use telepathy for 5 minutes. You can communicate with any creature within 5 squares of you that has a language and that you can see. This telepathy allows for two-way communication.
 
-      #shared.choiceBox("Improved Initiative")
+      #theme.choiceBox("Improved Initiative")
       You gain a +4 feat bonus to initiative.
 
-      #shared.choiceBox("Low-Light Adaptation")
+      #theme.choiceBox("Low-Light Adaptation")
       You gain Low-Light vision.
 
-      #shared.choiceBox("Lucky Start")
+      #theme.choiceBox("Lucky Start")
       If your initiative is the highest at the start of an encounter, when you make your first attack roll of the encounter you can roll twice and use either result.
 
-      #shared.choiceBox("Resilient")
+      #theme.choiceBox("Resilient")
       You gain a +2 feat bonus to saving throws.
 
-      #shared.choiceBox("Shield Proficiency")
+      #theme.choiceBox("Shield Proficiency")
       You gain proficiency in the next tier of shield. Going from Light-Heavy.
       #linebreak()
       *Special*: You may take this feat multiple times.
 
-      #shared.choiceBox("Speed Loader")
+      #theme.choiceBox("Speed Loader")
       As a free action, you can reload a crossbow you’re wielding that has the load minor weapon property.
 
-      #shared.choiceBox("Unarmored Agility")
+      #theme.choiceBox("Unarmored Agility")
       You gain a +2 feat bonus to AC while wearing either cloth armor or no armor.
 
-      #shared.choiceBox("Unfailing Vigor")
+      #theme.choiceBox("Unfailing Vigor")
       When you roll a 18 or higher on a death saving throw, you can spend a healing surge as if you had rolled a 20.
 
-      #shared.choiceBox("Weapon Proficiency")
+      #theme.choiceBox("Weapon Proficiency")
       Choose a weapon, you become proficient in that weapon.
       #linebreak()
       *Special*: You may take this feat multiple times.
 
-      #shared.choiceBox("Toughness")
+      #theme.choiceBox("Toughness")
       You gain 5 additional hit points. These additional hit points increase to 10 at 11th level and 15 at 21st level.
 
-      #shared.choiceBox("Technique Mastery")
+      #theme.choiceBox("Technique Mastery")
       Choose a Technique category, once per day, you can ignore the cost of a technique of that category of your level or lower that you have mastered.
       #linebreak()
       *Special*: You may take this feat multiple times, each time you do, select another category.
@@ -108,187 +108,187 @@
 
       = Multiclass Feats
       == General
-        #shared.choiceBox("Novice Power")
+        #theme.choiceBox("Novice Power")
       *Requirements*: Level 4+ #linebreak()
       You can swap one encounter attack power you know for one encounter attack power of the same level or lower from the class you multiclassed into.
 
-      #shared.choiceBox("Intermediate Power")
+      #theme.choiceBox("Intermediate Power")
       *Requirements*: Level 8+ #linebreak()
       You can swap one utility power you know for one utility power of the same level or lower from the class you multiclassed into.
 
-      #shared.choiceBox("Adept Power")
+      #theme.choiceBox("Adept Power")
       *Requirements*: Level 10+ #linebreak()
       You can swap one daily attack power you know for one daily attack power of the same level or lower from the class you multiclassed into.
 
       == Fighter
 
-      #shared.choiceBox("Student of the Sword")
+      #theme.choiceBox("Student of the Sword")
       Choose either one-handed melee weapons or two-handed melee weapons. Once per encounter as a free action, you can add a +1 bonus to the next attack roll you make with a weapon of that category. Whether the attack hits or misses, you mark the target until the end of your next turn.
 
-      #shared.choiceBox("Wrathful Warrior")
+      #theme.choiceBox("Wrathful Warrior")
       Once per encounter, when you are hit by a melee attack or a close attack, you gain temporary hit points equal to your Constitution modifier.
 
-      #shared.choiceBox("Cyclone Warrior")
+      #theme.choiceBox("Cyclone Warrior")
       Once per encounter as a free action during your turn, while you are wearing light armor or chainmail and wielding a weapon in each hand, you can gain a +1 bonus to damage rolls with melee or close attacks until the end of your turn. This bonus increases to +2 at 11th level and +3 at 21st level.
 
-      #shared.choiceBox("Brawling Warrior")
+      #theme.choiceBox("Brawling Warrior")
       Once per encounter while you wield a weapon in one hand and have nothing in your other hand, you can use a free action during your turn to gain a +1 bonus to an attack roll you just made or a +1 bonus to AC until the start of your next turn.
 
-      #shared.choiceBox("Battle Awareness")
+      #theme.choiceBox("Battle Awareness")
       Once per encounter, whenever an enemy that is adjacent to you shifts or makes an attack that does not include you as a target, you can make a melee basic attack against that enemy as an immediate interrupt.
 
       == Cleric
 
-      #shared.choiceBox("Initiate of the Faith")
+      #theme.choiceBox("Initiate of the Faith")
       Once per day, you can use the Cleric’s healing word power. In addition, you can use a holy symbol as an implement.
 
-      #shared.choiceBox("Divine Healer")
+      #theme.choiceBox("Divine Healer")
       You gain the cleric's Healer's Lore class feature. In addition, you can wield cleric implements.
 
       == Paladin
 
-      #shared.choiceBox("Soldier of Virtue")
+      #theme.choiceBox("Soldier of Virtue")
       Once per day, you can use the virtue’s touch power. In addition, you can wield paladin implements.
 
-      #shared.choiceBox("Squire of Righteousness")
+      #theme.choiceBox("Squire of Righteousness")
       You have proficiency with holy symbols. You gain the defender aura power. You can use righteous radiance as an encounter power.
 
-      #shared.choiceBox("Soldier of the Faith")
+      #theme.choiceBox("Soldier of the Faith")
       Once per encounter, you can use the Paladin’s divine challenge power.
       In addition, you can use a holy symbol or a holy avenger as an implement.
 
       == Ranger
 
-      #shared.choiceBox("Warrior of the Wild")
+      #theme.choiceBox("Warrior of the Wild")
       Once per encounter, you can use the Ranger’s Hunter's Quarry class feature. The target you designate as your quarry remains your quarry until the end of your next turn.
 
-      #shared.choiceBox("Two-Blade Warrior")
+      #theme.choiceBox("Two-Blade Warrior")
       You can wield a one-handed weapon in your off hand as though it were an off-hand weapon.
 
       == Rogue
 
-      #shared.choiceBox("Ruthless Efficiency")
+      #theme.choiceBox("Ruthless Efficiency")
       You gain the Ruthless Ruffian class feature.
 
-      #shared.choiceBox("Sly Dodge")
+      #theme.choiceBox("Sly Dodge")
       Once per encounter, when an enemy makes an opportunity attack against you, you can add your Charisma modifier to your AC against that attack.
 
-      #shared.choiceBox("Twilight Adept")
+      #theme.choiceBox("Twilight Adept")
       Once per encounter, you can use a free action during your turn to gain the benefit of the Rogue class feature Cunning Sneak until the end of your turn.
 
-      #shared.choiceBox("Sneak of Shadows")
+      #theme.choiceBox("Sneak of Shadows")
       Once per encounter, you can use the Rogue's Sneak Attack class feature.
 
       == Warlock
 
-      #shared.choiceBox("Student of Malediction")
+      #theme.choiceBox("Student of Malediction")
       Once per encounter, you can use the Warlock’s Curse class feature. The curse ends the first time you deal the extra damage from Warlock's Curse. In addition, you can wield Warlock implements.
 
-      #shared.choiceBox("Pact Initiate")
+      #theme.choiceBox("Pact Initiate")
       Choose a Warlock pact. You gain the pact's at-will power as an encounter power, and you can pursue the Warlock’s paragon path based on that pact. In addition, you can use a rod, a wand, or a pact blade as an implement.
 
       == Warlord
 
-      #shared.choiceBox("Resourceful Leader")
+      #theme.choiceBox("Resourceful Leader")
       When an ally you can see spends an action point to make an attack, the ally gains a +3 bonus to damage rolls on a hit or gains 3 temporary hit points on a miss. This bonus increases to +5 at 11th level and +7 at 21st level. These temporary hit points increase to 5 at 11th level and 7 at 21st level.
 
-      #shared.choiceBox("Student of Battle")
+      #theme.choiceBox("Student of Battle")
       Once per day, you can use the Warlord’s inspiring word power.
 
-      #shared.choiceBox("Bravura Leader")
+      #theme.choiceBox("Bravura Leader")
       When an ally you can see spends an action point to attack, that ally can choose to gain a +4 bonus to the attack's damage roll. If the ally chooses to use the bonus, he or she grants combat advantage to the target of the attack until the end of his or her next turn. This bonus increases to +6 at 11th level and +8 at 21st level.
 
-      #shared.choiceBox("Skirmishing Leader")
+      #theme.choiceBox("Skirmishing Leader")
       When an ally you can see spends an action point to take an extra action, that ally can shift 1 square as a free action before or after the extra action.
 
-      #shared.choiceBox("Insightful Leader")
+      #theme.choiceBox("Insightful Leader")
       When an ally you can see spends an action point to take an extra action, that ally gains a +1 bonus to all defenses until the end of his or her next turn.
 
-      #shared.choiceBox("Inspiring Leader")
+      #theme.choiceBox("Inspiring Leader")
       Once per encounter, when an ally who can see you spends an action point to take an extra action, that ally also gains temporary hit points equal to 1 + one-half your level.
 
-      #shared.choiceBox("Tactical Leader")
+      #theme.choiceBox("Tactical Leader")
       Once per encounter, when an ally you can see spends an action point to make an attack, that ally gains a +1 bonus to the attack roll.
 
       == Wizard
 
-      #shared.choiceBox("Arcane Initiate")
+      #theme.choiceBox("Arcane Initiate")
       Choose a 1st-level wizard at-will power. You can use that power once per encounter. In addition, you can use Wizard implements.
 
       == Avenger
 
-      #shared.choiceBox("Disciple of Divine Wrath")
+      #theme.choiceBox("Disciple of Divine Wrath")
       You can use the Avenger’s oath of enmity power. The effect lasts until the end of your next turn. In addition, you can wield Avenger implements.
 
       == Barbarian
 
-      #shared.choiceBox("Barbarian’s Fury")
+      #theme.choiceBox("Barbarian’s Fury")
       Once per day as a free action, you can gain a +2 bonus to damage rolls until the end of the encounter.
 
-      #shared.choiceBox("Rampant Fury")
+      #theme.choiceBox("Rampant Fury")
       You gain the Barbarian’s class feature Rampage.
 
       == Bard
 
-      #shared.choiceBox("Basic Dilettante")
+      #theme.choiceBox("Basic Dilettante")
       Once per day, you can use the Bard’s majestic word power. In addition, you can wield bard implements.
 
       == Druid
 
-      #shared.choiceBox("Initiate of the Old Faith")
+      #theme.choiceBox("Initiate of the Old Faith")
       You gain the Druid's wild shape power. Choose a 1st-level Druid at-will attack power that has the beast form keyword. You can use that power once per encounter. In addition, you can wield Druid implements.
 
-      #shared.choiceBox("Hunting Predator")
+      #theme.choiceBox("Hunting Predator")
       While you are in beast form, you gain a +1 bonus to speed.
 
       == Invoker
 
-      #shared.choiceBox("Keeper of Divine Secrets")
+      #theme.choiceBox("Keeper of Divine Secrets")
       Choose a 1st-level Invoker at-will attack power. You can use that power once per encounter. In addition, you can wield Invoker implements.
 
       == Shaman
 
-      #shared.choiceBox("Spirit Talker")
+      #theme.choiceBox("Spirit Talker")
       You gain the Shaman’s call spirit companion power, but you use it as a standard action. Choose a Companion Spirit option. You gain the at-will Shaman power associated with that option, such as spirit's shield or spirit's fang, as an encounter power. You gain speak with spirits as a daily power. In addition, you can wield Shaman implements.
 
-      #shared.choiceBox("Mending Spirit")
+      #theme.choiceBox("Mending Spirit")
       *Requirements*: Spirit Talker #linebreak()
       You gain the shaman power healing spirit, but you can use it only once per encounter.
 
       == Sorcerer
 
-      #shared.choiceBox("Arcane Prodigy")
+      #theme.choiceBox("Arcane Prodigy")
       Once per encounter as a free action, you can gain a +2 bonus to your next damage roll. The bonus increases to +3 at 11th level and +4 at 21st level. In addition, you can wield sorcerer implements.
 
-      #shared.choiceBox("Soul of Sorcery")
+      #theme.choiceBox("Soul of Sorcery")
       Choose acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder. You gain resist 5 to that damage type. In addition, you can wield sorcerer implements.
 
       == Warden
 
-      #shared.choiceBox("Defender of the Wild")
+      #theme.choiceBox("Defender of the Wild")
       Once per encounter as a free action, you can mark each enemy adjacent to you until the end of your next turn.
 
-      #shared.choiceBox("Warden’s Endurance")
+      #theme.choiceBox("Warden’s Endurance")
       Once per encounter, you can make a saving throw against one effect that a save can end at the start of your turn. On a save, the effect immediately ends, preventing it from affecting you on your current turn. If you fail the saving throw, you still make a saving throw against the effect at the end of your turn.
 
       == Runepriest
 
-      #shared.choiceBox("Student of Divine Runes")
+      #theme.choiceBox("Student of Divine Runes")
       Once per day, you can use the Runepriest’s rune of mending power.
 
       == Artificer
 
-      #shared.choiceBox("Student of Artifice")
+      #theme.choiceBox("Student of Artifice")
       Once per day, you can use the Artificer’s healing infusion power. The infusion you create cannot be replenished.
       In addition, you can wield Artificer’s implements.
 
       == Swordmage
 
-      #shared.choiceBox("Blade Initiate")
+      #theme.choiceBox("Blade Initiate")
       Once per day, when you are wielding a blade, you can invoke the Swordmage Warding class feature as a minor action. Until the end of the encounter, you gain a +1 bonus to AC (or a +3 bonus to AC if you have one hand free).
       In addition, you can use Swordmage implements.
 
-      #shared.choiceBox("Heart of the Blade")
+      #theme.choiceBox("Heart of the Blade")
       You gain the Swordmage’s Swordbond class feature. In addition, you can wield Swordmage’s implements.
     ]
   ]

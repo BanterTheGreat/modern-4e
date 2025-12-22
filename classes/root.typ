@@ -15,11 +15,13 @@
 #import "./shaman.typ";
 #import "./paladin.typ";
 #import "./swordmage.typ";
+#import "./bard.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
     return (
       artificer.artificerPage(),
+      bard.bardPage(),
       cleric.clericPage(),
       shaman.shamanPage(),
       runepriest.runePriestPage(),

@@ -36,6 +36,7 @@
   tome: "Tome",
   rod: "Rod",
   dagger: "Dagger",
+  totem: "Totem",
 )
 
 #let proficiencies(

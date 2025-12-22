@@ -12,12 +12,14 @@
 #import "./warden.typ";
 #import "./ranger.typ";
 #import "./sorcerer.typ";
+#import "./shaman.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
     return (
       artificer.artificerPage(),
       cleric.clericPage(),
+      shaman.shamanPage(),
       runepriest.runePriestPage(),
       warlord.warlordPage(),
     ).join(pagebreak())

@@ -63,7 +63,7 @@
     fill: theme.headerColor,
   )])]);
 
-#show heading.where(numbering: "1.", level: 3): it => theme.transparentBlock(below: -8pt, content: [#box(align(
+#show heading.where(numbering: "1.", level: 3): it => theme.transparentBlock(below: 3pt, content: [#box(align(
   center,
 )[#box(
   it,

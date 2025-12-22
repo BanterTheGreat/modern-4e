@@ -45,6 +45,8 @@
   },
 )
 
+#show table: it => theme.transparentBlock(content: it); 
+
 #show heading.where(level: 1): it => theme.transparentBlock(above: 12pt, below: 6pt, content: [
   #box(align(center)[#box(
     it,

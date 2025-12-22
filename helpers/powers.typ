@@ -1,3 +1,5 @@
+#import "theme.typ";
+
 #let at-will-color = rgb("#a6d37b")
 #let encounter-color = rgb("#e6958c")
 #let daily-color = rgb("#969090")

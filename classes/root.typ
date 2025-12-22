@@ -14,6 +14,7 @@
 #import "./sorcerer.typ";
 #import "./shaman.typ";
 #import "./paladin.typ";
+#import "./swordmage.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -46,6 +47,7 @@
   return (
     fighter.fighterPage(),
     paladin.paladinPage(),
+    swordmage.swordmagePage(),
     warden.wardenPage(),
 
   ).join(pagebreak())

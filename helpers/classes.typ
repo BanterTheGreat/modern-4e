@@ -26,6 +26,8 @@
   shortSword: "Shortsword",
   sling: "Sling",
   staff: "Staff",
+  militaryLightBlade: "Military Light Blade",
+  militaryHeavyBlade: "Military Heavy Blade",
 )
 
 #let implementProf = (
@@ -37,6 +39,8 @@
   rod: "Rod",
   dagger: "Dagger",
   totem: "Totem",
+  lightBlade: "Light Blade",
+  heavyBlade: "Heavy Blade",
 )
 
 #let proficiencies(

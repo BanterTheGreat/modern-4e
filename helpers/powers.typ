@@ -4,7 +4,7 @@
 #let utility-color = rgb("#5e84b4")
 
 #let powerType = (
-  at-will: "At-will",
+  at-will: "At-Will",
   encounter: "Encounter",
   daily: "Daily",
   utility: "Utility",

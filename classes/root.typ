@@ -1,12 +1,12 @@
 #import "../helpers/theme.typ" as theme;
 
-
 #import "./cleric.typ";
 #import "./artificer.typ";
 #import "./wizard.typ";
 #import "./fighter.typ";
 #import "./warlord.typ";
 #import "./invoker.typ";
+#import "./warlock.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -26,6 +26,7 @@
 
   let _getStrikerPages() = {
     return (
+      warlock.warlockPage(),
     ).join(pagebreak())
   }
 

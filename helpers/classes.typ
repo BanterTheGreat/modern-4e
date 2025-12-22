@@ -49,13 +49,13 @@
   }
 
 
-  let rows = ();
+  let rows = ()
   if armorContent != none {
     rows.push([
       #box(image("../svgs/armor.svg", height: 2em))
       #linebreak()
       #armorContent
-    ]);
+    ])
   }
 
   if weaponContent != none {
@@ -63,7 +63,7 @@
       #box(image("../svgs/sword.svg", height: 2em))
       #linebreak()
       #weaponContent
-    ]);
+    ])
   }
 
   if implementContent != none {
@@ -73,16 +73,16 @@
       #implementContent
     ])
   }
-  
+
   return [
     = Proficiencies
     #text(
       table(
         columns: (
           {
-            let cols = ();
+            let cols = ()
             for i in range(0, rows.len()) {
-              cols.push(1fr);
+              cols.push(1fr)
             }
             cols
           }
@@ -216,7 +216,7 @@
     );]
 }
 
-#let powerLinks(className: str, extraContent: none) = [
+#let powerLinks(className: str, extraContent: none, skipAtWill: false) = [
   #align(center)[
     = #className Powers
   ]
@@ -259,8 +259,12 @@
   #columns(2)[
     #extraContent;
 
-    = At-Will
-    #getLinks(power: powerType.at-will, level: 1)
+    #if skipAtWill == false {
+      [
+        = At-Will
+        #getLinks(power: powerType.at-will, level: 1)
+      ]
+    }
 
     = Encounter
     #getLinks(power: powerType.encounter, level: (1, 3, 7, 13, 17, 23, 27));

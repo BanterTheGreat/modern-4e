@@ -167,9 +167,11 @@
 
     = Feats
     You gain access to the #className feat list
-    #set page(columns: 1)
 
+    #colbreak();
     #classes.powerLinks(className: className);
+
+    #set page(columns: 1)
 
     #pagebreak()
 

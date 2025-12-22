@@ -12,7 +12,7 @@
 #import "glossary/skill_checks.typ" as skillChecks;
 #import "glossary/techniques.typ" as techniques;
 
-#let showPages(pages: (())) = {
+#let showPages(pages: ()) = {
   pages.join(pagebreak())
 }
 
@@ -22,37 +22,53 @@
   margin: (top: 1cm, rest: 2cm),
   fill: rgb("#F0E3C7"),
   background: {
-    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(theme.edgeColor, theme.centerColor, angle: 90deg)))
+    place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(
+      theme.edgeColor,
+      theme.centerColor,
+      angle: 90deg,
+    )))
     place(bottom + left, rect(width: 100%, height: 15%, fill: gradient.linear(
       theme.centerColor,
       theme.edgeColor,
       angle: 90deg,
     )))
-    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(theme.edgeColor, theme.centerColor, angle: 0deg)))
-    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(theme.centerColor, theme.edgeColor, angle: 0deg)))
+    place(top + left, rect(width: 15%, height: 100%, fill: gradient.linear(
+      theme.edgeColor,
+      theme.centerColor,
+      angle: 0deg,
+    )))
+    place(top + right, rect(width: 15%, height: 100%, fill: gradient.linear(
+      theme.centerColor,
+      theme.edgeColor,
+      angle: 0deg,
+    )))
   },
 )
 
-#show heading.where(level: 1): it => box(align(center)[#box(
-  it,
-  width: 100%,
-  inset: 6pt,
-  fill: theme.headerColor,
-)]);
+#show heading.where(level: 1): it => theme.transparentBlock(above: 12pt, below: 6pt, content: [
+  #box(align(center)[#box(
+    it,
+    width: 100%,
+    inset: 6pt,
+    fill: theme.headerColor,
+  )])]);
 
-#show heading.where(numbering: "1.", level: 2): it => box(align(center)[#box(
-  it,
-  width: 100%,
-  inset: 6pt,
-  fill: theme.headerColor,
-)]);
+#show heading.where(numbering: "1.", level: 2): it => theme.transparentBlock(spacing: 12pt, content: [
+  #box(align(center)[#box(
+    it,
+    width: 100%,
+    inset: 6pt,
+    fill: theme.headerColor,
+  )])]);
 
-#show heading.where(numbering: "1.", level: 3): it => box(align(center)[#box(
+#show heading.where(numbering: "1.", level: 3): it => theme.transparentBlock(below: -8pt, content: [#box(align(
+  center,
+)[#box(
   it,
   width: 100%,
   inset: 6pt,
   fill: theme.headerColor,
-)]);
+)])]);
 
 
 #align(center)[

@@ -7,25 +7,33 @@
 
 #let defaultTableStyle() = {
   return (col, row) => if row == 0 {
-      rgb("#D4C4A0")
-    } else if calc.rem(row, 2) == 0 {
-      rgb("#E8DBB7")
-    } else {
-      rgb("#F0E3C7")
-    };
+    rgb("#D4C4A0")
+  } else if calc.rem(row, 2) == 0 {
+    rgb("#E8DBB7")
+  } else {
+    rgb("#F0E3C7")
+  }
 }
 
 #let choiceBox(content) = {
-  return box(
-    align(center)[
-      #box(
-        text(content, size: 12pt, weight: "bold"),
-        width: 100%,
-        inset: 4pt,
-        fill: header2Color,
-      )
-    ],
-  )
+  block(
+    stroke: 0.5pt + rgb("#D4C4A0"),
+    radius: 2pt,
+    clip: true,
+    width: 100%,
+    below: 6pt,
+  )[
+    #box(
+      align(center)[
+        #box(
+          text(content, size: 12pt, weight: "bold"),
+          width: 100%,
+          inset: 4pt,
+          fill: header2Color,
+        )
+      ],
+    )
+  ]
 }
 
 #let pageTitle(title: str, additional: none) = {
@@ -66,4 +74,15 @@
       #additional
     ]
   ]
+}
+
+#let transparentBlock(above: auto, below: auto, spacing: none, content: content) = {
+  return block(
+    stroke: 0.5pt + rgb("#D4C4A0"),
+    radius: 4pt,
+    clip: true,
+    width: 100%,
+    above: if (spacing != none) { spacing } else { above },
+    below: if (spacing != none) { spacing } else { below },
+  )[#content]
 }

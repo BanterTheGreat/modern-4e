@@ -1,5 +1,6 @@
 #import "shared.typ";
 #import "powers.typ": powerType;
+#import "theme.typ";
 
 #let armorProf = (
   cloth: "Cloth (L)",
@@ -79,25 +80,27 @@
 
   return [
     = Proficiencies
-    #text(
-      table(
-        columns: (
-          {
-            let cols = ()
-            for i in range(0, rows.len()) {
-              cols.push(1fr)
+    #theme.transparentBlock(above: 12pt, content: [
+      #text(
+        table(
+          columns: (
+            {
+              let cols = ()
+              for i in range(0, rows.len()) {
+                cols.push(1fr)
+              }
+              cols
             }
-            cols
-          }
+          ),
+          stroke: 0.5pt + rgb("#D4C4A0"),
+          align: center,
+          fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
+          inset: 8pt,
+          ..rows
         ),
-        stroke: 0.5pt + rgb("#D4C4A0"),
-        align: center,
-        fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        ..rows
-      ),
-      size: 10pt,
-    );
+        size: 10pt,
+      );
+    ])
   ]
 }
 
@@ -111,30 +114,39 @@
 ) = {
   return [
     = Defenses & Health
-    #text(
-      table(
-        columns: (1fr, 1fr),
-        stroke: 0.5pt + rgb("#D4C4A0"),
-        align: center,
-        fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        [
-          #box(image("../svgs/shield.svg", height: 2em))
-          #linebreak()
-          #("Fortitude: " + str(fortitude), "Will: " + str(will), "Reflex: " + str(reflex)).join(linebreak())
-        ],
-        [
-          #box(image("../svgs/heart.svg", height: 2em))
-          #linebreak()
-          #(
-            "Health: " + str(health),
-            "Health on level-up: " + str(healthOnLevelUp),
-            "Healing Surges: " + str(healingSurges),
-          ).join(linebreak())
-        ],
-      ),
-      size: 10pt,
-    )]
+    #block(
+      stroke: 0.5pt + rgb("#D4C4A0"),
+      radius: 4pt,
+      clip: true,
+      width: 100%,
+      above: 12pt,
+    )[
+      #text(
+        table(
+          columns: (1fr, 1fr),
+          stroke: 0.5pt + rgb("#D4C4A0"),
+          align: center,
+          fill: (col, row) => if calc.rem(col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
+          inset: 8pt,
+          [
+            #box(image("../svgs/shield.svg", height: 2em))
+            #linebreak()
+            #("Fortitude: " + str(fortitude), "Will: " + str(will), "Reflex: " + str(reflex)).join(linebreak())
+          ],
+          [
+            #box(image("../svgs/heart.svg", height: 2em))
+            #linebreak()
+            #(
+              "Health: " + str(health),
+              "Health on level-up: " + str(healthOnLevelUp),
+              "Healing Surges: " + str(healingSurges),
+            ).join(linebreak())
+          ],
+        ),
+        size: 10pt,
+      )
+    ]
+  ]
 }
 
 #let abilities(mainAbilities: (str), class: str, extraAbilities: (str)) = {
@@ -179,50 +191,54 @@
     #additionalInfo;
 
     #text(
-      table(
-        columns: (1fr, 1fr, 1fr),
+      block(
         stroke: 0.5pt + rgb("#D4C4A0"),
-        align: left,
-        fill: (col, row) => if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
-        inset: 8pt,
-        [
-          #align(center)[=== Dexterity
-            #("+1 Reflex", "+1 Initiative").join(linebreak())]
-        ],
-        [
-          #align(center)[=== Strength
-            +1 Fortitude]
-        ],
-        [
-          #align(center)[=== Constitution
-            #("+1 Fortitude", "+1 Heal Surge", "+2 Health").join(linebreak())]
-        ],
+        radius: 4pt,
+        clip: true,
+        width: 100%,
+      )[
+        #table(
+          columns: (1fr, 1fr, 1fr),
+          stroke: 0.5pt + rgb("#D4C4A0"),
+          align: left,
+          fill: (col, row) => if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") },
+          inset: 8pt,
+          [
+            #align(center)[=== Dexterity
+              #("+1 Reflex", "+1 Initiative").join(linebreak())]
+          ],
+          [
+            #align(center)[=== Strength
+              +1 Fortitude]
+          ],
+          [
+            #align(center)[=== Constitution
+              #("+1 Fortitude", "+1 Heal Surge", "+2 Health").join(linebreak())]
+          ],
 
-        [
-          #align(center)[=== Intelligence
-            #("+1 Reflex", "+1 Initiative").join(linebreak())]
-        ],
-        [
-          #align(center)[=== Wisdom
-            +1 Will]
-        ],
-        [
-          #align(center)[=== Charisma
-            +1 Will
-            #linebreak()
-            ‌‌
-            #linebreak()
-            ‌‌ ]
-        ],
-      ),
+          [
+            #align(center)[=== Intelligence
+              #("+1 Reflex", "+1 Initiative").join(linebreak())]
+          ],
+          [
+            #align(center)[=== Wisdom
+              +1 Will]
+          ],
+          [
+            #align(center)[=== Charisma
+              +1 Will
+              #linebreak()
+              ‌‌
+              #linebreak()
+              ‌‌ ]
+          ],
+        )],
       size: 10pt,
-    );]
+    )
+  ]
 }
 
 #let powerLinks(className: str, extraContent: none, skipAtWill: false) = [
-  #align(center)[
-    = #className Powers
-  ]
 
   #let getLinks = (power: powerType, level: (int)) => {
     let baseUrl = if power == powerType.at-will {
@@ -249,33 +265,53 @@
     if type(level) == array {
       let links = level.map(l => {
         let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(l))
-        link(url)[Link to Level #str(l) #str(powerText)]
+        link(url)[#str(powerText) #str(l)]
       })
 
-      return links.join(linebreak())
+      return links
     } else {
       let url = baseUrl.replace("__ClassName__", className).replace("__Level__", str(level))
-      return link(url)[Link to Level #str(level) #str(powerText)]
+      return (link(url)[#str(powerText) #str(level)])
     }
   }
 
-  #columns(2)[
-    #extraContent;
-
-    #if skipAtWill == false {
-      [
-        = At-Will
-        #getLinks(power: powerType.at-will, level: 1)
-      ]
-    }
-
-    = Encounter
-    #getLinks(power: powerType.encounter, level: (1, 3, 7, 13, 17, 23, 27));
-
-    = Daily
-    #getLinks(power: powerType.daily, level: (1, 5, 9, 15, 19, 25, 29));
-
-    = Utility
-    #getLinks(power: powerType.utility, level: (2, 6, 10, 16, 22, 26))
+  #align(center)[
+    = Links to #className Powers
   ]
+
+  #extraContent;
+
+  // #if skipAtWill == false {
+  //   [
+  //     = At-Will
+  //     #getLinks(power: powerType.at-will, level: 1)
+  //   ]
+  // }
+
+  #theme.transparentBlock(spacing: 0pt, content: [
+    #table(
+      columns: 1fr,
+      stroke: none,
+      align: center,
+      fill: (col, row) => {
+        // Section header rows: At-Will (0), Encounter (2), Daily (9), Utility (17)
+        let sectionRows = (0, 2, 9, 17)
+        if sectionRows.contains(row) {
+          rgb("#d3bd89") // Darker color for section headers
+        } else if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") }
+      },
+      inset: 6pt,
+      [At-Will],
+      [#getLinks(power: powerType.at-will, level: 1)],
+
+      [Encounter],
+      ..getLinks(power: powerType.encounter, level: (3, 7, 13, 17, 23, 27)),
+
+      [Daily],
+      ..getLinks(power: powerType.daily, level: (1, 5, 9, 15, 19, 25, 29)),
+
+      [Utility],
+      ..getLinks(power: powerType.utility, level: (2, 6, 10, 16, 22, 26))
+    )
+  ]);
 ]

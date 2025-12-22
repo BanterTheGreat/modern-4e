@@ -25,6 +25,7 @@
   handCrossbow: "Hand Crossbow",
   shortSword: "Shortsword",
   sling: "Sling",
+  staff: "Staff",
 )
 
 #let implementProf = (
@@ -34,6 +35,7 @@
   wand: "Wand",
   tome: "Tome",
   rod: "Rod",
+  dagger: "Dagger",
 )
 
 #let proficiencies(

@@ -89,13 +89,20 @@
 
       = Feats
       You gain access to the #className feat list
+
+      #colbreak();
+      #classes.commonTraits(class: className, commonTraits: [
+        == Reliable
+        An effect type. If a reliable power misses every target, the power is not expended.
+        == Rattling
+        If a creature deals damage with a power that has the rattling keyword, the target takes a -2 penalty to attack rolls until the end of the user's next turn. A target that is immune to fear is not subject to this penalty.
+      ])
+      #classes.powerLinks(className: className);
     ]
 
     #pagebreak()
 
     #set page(columns: 1)
-
-    #classes.powerLinks(className: className);
 
     #pagebreak()
 
@@ -169,7 +176,7 @@
 
       #theme.choiceBox("Brutal Teamwork");
       You gain a +2 bonus to damage rolls when you are adjacent to at least one ally.
-      
+
       #theme.choiceBox("Surprise Knockdown");
       *Requirements: 3 Strength*
       If you score a critical hit while you have combat advantage, you knock the target prone.

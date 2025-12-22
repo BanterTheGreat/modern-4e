@@ -88,13 +88,13 @@
 
       = Feats
       You gain access to the #className feat list
-    ]
 
-    #pagebreak()
+      #colbreak();
+      #classes.powerLinks(className: className);
+    ]
 
     #set page(columns: 1)
 
-    #classes.powerLinks(className: className);
 
     #pagebreak()
 

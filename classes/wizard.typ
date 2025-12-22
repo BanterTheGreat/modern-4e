@@ -1,6 +1,8 @@
 #import "../helpers/theme.typ" as theme;
 
-#import "../helpers/classes.typ": abilities, armorProf, defensesAndHealth, implementProf, proficiencies, weaponProf, powerLinks;
+#import "../helpers/classes.typ": (
+  abilities, armorProf, defensesAndHealth, implementProf, powerLinks, proficiencies, weaponProf,
+);
 
 #import "../helpers/powers.typ";
 
@@ -25,7 +27,7 @@
       #defensesAndHealth(fortitude: 11, will: 13, reflex: 15, health: 20, healthOnLevelUp: 4, healingSurges: 6)
 
       #abilities(
-        mainAbilities: ("Intelligence"),
+        mainAbilities: "Intelligence",
         extraAbilities: ("Wisdom", "Constitution"),
         class: className,
       );
@@ -236,35 +238,7 @@
 
       #colbreak();
 
-      #theme.choiceBox("Ghost Sound");
-      #powers.power(
-        title: "Ghost Sound",
-        description: "With a wink, you create an illusory sound that emanates from a distant location.",
-        type: powers.powerType.at-will,
-        range: "Ranged 10",
-        action: powers.actionType.standard,
-        traits: "Arcane, Illusion",
-        target: "One object or unoccupied square",
-        additionalRows: (
-          [*Effect:* You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target. You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you whisper, you can whisper quietly enough that only creatures adjacent to the target can hear your words.],
-        ),
-      );
 
-      #theme.choiceBox("Light");
-      #powers.power(
-        title: "Light",
-        description: "With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space.",
-        type: powers.powerType.at-will,
-        range: "Ranged 5",
-        action: powers.actionType.minor,
-        traits: "Arcane",
-        target: "One object or unoccupied square",
-        additionalRows: (
-          [*Effect:* The target sheds bright light until the end of the encounter or until you use this power again. The light fills the target's space and all squares within 4 squares of it. Putting out the light is a free action.],
-        ),
-      );
-
-      #colbreak();
 
       #theme.choiceBox("Prestidigitation");
       #powers.power(
@@ -285,6 +259,36 @@
             - Produce out of nothingness a small item or image that exists until the end of your next turn.
             - Make a small, handheld item invisible until the end of your next turn.
           ],
+        ),
+      );
+
+      #theme.choiceBox("Ghost Sound");
+      #powers.power(
+        title: "Ghost Sound",
+        description: "With a wink, you create an illusory sound that emanates from a distant location.",
+        type: powers.powerType.at-will,
+        range: "Ranged 10",
+        action: powers.actionType.standard,
+        traits: "Arcane, Illusion",
+        target: "One object or unoccupied square",
+        additionalRows: (
+          [*Effect:* You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target. You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you whisper, you can whisper quietly enough that only creatures adjacent to the target can hear your words.],
+        ),
+      );
+
+      #colbreak();
+
+      #theme.choiceBox("Light");
+      #powers.power(
+        title: "Light",
+        description: "With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space.",
+        type: powers.powerType.at-will,
+        range: "Ranged 5",
+        action: powers.actionType.minor,
+        traits: "Arcane",
+        target: "One object or unoccupied square",
+        additionalRows: (
+          [*Effect:* The target sheds bright light until the end of the encounter or until you use this power again. The light fills the target's space and all squares within 4 squares of it. Putting out the light is a free action.],
         ),
       );
 
@@ -316,13 +320,13 @@
 
       = Feats
       You gain access to the #className feat list
-    ]
 
+      #colbreak();
+    ]
 
     #set page(columns: 1)
 
     #powerLinks(className: className);
-
     #pagebreak()
 
     #align(center)[
@@ -344,14 +348,14 @@
 
       #theme.choiceBox("Enlarge Spell");
       *Requirements: 2 Wisdom* #linebreak();
-      Before using a wizard at-will or encounter attack power, you can choose to take a -2 penalty to each die of damage rolled with the power to increase the size of its blast or its burst by 1. 
-      
+      Before using a wizard at-will or encounter attack power, you can choose to take a -2 penalty to each die of damage rolled with the power to increase the size of its blast or its burst by 1.
+
       You can't use this feat on a power that doesn't roll dice for damage.
 
       #theme.choiceBox("Expanded Spellbook");
       *Requirements: 2 Wisdom* #linebreak();
-      Choose one daily wizard attack spell of every level you know. Add this spell to your spellbook. Each time you gain a new level of daily wizard attack spells, you learn one extra spell of that level (in other words, add three spells to your spellbook instead of only two). 
-      
+      Choose one daily wizard attack spell of every level you know. Add this spell to your spellbook. Each time you gain a new level of daily wizard attack spells, you learn one extra spell of that level (in other words, add three spells to your spellbook instead of only two).
+
       This feat doesn't change the number of daily attack spells you can prepare each day.
 
       #theme.choiceBox("Bitter Cold");

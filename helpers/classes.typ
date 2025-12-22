@@ -275,43 +275,57 @@
     }
   }
 
-  #align(center)[
-    = Links to #className Powers
-  ]
-
-  #extraContent;
-
-  // #if skipAtWill == false {
-  //   [
-  //     = At-Will
-  //     #getLinks(power: powerType.at-will, level: 1)
-  //   ]
-  // }
-
-  #theme.transparentBlock(spacing: 0pt, content: [
+  #let powerTable(title: str, ..linkArgs) = theme.transparentBlock(stroke: 1pt + rgb("#706853"), spacing: 0pt, content: [
     #table(
       columns: 1fr,
       stroke: none,
       align: center,
-      fill: (col, row) => {
-        // Section header rows: At-Will (0), Encounter (2), Daily (9), Utility (17)
-        let sectionRows = (0, 2, 9, 17)
-        if sectionRows.contains(row) {
-          rgb("#d3bd89") // Darker color for section headers
-        } else if calc.rem(row + col, 2) == 0 { rgb("#E8DBB7") } else { rgb("#F0E3C7") }
-      },
+      fill: theme.defaultTableStyle(),
       inset: 6pt,
-      [At-Will],
-      [#getLinks(power: powerType.at-will, level: 1)],
-
-      [Encounter],
-      ..getLinks(power: powerType.encounter, level: (3, 7, 13, 17, 23, 27)),
-
-      [Daily],
-      ..getLinks(power: powerType.daily, level: (1, 5, 9, 15, 19, 25, 29)),
-
-      [Utility],
-      ..getLinks(power: powerType.utility, level: (2, 6, 10, 16, 22, 26))
+      title,
+      ..linkArgs.pos()
     )
   ]);
+
+  #theme.transparentBlock(content: [
+    #block(
+      fill: theme.headerColor,
+      inset: 10pt,
+      [
+        #align(center)[
+          == Links to #className Powers
+        ]
+
+        #if (extraContent != none) {
+          extraContent;
+          linebreak();
+        }
+
+        #if (skipAtWill == false) {
+          powerTable(title: [At-Will], getLinks(power: powerType.at-will, level: 1))
+          linebreak();
+        }
+
+        #powerTable(title: [Encounter], ..getLinks(power: powerType.encounter, level: (3, 7, 13, 17, 23, 27)))
+        #linebreak();
+        #powerTable(title: [Daily], ..getLinks(power: powerType.daily, level: (1, 5, 9, 15, 19, 25, 29)))
+        #linebreak();
+        #powerTable(title: [Utility], ..getLinks(power: powerType.utility, level: (2, 6, 10, 16, 22, 26)))
+      ],
+    )
+  ])
 ]
+
+#let commonTraits(commonTraits: none, class: str) = {
+  theme.transparentBlock(content: [
+    #block(
+      fill: theme.headerColor,
+      inset: 10pt,
+      [
+        = Common #class Traits
+
+        #commonTraits;
+      ],
+    )
+  ])
+}

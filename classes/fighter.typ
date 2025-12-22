@@ -113,18 +113,20 @@
 
       = Feats
       You gain access to the #className feat list
+
+      #colbreak();
+      #classes.commonTraits(class: className, commonTraits: [
+        == Reliable
+        An effect type. If a reliable power misses every target, the power is not expended.
+        == Invigorating
+        The creature gains temporary hit points equal to their *Constitution* when it hits with a power that has the invigorating keyword. No invigorating power grants temporary hit points more than once during a turn, even if the user hits more than once with that power.
+      ]);
+      #classes.powerLinks(className: className);
     ]
 
     #pagebreak()
 
-    #classes.powerLinks(className: className, extraContent: [
-      = Common Traits
-      == Reliable
-      An effect type. If a reliable power misses every target, the power is not expended.
-      == Invigorating
-      The creature gains temporary hit points equal to their *Constitution* when it hits with a power that has the invigorating keyword. No invigorating power grants temporary hit points more than once during a turn, even if the user hits more than once with that power.
 
-    ]);
 
     #set page(columns: 1)
 

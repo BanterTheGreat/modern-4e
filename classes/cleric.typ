@@ -1,6 +1,8 @@
 #import "../helpers/theme.typ" as theme;
 
-#import "../helpers/classes.typ": abilities, defensesAndHealth, proficiencies, armorProf, weaponProf, implementProf, powerLinks;
+#import "../helpers/classes.typ": (
+  abilities, armorProf, defensesAndHealth, implementProf, powerLinks, proficiencies, weaponProf,
+);
 
 #import "../helpers/powers.typ";
 
@@ -10,9 +12,10 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional:[ _Their prayers burn, and the unholy tremble._
-      #linebreak()
-      #text(size: 10pt)[Divine Leader]])
+      additional: [ _Their prayers burn, and the unholy tremble._
+        #linebreak()
+        #text(size: 10pt)[Divine Leader]],
+    )
 
     #columns(2)[
       #proficiencies(
@@ -97,8 +100,9 @@
       defenseStat: powers.defense.ac,
       additionalRows: (
         [*Hit*: 2[W] + Strength radiant damage, and the target is immobilized until the end of your next turn.
-          - Level 11: 3[W] damage.
-          - Level 21: 4[W] damage.
+
+          *Level 11:* 3[W] damage.
+          *Level 21:* 4[W] damage.
         ],
         [*Effect*: Make the secondary attack.],
         [*Channel Divinity*: You can use only one channel divinity power per encounter],
@@ -135,8 +139,9 @@
       defenseStat: powers.defense.will,
       additionalRows: (
         text[*Hit*: 1d10 + Wisdom radiant damage, and you push the target a number of squares up to 3 + your Charisma. The target is immobilized until the end of your next turn.
-          - Level 11: 2d10 + Wisdom radiant damage.
-          - Level 21: 3d10 + Wisdom radiant damage.
+
+          *Level 11:* 2d10 + Wisdom radiant damage. #linebreak()
+          *Level 21:* 3d10 + Wisdom radiant damage.
         ],
         text[*Channel Divinity*: You can use only one channel divinity power per encounter],
       ),
@@ -168,13 +173,10 @@
     = Feats
     You gain access to the #className feat list
 
-    #pagebreak()
-
-    #set page(columns: 1)
-
+    #colbreak();
     #powerLinks(className: className);
 
-    #pagebreak()
+    #set page(columns: 1)
 
     #align(center)[
       = Heroic #className Feats
@@ -224,7 +226,7 @@
       When you use healing word or a divine power that allows a target to spend a healing surge, the target regains additional hit points equal to 1d6 + your Charisma modifier. Whenever you use said power, until the end of your next turn if you deal damage to a bloodied enemy, you become Dazed.
 
       The additional hit points increase to 2d6 + your Charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.
-      
+
       #theme.choiceBox("Pacifist's Reward")
       When you hit with an attack that doesn't deal damage, if you didn't deal any damage on your turn, gain 2 temporary hit points at the end of the turn. The temporary hit points increase to 3 at 11th level, and to 4 at 21st level.
     ]

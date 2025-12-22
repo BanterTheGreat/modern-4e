@@ -76,9 +76,9 @@
   ]
 }
 
-#let transparentBlock(above: auto, below: auto, spacing: none, content: content) = {
+#let transparentBlock(above: auto, below: auto, spacing: none, stroke: none, content: content) = {
   return block(
-    stroke: 0.5pt + rgb("#D4C4A0"),
+    stroke: if stroke == none { 0.5pt + edgeColor } else { stroke },
     radius: 4pt,
     clip: true,
     width: 100%,

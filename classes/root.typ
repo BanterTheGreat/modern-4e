@@ -7,12 +7,14 @@
 #import "./warlord.typ";
 #import "./invoker.typ";
 #import "./warlock.typ";
+#import "./runepriest.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
     return (
       artificer.artificerPage(),
       cleric.clericPage(),
+      runepriest.runePriestPage(),
       warlord.warlordPage(),
     ).join(pagebreak())
   }

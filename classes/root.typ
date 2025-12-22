@@ -10,6 +10,7 @@
 #import "./runepriest.typ";
 #import "./rogue.typ";
 #import "./warden.typ";
+#import "./ranger.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -30,6 +31,7 @@
 
   let _getStrikerPages() = {
     return (
+      ranger.rangerPage(),
       rogue.roguePage(),
       warlock.warlockPage(),
     ).join(pagebreak())

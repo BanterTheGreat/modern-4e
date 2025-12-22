@@ -30,6 +30,8 @@
         class: className,
       );
 
+      #colbreak();
+
       = Arcane Empowerment
       Your study of magic has given you the ability to manipulate the arcane energy contained within items. You begin each day with the ability to empower a magic item, and you gain one additional arcane empowerment for each milestone you reach. You must spend a short rest with an item in order to empower it. You can empower an item in two ways
 

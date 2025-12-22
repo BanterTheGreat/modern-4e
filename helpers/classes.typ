@@ -21,6 +21,9 @@
   superiorRanged: "Superior Ranged",
   dagger: "Dagger",
   quarterstaff: "Quarterstaff",
+  handCrossbow: "Hand Crossbow",
+  shortSword: "Shortsword",
+  sling: "Sling",
 )
 
 #let implementProf = (

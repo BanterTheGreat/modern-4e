@@ -8,6 +8,7 @@
 #import "./invoker.typ";
 #import "./warlock.typ";
 #import "./runepriest.typ";
+#import "./rogue.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -28,6 +29,7 @@
 
   let _getStrikerPages() = {
     return (
+      rogue.roguePage(),
       warlock.warlockPage(),
     ).join(pagebreak())
   }

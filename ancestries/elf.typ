@@ -81,19 +81,18 @@
       *Requirements:* Elven Accuracy #linebreak();
       When you use the elven accuracy power, you gain a +2 to the new attack roll.
 
-      #colbreak();
 
       #theme.choiceBox("Shimmering Elf")
       *Requirements:* Elven Accuracy #linebreak();
       Immediately after you use elven accuracy, you can teleport up to 2 squares as a free action.
 
+      #colbreak();
+      
       #theme.choiceBox("Elven Sidestep")
       When you move, the first square of your movement does not provoke opportunity attacks from enemies you have marked.
 
       #theme.choiceBox("Eyes of the Forest")
       Each ally affected by your Group Awareness trait doesn’t take the -2 penalty for attacking an enemy that has partial concealment.
-
-      #colbreak();
 
       #theme.choiceBox("Elven Empathy")
       When one of your allies within 10 squares of you spends a healing surge to regain hit points, he or she regains 1 additional hit point. The additional hit points gained increase to 2 at 11th level, and 3 at 21st level.

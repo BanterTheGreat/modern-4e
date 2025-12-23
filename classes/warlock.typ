@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Bound by pact, driven by power, feared by all._
-        #linebreak()
-        #text(size: 10pt)[Arcane Striker]],
+      additional: ["It might not be my own power, but it will be more than enough for you."],
     )
 
     #columns(2)[

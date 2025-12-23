@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _With a whisper, they summon the fury of the wild_
-        #linebreak()
-        #text(size: 10pt)[Primal Controller]],
+      additional: ["I won't let anyone disturb the balance of nature."],
     )
 
     #columns(2)[

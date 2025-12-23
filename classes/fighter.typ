@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [_They are up against a wall: You_
-        #linebreak()
-        #text(size: 10pt)[martial Defender]],
+      additional: ["Don't be afraid, they won't get past me."],
     )
 
     #columns(2)[

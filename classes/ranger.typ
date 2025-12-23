@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _TODO_
-        #linebreak()
-        #text(size: 10pt)[Martial Striker]],
+      additional: ["I found you, time to make peace with your maker."],
     )
 
     #columns(2)[

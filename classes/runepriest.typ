@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Their sacred runes echo the will of the gods_
-        #linebreak()
-        #text(size: 10pt)[Divine Leader]],
+      additional: ["Behold, the power of the ancient runes!"],
     )
 
     #columns(2)[

@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Arcane energies soar through the sky, striking fear into the hearts of foes._
-        #linebreak()
-        #text(size: 10pt)[Arcane Striker]],
+      additional: ["You need a book to learn magic? I was born with it."],
     )
 
     #columns(2)[

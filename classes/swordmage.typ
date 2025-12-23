@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [_Their magic deflects, their steel retaliates—unstoppable in defense._
-        #linebreak()
-        #text(size: 10pt)[Arcane Defender]],
+      additional: ["If my magic fails me, my blade will not."],
     )
 
     #columns(2)[

@@ -93,7 +93,7 @@
   return align(center)[
     #text(heading(title, numbering: "1.", level: 3), size: 24pt);
     #if additional != none [
-      #additional
+      #quoteBox([#additional]);
     ]
   ]
 }

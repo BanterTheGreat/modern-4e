@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Bound to the spirits, they bless, heal, and command._
-        #linebreak();
-        #text(size: 10pt)[Primal Leader]],
+      additional: ["I am the voice of the wilds, the spirit's chosen."],
     )
 
     #columns(2)[

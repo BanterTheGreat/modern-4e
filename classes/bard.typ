@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _TODO_
-        #linebreak()
-        #text(size: 10pt)[Arcane Leader]],
+      additional: ["Anyone can sing a song, but only I can make it magical."],
     )
 
     #columns(2)[

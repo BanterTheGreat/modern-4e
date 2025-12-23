@@ -12,9 +12,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Their prayers burn, and the unholy tremble._
-        #linebreak()
-        #text(size: 10pt)[Divine Leader]],
+      additional: [ "Our god watches over us, we are blessed this journey" ],
     )
 
     #columns(2)[

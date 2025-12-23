@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _With steel and scripture, they stand unbroken._
-        #linebreak()
-        #text(size: 10pt)[Divine Defender]],
+      additional: ["I won't let you fall, for I am your shield and your sword."],
     )
 
     #columns(2)[

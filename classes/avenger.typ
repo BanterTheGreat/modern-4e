@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _They may not repent in time_
-        #linebreak()
-        #text(size: 10pt)[Divine Striker]],
+      additional: [ "The time for repentance is over, now they will face the blade."],
     )
 
     #columns(2)[

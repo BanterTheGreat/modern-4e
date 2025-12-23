@@ -10,9 +10,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Using magical elixirs and contraptions, artificers bolster their allies and confound their enemies._
-        #linebreak()
-        #text(size: 10pt)[Arcane Leader]],
+      additional: [ #theme.quoteBox(["Hold up! I got just tool for this!"])],
     )
 
     #columns(2)[

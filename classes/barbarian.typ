@@ -7,9 +7,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _A furious rage ravaging through enemy lines_
-        #linebreak()
-        #text(size: 10pt)[Primal Striker]],
+      additional: ["RAAAAAAAGH!"],
     )
 
     #columns(2)[

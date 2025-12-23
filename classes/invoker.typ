@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [_Their decrees fall like curses, inescapable and divine._
-        #linebreak()
-        #text(size: 10pt)[Divine Controller]],
+      additional: ["I will rain holy fire upon those who defy the gods."],
     )
 
     #columns(2)[

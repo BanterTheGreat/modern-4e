@@ -12,9 +12,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Knowledge is their weapon, and magic bends to their will._
-        #linebreak()
-        #text(size: 10pt)[Arcane Controller]],
+      additional: ["Magic is just like any other tool—if you know how to use it."],
     )
 
     #columns(2)[

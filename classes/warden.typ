@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [ _Nature's fury surges, guarding with unyielding strength._
-        #linebreak()
-        #text(size: 10pt)[Primal Defender]],
+      additional: ["Stand tall, nature itself fights alongside me."],
     )
 
     #columns(2)[

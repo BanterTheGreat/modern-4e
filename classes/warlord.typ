@@ -8,9 +8,7 @@
   return [
     #theme.classTitle(
       title: [The #className],
-      additional: [_Their orders strike swift, and chaos obeys._
-        #linebreak()
-        #text(size: 10pt)[Martial Leader]],
+      additional: ["I will lead us to victory, no matter the cost."],
     )
 
     #columns(2)[

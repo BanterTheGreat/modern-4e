@@ -10,7 +10,7 @@
       title: [The #className],
       additional: [ _With a whisper, they summon the fury of the wild_
         #linebreak()
-        #text(size: 10pt)[Role]],
+        #text(size: 10pt)[Primal Controller]],
     )
 
     #columns(2)[

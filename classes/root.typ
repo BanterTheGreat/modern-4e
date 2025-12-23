@@ -1,6 +1,7 @@
 #import "../helpers/theme.typ" as theme;
 
 #import "./avenger.typ";
+#import "./barbarian.typ";
 #import "./cleric.typ";
 #import "./artificer.typ";
 #import "./wizard.typ";
@@ -42,6 +43,7 @@
   let _getStrikerPages() = {
     return (
       avenger.avengerPage(),
+      barbarian.barbarianPage(),
       ranger.rangerPage(),
       rogue.roguePage(),
       sorcerer.sorcererPage(),

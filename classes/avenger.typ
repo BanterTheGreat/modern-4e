@@ -12,6 +12,9 @@
     )
 
     #columns(2)[
+      = Role
+      A *Divine Striker*, the avenger specializes in single-target damage and swift justice.
+
       #classes.proficiencies(
         armorProficiencies: (classes.armorProf.cloth),
         weaponProficiencies: (

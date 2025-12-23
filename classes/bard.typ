@@ -12,11 +12,12 @@
     )
 
     #columns(2)[
+      = Role
+      A *Arcane Leader*, the bard specializes in inspiring allies and controlling the flow of battle.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
           classes.armorProf.lightShield,
         ),

@@ -12,6 +12,9 @@
     )
 
     #columns(2)[
+      = Role
+      An *Arcane Defender*, the swordmage specializes in protecting allies through martial prowess and arcane wards.
+
       #classes.proficiencies(
         armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather),
         weaponProficiencies: (

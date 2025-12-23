@@ -12,11 +12,12 @@
     )
 
     #columns(2)[
+      = Role
+      A *Divine Controller*, the invoker specializes in channeling divine wrath to control and devastate foes.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
         ),
         weaponProficiencies: (classes.weaponProf.simpleMelee, classes.weaponProf.simpleRanged),

@@ -16,6 +16,9 @@
     )
 
     #columns(2)[
+      = Role
+      An *Arcane Controller*, the wizard specializes in controlling the battlefield through studied magical mastery.
+
       #proficiencies(
         armorProficiencies: (armorProf.cloth),
         weaponProficiencies: (weaponProf.simpleMelee, weaponProf.simpleRanged),

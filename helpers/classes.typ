@@ -3,14 +3,17 @@
 #import "theme.typ";
 
 #let armorProf = (
-  cloth: "Cloth (L)",
-  leather: "Leather (L)",
-  hide: "Hide (L)",
-  chainmail: "Chainmail (H)",
-  scale: "Scale (H)",
-  plate: "Plate (H)",
-  lightShield: "Light Shield",
-  heavyShield: "Heavy Shield",
+  cloth: "Cloth",
+  leather: "Leather",
+  hide: "Hide",
+  chainmail: "Chainmail",
+  scale: "Scale",
+  plate: "Plate",
+  lightShield: "L. Shield",
+  heavyShield: "H. Shield",
+  light: "Light Armor",
+  heavy: "Heavy Armor",
+  shields: "Shields",
 )
 
 #let weaponProf = (
@@ -282,17 +285,21 @@
     }
   }
 
-  #let powerTable(title: str, ..linkArgs) = theme.transparentBlock(stroke: 1pt + rgb("#706853"), spacing: 0pt, content: [
-    #table(
-      columns: 1fr,
-      stroke: none,
-      align: center,
-      fill: theme.defaultTableStyle(),
-      inset: 6pt,
-      title,
-      ..linkArgs.pos()
-    )
-  ]);
+  #let powerTable(title: str, ..linkArgs) = theme.transparentBlock(
+    stroke: 1pt + rgb("#706853"),
+    spacing: 0pt,
+    content: [
+      #table(
+        columns: 1fr,
+        stroke: none,
+        align: center,
+        fill: theme.defaultTableStyle(),
+        inset: 6pt,
+        title,
+        ..linkArgs.pos()
+      )
+    ],
+  );
 
   #theme.transparentBlock(content: [
     #block(
@@ -304,13 +311,13 @@
         ]
 
         #if (extraContent != none) {
-          extraContent;
-          linebreak();
+          extraContent
+          linebreak()
         }
 
         #if (skipAtWill == false) {
           powerTable(title: [At-Will], getLinks(power: powerType.at-will, level: 1))
-          linebreak();
+          linebreak()
         }
 
         #powerTable(title: [Encounter], ..getLinks(power: powerType.encounter, level: (3, 7, 13, 17, 23, 27)))

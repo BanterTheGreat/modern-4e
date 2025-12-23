@@ -12,8 +12,11 @@
     )
 
     #columns(2)[
+      = Role
+      A *Primal Controller*, the druid specializes in controlling the battlefield and shapeshifting.
+
       #classes.proficiencies(
-        armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather, classes.armorProf.hide),
+        armorProficiencies: (classes.armorProf.light),
         weaponProficiencies: (classes.weaponProf.simpleMelee, classes.weaponProf.simpleRanged),
         implementProficiencies: (classes.implementProf.staff, classes.implementProf.totem),
       );

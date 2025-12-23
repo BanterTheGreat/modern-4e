@@ -12,11 +12,12 @@
     )
 
     #columns(2)[
+      = Role
+      A *Martial Striker*, the ranger specializes in hunting down and eliminating priority targets.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
         ),
         weaponProficiencies: (

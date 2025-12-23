@@ -14,6 +14,9 @@
     )
 
     #columns(2)[
+      = Role
+      A *Arcane Leader*, the artificer specializes in supporting allies through magical means and enhancing their capabilities.
+
       #proficiencies(
         armorProficiencies: (armorProf.cloth, armorProf.leather),
         weaponProficiencies: (weaponProf.simpleMelee, weaponProf.simpleRanged),

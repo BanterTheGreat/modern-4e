@@ -12,6 +12,9 @@
     )
 
     #columns(2)[
+      = Role
+      A *Martial Striker*, the rogue specializes in dealing devastating damage from the shadows.
+
       #classes.proficiencies(
         armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather, classes.armorProf.lightShield),
         weaponProficiencies: (

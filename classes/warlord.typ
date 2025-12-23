@@ -12,8 +12,11 @@
     )
 
     #columns(2)[
+      = Role
+      A *Martial Leader*, the warlord specializes in commanding allies and coordinating devastating tactical maneuvers.
+
       #classes.proficiencies(
-        armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather, classes.armorProf.hide),
+        armorProficiencies: (classes.armorProf.light),
         weaponProficiencies: (
           classes.weaponProf.simpleMelee,
           classes.weaponProf.militaryMelee,

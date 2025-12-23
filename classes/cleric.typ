@@ -16,8 +16,11 @@
     )
 
     #columns(2)[
+      = Role
+      A *Divine Leader*, the cleric specializes in healing and supporting allies through divine power.
+
       #proficiencies(
-        armorProficiencies: (armorProf.cloth, armorProf.leather, armorProf.hide, armorProf.chainmail),
+        armorProficiencies: (armorProf.light, armorProf.chainmail),
         weaponProficiencies: (weaponProf.simpleMelee, weaponProf.simpleRanged),
         implementProficiencies: (implementProf.holySymbol),
       );

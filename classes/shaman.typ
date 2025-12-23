@@ -12,6 +12,9 @@
     )
 
     #columns(2)[
+      = Role
+      A *Primal Leader*, the shaman specializes in healing and supporting allies through spirit companions.
+
       #classes.proficiencies(
         armorProficiencies: (classes.armorProf.cloth, classes.armorProf.leather),
         weaponProficiencies: (classes.weaponProf.simpleMelee, classes.weaponProf.simpleRanged),

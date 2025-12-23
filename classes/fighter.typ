@@ -12,15 +12,15 @@
     )
 
     #columns(2)[
+      = Role
+      As an *Martial Defender*, the fighter specializes in protecting allies and controlling the battlefield.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
           classes.armorProf.scale,
-          classes.armorProf.lightShield,
-          classes.armorProf.heavyShield,
+          classes.armorProf.shields,
         ),
         weaponProficiencies: (
           classes.weaponProf.simpleMelee,
@@ -38,6 +38,8 @@
         extraAbilities: ("Constitution", "Dexterity", "Wisdom"),
         class: className,
       );
+
+      #colbreak();
 
       = Combat Challenge
       In combat, it’s dangerous to ignore The Fighter. Every time you attack an enemy, you can choose to *mark* that target. The mark lasts until the end of your next turn.

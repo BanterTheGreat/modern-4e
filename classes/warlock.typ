@@ -12,11 +12,12 @@
     )
 
     #columns(2)[
+      = Role
+      An *Arcane Striker*, the warlock specializes in cursing enemies and dealing devastating eldritch damage.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
         ),
         weaponProficiencies: (classes.weaponProf.simpleMelee, classes.weaponProf.simpleRanged),

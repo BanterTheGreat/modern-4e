@@ -12,6 +12,9 @@
     )
 
     #columns(2)[
+      = Role
+      An *Arcane Striker*, the sorcerer specializes in dealing elemental damage through innate magical power.
+
       #classes.proficiencies(
         armorProficiencies: (classes.armorProf.cloth),
         weaponProficiencies: (classes.weaponProf.dagger, classes.weaponProf.staff),

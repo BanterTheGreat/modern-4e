@@ -12,16 +12,14 @@
     )
 
     #columns(2)[
+      = Role
+      A *Divine Defender*, the paladin specializes in protecting allies and punishing enemies who dare attack them.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
-          classes.armorProf.chainmail,
-          classes.armorProf.scale,
-          classes.armorProf.plate,
-          classes.armorProf.lightShield,
-          classes.armorProf.heavyShield,
+          classes.armorProf.light,
+          classes.armorProf.heavy,
+          classes.armorProf.shields,
         ),
         weaponProficiencies: (
           classes.weaponProf.simpleMelee,

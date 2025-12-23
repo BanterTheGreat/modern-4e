@@ -12,11 +12,12 @@
     )
 
     #columns(2)[
+      = Role
+      A *Divine Leader*, the runepriest specializes in invoking ancient runes to aid allies and smite foes.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
           classes.armorProf.chainmail,
           classes.armorProf.scale,
           classes.armorProf.lightShield,

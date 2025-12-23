@@ -12,13 +12,13 @@
     )
 
     #columns(2)[
+      = Role
+      A *Primal Defender*, the warden specializes in drawing enemies' attention and punishing those who ignore them.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
-          classes.armorProf.lightShield,
-          classes.armorProf.heavyShield,
+          classes.armorProf.light,
+          classes.armorProf.shields,
         ),
         weaponProficiencies: (
           classes.weaponProf.simpleMelee,

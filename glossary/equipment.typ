@@ -1,6 +1,6 @@
 #import "../helpers/theme.typ" as theme;
 
-#let equipmentTable(equipment: ()) = {
+#let weaponTable(equipment: ()) = {
   return table(
     columns: (1fr, 1fr, 1fr, 1fr, 1fr),
     stroke: 0.5pt + rgb("#D4C4A0"),
@@ -16,13 +16,27 @@
   )
 }
 
+#let armorTable(equipment: ()) = {
+  return table(
+    columns: (1fr, 1fr, 1fr),
+    stroke: 0.5pt + rgb("#D4C4A0"),
+    align: left,
+    fill: (col, row) => theme.defaultTableStyle()(col, row),
+    inset: 8pt,
+    [*Armor*],
+    [*Armor Bonus*],
+    [*Speed Penalty*],
+    ..equipment,
+  )
+}
+
 #let equipmentPage() = {
   return [
     #theme.pageTitle(title: "Equipment");
 
-    = Weapons
+    #theme.subPageTitle(title: "Weapons")
     == Improvised One-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Unarmed Attack",
       "",
       "1d4",
@@ -31,37 +45,32 @@
     ))
 
     == Simple One-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Club",
       "+2",
       "1d6",
       "Off-hand",
       "Club",
-
       "Dagger",
       "+3",
       "1d4",
       "Off-hand, Thrown",
       "Light Blade",
-
       "Handaxe",
       "+2",
       "1d6",
       "Thrown 5/10",
       "Axe",
-
       "Javelin",
       "+2",
       "1d6",
       "Thrown 5/10",
       "Spear",
-
       "Mace",
       "+2",
       "1d8",
       "None, Implement",
       "Hammer",
-
       "Sickle",
       "+2",
       "1d6",
@@ -70,19 +79,17 @@
     ))
 
     == Simple Two-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Greatclub",
       "+2",
       "1d10",
       "None",
       "Club",
-
       "Quarterstaff",
       "+2",
       "1d8",
       "Versatile, Implement",
       "Staff",
-
       "Spear",
       "+2",
       "1d8",
@@ -92,13 +99,12 @@
 
     #pagebreak();
     == Simple Ranged Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Sling",
       "+2",
       "1d6",
       "Ranged 20/40",
       "Sling",
-
       "Light Crossbow",
       "+2",
       "1d8",
@@ -107,49 +113,42 @@
     ))
 
     == Military One-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Battleaxe",
       "+3",
       "1d10",
       "Versatile",
       "Axe",
-
       "Flail",
       "+3",
       "1d8",
       "None",
       "Flail",
-
       "Longsword",
       "+3",
       "1d8",
       "Versatile",
       "Heavy Blade",
-
       "Pick",
       "+3",
       "1d8",
       "Brutal",
       "Hammer",
-
       "Rapier",
       "+3",
       "1d8",
       "High Crit",
       "Light Blade",
-
       "Scimitar",
       "+3",
       "1d8",
       "None",
       "Heavy Blade",
-
       "Shortsword",
       "+3",
       "1d6",
       "Off-hand",
       "Light Blade",
-
       "Warhammer",
       "+3",
       "1d10",
@@ -158,13 +157,12 @@
     ))
 
     == Military One-Handed Ranged Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Throwing Hammer",
       "+3",
       "1d6",
       "Thrown 5/10",
       "Hammer",
-
       "Throwing Shield",
       "+3",
       "1d6",
@@ -174,43 +172,37 @@
 
     #pagebreak();
     == Military Two-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Glaive",
       "+3",
       "1d10",
       "Reach, Versatile",
       "Heavy Blade",
-
       "Greataxe",
       "+3",
       "1d12",
       "Brutal",
       "Axe",
-
       "Greatsword",
       "+3",
       "1d10",
       "High Crit",
       "Heavy Blade",
-
       "Halberd",
       "+3",
       "1d10",
       "Reach, Severe",
       "Polearm",
-
       "Longspear",
       "+3",
       "1d10",
       "Reach",
       "Spear",
-
       "Maul",
       "+3",
       "2d6",
       "Brutal",
       "Hammer",
-
       "Warpick",
       "+3",
       "1d12",
@@ -219,25 +211,22 @@
     ))
 
     == Military Two-Handed Ranged Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Composite Bow",
       "+3",
       "1d8",
       "Load Free, Ranged 20/40",
       "Bow",
-
       "Greatbow",
       "+3",
       "1d10",
       "Load Minor, Ranged 25/50",
       "Bow",
-
       "Heavy Crossbow",
       "+3",
       "1d10",
       "Load Minor, Ranged 20/40",
       "Crossbow",
-
       "Sling Staff",
       "+3",
       "1d10",
@@ -246,19 +235,17 @@
     ))
 
     == Superior One-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Bastard Sword",
       "+3",
       "1d10",
       "Versatile",
       "Heavy Blade",
-
       "Double-Bladed Dagger",
       "+3",
       "1d8",
       "Off-hand",
       "Light Blade",
-
       "Parrying Dagger",
       "+3",
       "1d6",
@@ -267,19 +254,17 @@
     ))
 
     == Superior Two-Handed Melee Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Fullblade",
       "+3",
       "1d12",
       "Brutal, Severe",
       "Heavy Blade",
-
       "Execution Axe",
       "+3",
       "1d12",
       "High Crit",
       "Axe",
-
       "Spiked Chain",
       "+3",
       "2d4",
@@ -288,13 +273,12 @@
     ))
 
     == Superior Ranged Weapons
-    #equipmentTable(equipment: (
+    #weaponTable(equipment: (
       "Recurve Bow",
       "+3",
       "1d8",
       "Ranged 25/50, Load Free",
       "Bow",
-
       "Repeating Heavy Crossbow",
       "+3",
       "1d10",
@@ -315,8 +299,8 @@
       A defensive weapon grants you a +1 bonus to AC while you wield at least one defensive weapon you are proficient with. Multiple defensive weapons do not stack.
 
       == Severe
-      A severe weapon's maximum damage is higher than that of a normal weapon.  
-      When rolling the damage from a weapon attack made with a severe weapon, whenever you roll a die that displays its maximum value, that die explodes: roll a second damage die of the same size, and add these dice to the original roll as extra damage. 
+      A severe weapon's maximum damage is higher than that of a normal weapon.
+      When rolling the damage from a weapon attack made with a severe weapon, whenever you roll a die that displays its maximum value, that die explodes: roll a second damage die of the same size, and add these dice to the original roll as extra damage.
 
       #colbreak();
 
@@ -336,35 +320,107 @@
       A character visibly carrying only an innocuous weapon adds its proficiency bonus to any check made to pretend they are not armed.
 
       === Thrown
-      A thrown weapon may be used to make ranged attacks without penalty.  
-      You hurl most thrown weapons from your hand, rather than using the weapon to loose a projectile. 
-      
+      A thrown weapon may be used to make ranged attacks without penalty.
+      You hurl most thrown weapons from your hand, rather than using the weapon to loose a projectile.
+
       A thrown weapon with a specified load speed is instead a launcher that can be used with enchanted ammunition if desired-- the launcher is not thrown at the target.
 
       == Implement
       A weapon with the Implement property may be used as an implement, even if they are held in only one hand.
     ]
 
-      #pagebreak();
-    
-      == Versatile
-      Versatile weapons are one-handed but deal bonus damage and qualify as a two-handed weapon for power riders and requirements when supported with a second hand.
-      This bonus is equal to:
-      - +1 to each `[W]` die at levels 1–10
-      - +2 at levels 11–20
-      - +3 at levels 21–30
-      
-      The versatile bonus may be gained by supporting the weapon with an off-hand occupied by a light shield or weapon in the unarmed group, but no bonuses from the item equipped in the off-hand apply to the attack, and the unarmed weapon cannot be used to attack until the grip is released.  
-      Changing grip is a free action.
+    #pagebreak();
+
+    == Versatile
+    Versatile weapons are one-handed but deal bonus damage and qualify as a two-handed weapon for power riders and requirements when supported with a second hand.
+    This bonus is equal to:
+    - +1 to each `[W]` die at levels 1–10
+    - +2 at levels 11–20
+    - +3 at levels 21–30
+
+    The versatile bonus may be gained by supporting the weapon with an off-hand occupied by a light shield or weapon in the unarmed group, but no bonuses from the item equipped in the off-hand apply to the attack, and the unarmed weapon cannot be used to attack until the grip is released.
+    Changing grip is a free action.
+
+    #theme.subPageTitle(title: "Armor")
+    == Light Armor
+
+    #armorTable(equipment: (
+      "Cloth",
+      "Intelligence or Dexterity",
+      "-",
+
+      "Leather",
+      "(Intelligence or Dexterity) + 2",
+      "-",
+
+      "Hide",
+      "(Intelligence or Dexterity) + 3",
+      "-",
+    ))
+
+    == Heavy Armor
+    #armorTable(equipment: (
+      "Chainmail",
+      "+6",
+      "-1",
+
+      "Scale",
+      "+7",
+      "-1",
+
+      "Plate",
+      "+8",
+      "-1",
+    ))
+
+    == Shields
+    #armorTable(equipment: (
+      "Light Shield",
+      "+1",
+      "-",
+
+      "Heavy Shield",
+      "+2",
+      "-",
+    ))
   ]
 }
 
-Versatile
-Versatile weapons are one-handed but deal bonus damage and qualify as a two-handed weapon for power riders and requirements when supported with a second hand.  
-This bonus is equal to:
-- +1 to each `[W]` die at levels 1–10
-- +2 at levels 11–20
-- +3 at levels 21–30  
+Armor
+Armor Bonus
+Speed Penalty
+Cloth
+-
+-
+Leather
++2
+-
+Hide
++3
+-
 
-The versatile bonus may be gained by supporting the weapon with an off-hand occupied by a light shield or weapon in the unarmed group, but no bonuses from the item equipped in the off-hand apply to the attack, and the unarmed weapon cannot be used to attack until the grip is released.  
-Changing grip is a free action.
+Heavy Armor
+Armor
+Armor Bonus
+Speed Penalty
+Chainmail
++6
+-1
+Scale
++7
+-1
+Plate
++8
+-1
+
+Shields
+Shield
+Armor Bonus
+Speed Penalty
+Light Shield
++1
+-
+Heavy Shield
++2
+-
+

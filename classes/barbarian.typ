@@ -11,11 +11,12 @@
     )
 
     #columns(2)[
+      = Role
+      A *Primal Striker*, the barbarian specializes in dealing damage and overwhelming enemies.
+
       #classes.proficiencies(
         armorProficiencies: (
-          classes.armorProf.cloth,
-          classes.armorProf.leather,
-          classes.armorProf.hide,
+          classes.armorProf.light,
         ),
         weaponProficiencies: (
           classes.weaponProf.simpleMelee,

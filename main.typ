@@ -11,6 +11,7 @@
 #import "glossary/creation & advancement.typ" as creationAndAdvancement;
 #import "glossary/skill_checks.typ" as skillChecks;
 #import "glossary/techniques.typ" as techniques;
+#import "glossary/balance_changes.typ" as balanceChanges;
 
 #let showPages(pages: ()) = {
   pages.join(pagebreak())
@@ -93,5 +94,6 @@
     utility.utilityPage(),
     skillChecks.skillChecksPage(),
     techniques.techniquesPage(),
+    balanceChanges.balanceChangesPage(),
   ),
 );

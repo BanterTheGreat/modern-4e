@@ -5,6 +5,8 @@
 #let headerColor = rgb("#D4C4A0")
 #let header2Color = rgb("#c9bda3")
 
+#let quoteColor = rgb("#dbcfad")
+
 #let defaultTableStyle() = {
   return (col, row) => if row == 0 {
     rgb("#D4C4A0")
@@ -30,6 +32,27 @@
           width: 100%,
           inset: 4pt,
           fill: header2Color,
+        )
+      ],
+    )
+  ]
+}
+
+#let quoteBox(content) = {
+  block(
+    stroke: 0.5pt + rgb("#dacdb1"),
+    radius: 2pt,
+    clip: true,
+    width: 100%,
+    below: 6pt,
+  )[
+    #box(
+      align(center)[
+        #box(
+          emph(content),
+          width: 100%,
+          inset: 4pt,
+          fill: quoteColor,
         )
       ],
     )

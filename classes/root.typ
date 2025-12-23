@@ -1,5 +1,6 @@
 #import "../helpers/theme.typ" as theme;
 
+#import "./avenger.typ";
 #import "./cleric.typ";
 #import "./artificer.typ";
 #import "./wizard.typ";
@@ -16,6 +17,7 @@
 #import "./paladin.typ";
 #import "./swordmage.typ";
 #import "./bard.typ";
+#import "./druid.typ";
 
 #let classesPage() = {
   let _getLeaderPages() = {
@@ -31,6 +33,7 @@
 
   let _getControllerPages() = {
     return (
+      druid.druidPage(),
       invoker.invokerPage(),
       wizard.wizardPage(),
     ).join(pagebreak())
@@ -38,6 +41,7 @@
 
   let _getStrikerPages() = {
     return (
+      avenger.avengerPage(),
       ranger.rangerPage(),
       rogue.roguePage(),
       sorcerer.sorcererPage(),

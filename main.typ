@@ -74,7 +74,7 @@
 
 
 #align(center)[
-  #text([== *Slimmer Fourth Edition*], size: 32pt)];
+  #text([== *Trimmed Fourth Edition*], size: 32pt)];
 #image("./images/cover.jpg");
 #pagebreak();
 

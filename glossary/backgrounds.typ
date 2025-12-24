@@ -6,7 +6,7 @@
     = Backgrounds
     Backgrounds represent an adventurer’s past, training, and unique skills. They provide bonuses to skill checks when relevant to the situation.
 
-Each background has a total of five ranks. When a skill check is made and a background is applicable, it grants a +1 bonus per rank. Only one background can be applied to a skill check, and it must be chosen before rolling.
+When performing a Skill Check, you may invoke your background to gain a +3 to the roll. Only one background can be applied to a skill check, and it must be decided before rolling.
 
 Backgrounds should be specific and evocative to reflect a character’s history. For example, rather than simply using “Acrobat,” a background like “Acrobat Performer for the Demon Circus” adds more depth and context.
 
@@ -27,7 +27,7 @@ Example Titles:
 - Moonfang
 - The Timeless Bard
 
-Whenever you make a skill check, you can invoke your adventurer’s title before rolling to gain a +2 bonus.
+Whenever you make a skill check, you can invoke your adventurer’s title before rolling to roll twice and take the higher result.
 To invoke a title, the action in question must contribute to the legend of your adventurer's title. Think of a story being told about your adventurer, where their name is lost to history and only their title survives. Would this action make it into the story?
 
 == Example:

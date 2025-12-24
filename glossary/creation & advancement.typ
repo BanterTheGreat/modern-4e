@@ -10,7 +10,7 @@
     Choose a ancestry from Ancestries, this will give you 2 passive abilities and an encounter power.
 
     == 2. Create a Background for your Character and write a Title.
-    Think of your character’s Backgrounds and write some of his prior experiences down. You have 6 points to assign total, with a maximum of 5 in a single background entry. Make sure to make it evocative and not too broad. For your title, write down a short piece of text which would be used to refer to your legend in a way. Once again, make sure it is not too broad.
+    Think of your character’s backstory and create 2 backgrounds for them.  Make sure to make it evocative and not too broad. For your title, write down a short piece of text which would be used to refer to your legend in a way. Once again, make sure it is not too broad.
 
     == 3. Choose a Class
     Choose a class from Classes, this will decide your main playstyle during combat. Make sure you write down any choices you make during class selection, such as powers selected.

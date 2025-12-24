@@ -27,7 +27,7 @@
     - Moonfang
     - The Timeless Bard
 
-    Whenever you make a skill check, you can invoke your adventurer’s title before rolling to roll twice and take the higher result.
+    Once per session you make a skill check, you can invoke your adventurer’s title before rolling to roll twice and take the higher result.
     To invoke a title, the action in question must contribute to the legend of your adventurer's title. Think of a story being told about your adventurer, where their name is lost to history and only their title survives. Would this action make it into the story?
 
     == Example:

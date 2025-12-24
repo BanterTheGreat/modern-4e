@@ -38,6 +38,9 @@
       #theme.choiceBox("Coordinated Explosion")
       When you use any implement power that targets creatures in a burst or a blast, you gain a +1 bonus to attack rolls against the power’s targets if at least one ally is within the burst or the blast.
 
+      #theme.choiceBox("Cunning Stalker")
+      You gain combat advantage against enemies that have no creatures adjacent to them other than you.
+
       #theme.choiceBox("Daring Duelist")
       You gain combat advantage against enemies that have no creatures adjacent to them other than you.
 
@@ -103,6 +106,9 @@
       Choose a Technique category, once per day, you can ignore the cost of a technique of that category of your level or lower that you have mastered.
       #linebreak()
       *Special*: You may take this feat multiple times, each time you do, select another category.
+
+      #theme.choiceBox("World Serpent's Grasp")
+      WWhenever you hit a slowed or immobilized target with an attack, you can knock it prone.
 
       #colbreak();
 

@@ -38,9 +38,6 @@
       #theme.choiceBox("Coordinated Explosion")
       When you use any implement power that targets creatures in a burst or a blast, you gain a +1 bonus to attack rolls against the power’s targets if at least one ally is within the burst or the blast.
 
-      #theme.choiceBox("Cunning Stalker")
-      You gain combat advantage against enemies that have no creatures adjacent to them other than you.
-
       #theme.choiceBox("Daring Duelist")
       You gain combat advantage against enemies that have no creatures adjacent to them other than you.
 

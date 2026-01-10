@@ -27,11 +27,11 @@
     - Moonfang
     - The Timeless Bard
 
-    Once per session you make a skill check, you can invoke your adventurer’s title before rolling to roll twice and take the higher result.
+    Once per session when you fail a skill check, you can invoke your adventurer’s title to perform a reroll, you may use the result of either rolls.
     To invoke a title, the action in question must contribute to the legend of your adventurer's title. Think of a story being told about your adventurer, where their name is lost to history and only their title survives. Would this action make it into the story?
 
     == Example:
-    Shawn likes the idea of playing someone smart; a knowledge-seeker. She gives Dhalia the title of "The All-Knowing." Shawn can invoke this title when doing something that contributes to the legacy of “The All-Knowing.” For example, if Dhalia is making a skill check to piece together a conspiracy, she can invoke her title to gain a +2 bonus. If Dhalia is making a skill check to climb a mountain, the title wouldn’t apply since it doesn't contribute to her being “All-Knowing.”
+    Shawn likes the idea of playing someone smart; a knowledge-seeker. She gives Dhalia the title of "The All-Knowing." Shawn can invoke this title when doing something that contributes to the legacy of “The All-Knowing.” For example, if Dhalia is making a skill check to piece together a conspiracy, If Dhalia is making a skill check to climb a mountain, the title wouldn’t apply since it doesn't contribute to her being “All-Knowing.”
 
     == Rephrasing Titles for Balance:
     If you find that your title is too easy to invoke, consider rephrasing it to limit its scope. For example, Delmar’s adventurer is Dmitri, “The Demigod.” After a few sessions, Delmar realizes that “The Demigod” can be invoked in every situation. Delmar rephrases it as “The Demigod of Determination”, which limits when it can be invoked.

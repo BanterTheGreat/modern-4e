@@ -105,8 +105,6 @@
 
     #set page(columns: 1)
 
-    #pagebreak()
-
     #align(center)[
       = Heroic #className Feats
     ]

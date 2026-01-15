@@ -4,10 +4,10 @@
 #let featsPage() = {
   return [
     #theme.pageTitle(title: "General Feats");
-    #columns(2)[
-      = Heroic Feats
+    = Heroic Feats
+    #columns(3)[
       #theme.choiceBox("Alchemist")
-      You master the Alchemical Synthesis technique, additionally, you learn a 
+      You master the Alchemical Synthesis technique, additionally, you learn a
       formula of your level or lower at 1st level, 2nd level, and every even level thereafter.
 
       *Special*: You can take this feat instead of the Ritual Caster feat granted by your class feature.
@@ -106,12 +106,12 @@
 
       #theme.choiceBox("World Serpent's Grasp")
       WWhenever you hit a slowed or immobilized target with an attack, you can knock it prone.
-
-      #colbreak();
+    ]
 
       = Multiclass Feats
+    #columns(2)[
       == General
-        #theme.choiceBox("Novice Power")
+      #theme.choiceBox("Novice Power")
       *Requirements*: Level 4+ #linebreak()
       You can swap one encounter attack power you know for one encounter attack power of the same level or lower from the class you multiclassed into.
 
@@ -416,7 +416,7 @@ Blade Initiate
 Once per day, when you are wielding a blade, you can invoke the Swordmage Warding class feature as a minor action. Until the end of the encounter, you gain a +1 bonus to AC (or a +3 bonus to AC if you have one hand free).
 In addition, you can use Swordmage implements.
 Heart of the Blade
-You gain the Swordmage’s Swordbond class feature. In addition, you can wield Swordmage’s implements.4e 
+You gain the Swordmage’s Swordbond class feature. In addition, you can wield Swordmage’s implements.4e
 
 
 

@@ -97,20 +97,43 @@
       "Spear",
     ))
 
-    #pagebreak();
-    == Simple Ranged Weapons
+    == Simple One-Handed Ranged Weapons
+    #weaponTable(equipment: (
+      "Pistol",
+      "+2",
+      "2d6",
+      "Load Standard, Ranged 10/20, Brutal 2, High Crit, Off-Hand",
+      "Firearm",
+    ))
+
+    == Simple Two-Handed Ranged Weapons
     #weaponTable(equipment: (
       "Sling",
       "+2",
       "1d6",
       "Ranged 20/40",
       "Sling",
+
       "Light Crossbow",
       "+2",
       "1d8",
       "Load Minor, Ranged 15/30",
       "Crossbow",
+
+      "Carbine",
+      "+2",
+      "2d8",
+      "Load Standard, Ranged 15/30, brutal 2, High Crit",
+      "Firearm",
+      
+      "Shotgun",
+      "+2",
+      "2d10",
+      "Load Standard, Ranged 3/6",
+      "Firearm",
     ))
+
+    #pagebreak();
 
     == Military One-Handed Melee Weapons
     #weaponTable(equipment: (
@@ -170,7 +193,6 @@
       "Shield",
     ))
 
-    #pagebreak();
     == Military Two-Handed Melee Weapons
     #weaponTable(equipment: (
       "Glaive",
@@ -234,6 +256,8 @@
       "Sling",
     ))
 
+    #pagebreak();
+
     == Superior One-Handed Melee Weapons
     #weaponTable(equipment: (
       "Bastard Sword",
@@ -279,15 +303,21 @@
       "1d8",
       "Ranged 25/50, Load Free",
       "Bow",
+
       "Repeating Heavy Crossbow",
       "+3",
       "1d10",
       "Load Free, Ranged 25/50",
       "Crossbow",
+
+      "Musket",
+      "+3",
+      "2d10",
+      "Load Standard, Ranged 20/40, Brutal 2, High Crit",
+      "Firearm",
     ))
 
     = Properties
-
     #columns(2)[
       == Balanced
       A balanced weapon is particularly easy to maneuver under pressure. A proficient character wielding only weapons with the balanced property reduces their armor check penalty to skill and ability checks by 2 while in combat, and when you replace the ability score for the melee basic attack power or ranged basic attack power using a balanced weapon, you may use the full replacement ability score, rather than half, for the associated damage roll.

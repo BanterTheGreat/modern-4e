@@ -123,15 +123,14 @@
 
     #set page(columns: 1)
 
-    #classes.powerLinks(className: className);
 
-    #pagebreak()
-
-    #align(center)[
-      = Heroic #className Feats
-    ]
 
     #columns(2)[
+      
+      #align(center)[
+        = Heroic #className Feats
+      ]
+
       #theme.choiceBox("Improved Spellwarden Shielding");
       While you are wearing cloth armor, leather armor, or no armor, the bonus to AC from your Swordmage Warding increases by 1.
 
@@ -146,8 +145,6 @@
       #theme.choiceBox("Escalating Assault")
       *Requirements: Aegis of Assault* #linebreak();
       Each time you make a melee basic attack granted by your aegis of assault power, you gain a cumulative +1 bonus on future attack rolls made for the melee basic attacks granted by this power (up to a maximum bonus of +3). This bonus resets to 0 at the end of the encounter or if you are rendered unconscious.
-
-      #colbreak();
 
       #theme.choiceBox("Aegis Accuracy")
       If a target marked by your Swordmage Aegis makes an attack and doesn't include you as a target, you gain a +1 bonus to attack rolls against the marked creature until the end of your next turn.
@@ -164,6 +161,12 @@
 
       #theme.choiceBox("Improved Swordbond")
       You can call your bonded weapon to your hand from up to 20 squares away with a minor action.
+
+
+      #colbreak();
+
+      #classes.powerLinks(className: className);
+
     ]
   ]
 }

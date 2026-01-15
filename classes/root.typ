@@ -86,7 +86,6 @@
     #theme.subPageTitle(title: "Defenders")
     #pagebreak();
     #_getDefenderPages();
-    #pagebreak();
   ]
 }
 

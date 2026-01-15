@@ -17,10 +17,14 @@
   pages.join(pagebreak())
 }
 
+#set text(size: 9pt);
+
 #set page(
-  paper: "a4",
+  // paper: "a4",
+  height: 277mm,
+  width: 230mm,
   numbering: "1",
-  margin: (top: 1cm, rest: 2cm),
+  margin: (top: 1cm, rest: 1cm),
   fill: rgb("#F0E3C7"),
   background: {
     place(top + left, rect(width: 100%, height: 15%, fill: gradient.linear(

@@ -28,7 +28,7 @@
     #box(
       align(center)[
         #box(
-          text(content, size: 12pt, weight: "bold"),
+          text(content, size: 10pt, weight: "bold"),
           width: 100%,
           inset: 4pt,
           fill: header2Color,

@@ -48,10 +48,10 @@
       #theme.choiceBox("Primal Swarm");
       While you are in beast form and not wearing heavy armor, melee attacks and ranged attacks deal less damage to you. When you take damage from either type of attack, the damage is reduced by your *Constitution*.
 
-      #colbreak();
-
       #theme.choiceBox("Primal Wrath");
       While you are not wearing heavy armor, you gain a +1 bonus to the attack rolls of Wildcaller attack powers and Wildcaller paragon path attack powers that have the cold, fire, lightning, or thunder keywords.
+
+      #colbreak();
 
       = Wild Shape
       As a Wildcaller, you have the ability to channel the primal energy of beasts into your physical form and transform into a beast. You have an at-will power, wild shape, that allows you to assume the form of a beast, and many Wildcaller powers have the beast form keyword and therefore can be used only while you are in beast form.
@@ -81,18 +81,18 @@
         ),
       )
 
+      #colbreak();
+
       = Powers
       You may choose 2 At-Will, 1 Encounter and 2 Daily #className Powers.
 
       = Feats
       You gain access to the #className feat list
+
+
+      #classes.powerLinks(className: className);
     ]
 
-    #pagebreak()
-
-    #set page(columns: 1)
-
-    #classes.powerLinks(className: className);
 
     #pagebreak()
 

@@ -111,7 +111,7 @@
         ],
         ..additionalRows
       ),
-      size: 10pt,
+      size: 9pt,
     )],
     breakable: false,
   )

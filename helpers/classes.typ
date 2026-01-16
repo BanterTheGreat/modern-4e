@@ -256,6 +256,10 @@
       )
     ],
   );
+  
+  #let baseParagonPathLink = "https://iws.mx/dnd/?list.full.paragonpath=-%22Dra***%22%20%2B%22Prerequisite%3A%20__ClassName__%22";
+  #let paragonPathLink = baseParagonPathLink.replace("__ClassName__", className);
+  
 
   #theme.transparentBlock(content: [
     #block(
@@ -281,6 +285,8 @@
         #powerTable(title: [Daily], ..getLinks(power: powerType.daily, level: (1, 5, 9, 15, 19, 25, 29)))
         #linebreak();
         #powerTable(title: [Utility], ..getLinks(power: powerType.utility, level: (2, 6, 10, 16, 22, 26)))
+        #linebreak();
+        #powerTable(title: [Paragon Path], ..(link(paragonPathLink)[View Paragon Paths],));
       ],
     )
   ])

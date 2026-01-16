@@ -121,12 +121,12 @@
 
     #pagebreak()
 
+      #classes.powerLinks(className: className);
     #set page(columns: 1)
 
 
 
     #columns(2)[
-      
       #align(center)[
         = Heroic #className Feats
       ]
@@ -162,11 +162,75 @@
       #theme.choiceBox("Improved Swordbond")
       You can call your bonded weapon to your hand from up to 20 squares away with a minor action.
 
-
       #colbreak();
 
-      #classes.powerLinks(className: className);
+      = Paragon Swordmage Feats
 
+      #theme.featBlock(
+        title: "Deadly Immobilization",
+        prerequisite: "11th level",
+        content: [
+          Whenever you slow or immobilize a target with a swordmage or swordmage paragon path attack power, that power deals extra damage equal to your *Constitution* modifier.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Distant Swordbond",
+        prerequisite: "11th level",
+        content: [
+          You can call your bonded weapon to your hand from up to 1 mile away as a minor action.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Double Aegis",
+        prerequisite: "11th level",
+        content: [
+          When you use your Swordmage Aegis power, you can choose to also mark a second target within the burst.
+          If both targets attack your allies, you must choose which of the targets to respond to. (You still have only one immediate action per round.)
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Ensnaring Flourish",
+        prerequisite: "11th level, Aegis of Ensnarement",
+        content: [
+          When you use aegis of ensnarement to teleport an enemy, you gain a +5 bonus to damage rolls on melee attacks against that enemy until the end of your next turn.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Greater Aegis of Shielding",
+        prerequisite: "11th level, Aegis of Shielding",
+        content: [
+          When you use your aegis of shielding to reduce the damage from an enemy's attack, you reduce the damage by an additional 5 points.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Greater Swordmage Warding",
+        prerequisite: "11th level",
+        content: [
+          While your Swordmage Warding is active, you gain a +1 feat bonus to all defenses.
+          At 21st level, this bonus increases to +2.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Timely Teleport",
+        prerequisite: "11th level",
+        content: [
+          When you use second wind, you can also teleport a number of squares equal to your *Intelligence* modifier as a free action.
+        ],
+      )
+
+      #theme.featBlock(
+        title: "Vigorous Assault",
+        prerequisite: "11th level, Aegis of Assault",
+        content: [
+          When you use your aegis of assault to teleport, you gain temporary hit points equal to 3 + your *Strength* modifier.
+        ],
+      )
     ]
   ]
 }

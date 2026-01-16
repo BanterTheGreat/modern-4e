@@ -267,7 +267,7 @@
       inset: 10pt,
       [
         #align(center)[
-          == Links to #className Powers
+          == Links to #className Powers & Paragon Paths
         ]
 
         #if (extraContent != none) {

@@ -13,10 +13,12 @@
 #import "./revenant.typ";
 #import "./orc.typ";
 #import "./tiefling.typ";
+#import "./deva.typ";
 
 #let ancestriesPage() = {
   let _getAncestryPages() = {
   return (
+    deva.devaPage(),
     dragonborn.dragonbornPage(),
     dwarf.dwarfPage(),
     elf.elfPage(),

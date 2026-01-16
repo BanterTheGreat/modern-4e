@@ -11,13 +11,96 @@
 );
 
 #powers.power(
-  title: "Swift Recovery",
-  description: "You address a companion's most critical wounds to get him or her back into the battle.",
+  title: "Time Out",
+  description: "You grant your comrade a moment of respite.",
   type: powers.powerType.encounter,
   range: "Melee 1",
   action: powers.actionType.minorAction,
   target: "One ally",
   additionalRows: (
-    [*Effect*: The target can use his or her second wind without taking an action to do so.],
+    [*Effect*: The target regains the use of second wind if he or she has already used it during this encounter.],
+  ),
+);
+
+#powers.power(
+  title: "Insightful Comment",
+  description: "You assess the situation and offer words of advice that guide the conversation in a fruitful direction.",
+  type: powers.powerType.encounter,
+  range: "Close burst 5",
+  action: powers.actionType.minorAction,
+  target: "You and each ally in the burst",
+  additionalRows: (
+    [*Effect*: Until the end of your next turn, each target gains a bonus to Bluff checks, Diplomacy checks, and Intimidate checks equal to your Wisdom modifier.],
+  ),
+);
+
+#powers.power(
+  title: "Prescient Defense",
+  description: "You anticipate your foe's attack and ably defend yourself.",
+  type: powers.powerType.encounter,
+  range: "Personal",
+  action: powers.actionType.immediateInterrupt,
+  trigger: "You are hit by a creature",
+  additionalRows: (
+    [*Effect*: You gain a +2 power bonus to all defenses against the attack.],
+  ),
+);
+
+#powers.power(
+  title: "Spot the Path",
+  description: "Having walked miles of broken trails, you know how to find the safest way through the most treacherous terrain.",
+  type: powers.powerType.encounter,
+  range: "Close burst 5",
+  action: powers.actionType.minorAction,
+  target: "You and each ally in the burst",
+  additionalRows: (
+    [*Effect*: Each target ignores difficult terrain until the end of your next turn.],
+  ),
+);
+
+#powers.power(
+  title: "Perfect Sight",
+  description: "Enemies might hide, but once you find a trace of them, there's no escaping you.",
+  type: powers.powerType.encounter,
+  range: "Personal",
+  action: powers.actionType.minorAction,
+  additionalRows: (
+    [*Effect*: You gain blindsight 5 until the end of your next turn.],
+  ),
+);
+
+#powers.power(
+  title: "Assurance of Prophecy",
+  description: "You call out choice verses of prophecy. The knowledge that destiny is on your side renews your ally's vigor.",
+  type: powers.powerType.encounter,
+  range: "Close burst 5",
+  action: powers.actionType.immediateReaction,
+  trigger: "An ally within 5 squares of you spends a healing surge",
+  additionalRows: (
+    [*Effect*: The triggering ally gains 3d6 temporary hit points.],
+  ),
+);
+
+#powers.power(
+  title: "Conviction",
+  description: "You whisper a prayer for aid to overcome hardship.",
+  type: powers.powerType.encounter,
+  range: "Personal",
+  action: powers.actionType.minorAction,
+  additionalRows: (
+    [*Effect*: You gain a +5 bonus to the next saving throw you make before the start of your next turn.],
+  ),
+);
+
+#powers.power(
+  title: "Recitation",
+  description: "You echo your allies' prayers to give them strength.",
+  type: powers.powerType.daily,
+  keywords: "Zone",
+  range: "Close burst 1",
+  action: powers.actionType.minorAction,
+  additionalRows: (
+    [*Effect*: The burst creates a zone that lasts until the end of your next turn. When you move, the zone moves with you, remaining centered on you. While within the zone, your allies gain a +1 power bonus to attack rolls.],
+    [*Sustain Minor*: The zone persists.],
   ),
 );

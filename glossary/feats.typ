@@ -233,7 +233,7 @@
       #theme.featBlock(
         title: "Unexpected Escape",
         prerequisite: "11th level",
-        content: "You gain a +4 bonus to Acrobatics or Athletics checks made to escape a grab and any other effect that allows you to escape. Whenever you successfully escape, you can shift 2 squares.",
+        content: "You gain a +4 bonus to Strength or Dexterity checks made to escape a grab and any other effect that allows you to escape. Whenever you successfully escape, you can shift 2 squares.",
       );
 
       #theme.featBlock(

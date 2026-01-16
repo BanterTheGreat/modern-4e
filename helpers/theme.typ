@@ -108,3 +108,16 @@
     below: if (spacing != none) { spacing } else { below },
   )[#content]
 }
+
+#let featBlock(title: str, content: content, prerequisite: none) = {
+  return block(
+    [
+      #choiceBox(title)
+      #if (prerequisite != none) [
+        *Prerequisite: #text(prerequisite)* #linebreak();
+      ]
+      #content
+    ],
+    breakable: false,
+  )
+}

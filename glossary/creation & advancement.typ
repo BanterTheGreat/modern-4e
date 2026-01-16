@@ -17,7 +17,7 @@
 
 
     == 4. Gather your Equipment
-    Choose your starting equipment from Equipment. Make sure to write down any choices you make during equipment selection, such as weapon types. You may select a weapon, an armor, a shield and if proficient an implement.
+    Choose your starting equipment from Equipment. Make sure to write down any choices you make during equipment selection, such as weapon types. You may select one or two weapons, an armor type, a shield and an implement you are proficent in.
 
     == 5. Choose a Theme
     Themes are a kind subtrack you can pick which come with some benefits. You may choose one.
@@ -25,7 +25,6 @@
     == 6. Choose a Feat
     You may choose 1 Feat from either your Ancestry, Class or the general Feats list.
 
-    #pagebreak()
     = Character Advancement
     When your character levels up, you gain new features & abilities. This table shows what you gain each level.
 

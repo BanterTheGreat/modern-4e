@@ -1,0 +1,23 @@
+#powers.power(
+  title: "Faulty Memory",
+  description: "You spin a web of lies that makes someone doubt his or her own recollection.",
+  type: powers.powerType.encounter,
+  range: "Ranged 10",
+  action: powers.actionType.standardAction,
+  target: "One creature that shares a language with you",
+  additionalRows: (
+    [*Effect*: You make a Bluff check opposed by an Insight check that the target makes as a free action. The target gains a +5 bonus to Insight if the target is unfriendly to the character, or a +10 bonus if the target is hostile. If your check succeeds, you make the target doubt its memory and believe your version of events.],
+  ),
+);
+
+#powers.power(
+  title: "Swift Recovery",
+  description: "You address a companion's most critical wounds to get him or her back into the battle.",
+  type: powers.powerType.encounter,
+  range: "Melee 1",
+  action: powers.actionType.minorAction,
+  target: "One ally",
+  additionalRows: (
+    [*Effect*: The target can use his or her second wind without taking an action to do so.],
+  ),
+);

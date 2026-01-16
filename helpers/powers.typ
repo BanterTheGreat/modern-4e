@@ -71,6 +71,7 @@
   attackType: attackType.default,
   trigger: none,
   requirement: none,
+  bonusTitle: none,
 ) => {
   let color = (
     "At-will": at-will-color,
@@ -96,7 +97,12 @@
         },
         inset: 6pt,
         [
-          #text(weight: 700, size: 11pt)[#title]
+          #grid(
+            columns: (1fr, auto),
+            align: (left + top, right + top),
+            text(weight: 700, size: 11pt)[#title],
+            text(weight: 700, size: 11pt)[#bonusTitle]
+          )
         ],
         ..if description != none { ([_#text(description)_],) } else { () },
         [

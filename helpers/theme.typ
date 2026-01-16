@@ -109,12 +109,12 @@
   )[#content]
 }
 
-#let featBlock(title: str, content: content, prerequisite: none) = {
+#let featBlock(title: str, content: content, requirements: none) = {
   return block(
     [
       #choiceBox(title)
-      #if (prerequisite != none) [
-        *Prerequisite: #text(prerequisite)* #linebreak();
+      #if (requirements != none) [
+        *Requirements: #text(requirements)* #linebreak();
       ]
       #content
     ],

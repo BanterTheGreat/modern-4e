@@ -113,144 +113,144 @@
       #theme.featBlock(
         title: "Agile Opportunist",
         content: "When you are pulled, pushed, or slid into a square adjacent to an enemy, you can use an immediate reaction to make a melee basic attack against that enemy.",
-        prerequisite: "11th level",
+        requirements: "11th level",
       );
 
       #theme.featBlock(
         title: "Back to the Wall",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever you are adjacent to a wall, you gain a +1 bonus to melee attack rolls, melee damage rolls, and AC",
       );
 
       #theme.featBlock(
         title: "Blood Thirst",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +2 bonus to melee damage rolls against bloodied foes.",
       );
 
       #theme.featBlock(
         title: "Danger Sense",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you make an initiative check, roll twice and take the higher of the two rolls.",
       );
 
       #theme.featBlock(
         title: "Devastating Critical",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you score a critical hit, you deal an extra 1d10 damage.",
       );
 
       #theme.featBlock(
         title: "Empty Vessel",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "The first time you drop to 0 power points during an encounter, you gain a +2 bonus to attack rolls and a +2 bonus to all defenses until the end of your next turn.",
       );
 
       #theme.featBlock(
         title: "Expansive Burst",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Your close burst and area burst attacks ignore cover, but not superior cover.",
       );
 
       #theme.featBlock(
         title: "Eyes in the Back of Your Head",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Being flanked doesn't cause you to grant combat advantage.",
       );
 
       #theme.featBlock(
         title: "Fleet-Footed",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +1 feat bonus to your speed.",
       );
 
       #theme.featBlock(
         title: "Gritty Determination",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever you use a daily attack power, you gain temporary hit points equal to one-half your level + your Constitution modifier.",
       );
 
       #theme.featBlock(
         title: "Improved Second Wind",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you use your second wind, you regain an additional 5 hit points.",
       );
 
       #theme.featBlock(
         title: "Luck of the Gods",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you roll a natural 20 on an attack roll, skill check, or saving throw, remove all effects on you that a save can end.",
       );
 
       #theme.featBlock(
         title: "Mettle",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When an area or close attack targeting your Fortitude or Will defense misses you and still deals damage on a miss, you take no damage from the attack.",
       );
 
       #theme.featBlock(
         title: "Opportunistic Withdrawal",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "While you are adjacent to an enemy granting combat advantage to you, your movement doesn't provoke opportunity attacks from that enemy.",
       );
 
       #theme.featBlock(
         title: "Opportunity Sidestep",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you hit with an opportunity attack, you can shift 1 square as a free action.",
       );
 
       #theme.featBlock(
         title: "Overwhelming Critical",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever you score a critical hit, you also knock the target prone.",
       );
 
       #theme.featBlock(
         title: "Point-Blank Shot",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "If you make a ranged attack against a foe within 5 squares of you, your attack ignores cover and concealment, including superior cover, but not total concealment.",
       );
 
       #theme.featBlock(
         title: "Quick Recovery",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever you spend a healing surge at the end of a short rest or an extended rest, you regain 5 additional hit points.",
       );
 
       #theme.featBlock(
         title: "Repel Charge",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever an enemy makes a charge attack against you, you can make a melee basic attack against that enemy as an opportunity action.",
       );
 
       #theme.featBlock(
         title: "Roll with It",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Whenever an enemy pulls, pushes, or slides you, you can shift 1 square as a free action at the end of the forced movement.",
       );
 
       #theme.featBlock(
         title: "Unexpected Escape",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +4 bonus to Strength or Dexterity checks made to escape a grab and any other effect that allows you to escape. Whenever you successfully escape, you can shift 2 squares.",
       );
 
       #theme.featBlock(
         title: "Unfailing Courage",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you spend an action point, you can also spend a healing surge.",
       );
 
       #theme.featBlock(
         title: "Vexing Flanker",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "While you are flanking an enemy, that enemy grants combat advantage to your allies.",
       );
 
       #theme.featBlock(
         title: "War Wizardry",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Your arcane spells take a –5 penalty on attack rolls against allies, and deal only half their normal damage to allies.",
       );
 
@@ -260,43 +260,43 @@
 
       #theme.featBlock(
         title: "Icy Heart",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +3 feat bonus to cold damage rolls. This bonus increases to +4 at 21st level. In addition, whenever you take cold damage from an attack, each enemy within 2 squares of you becomes slowed until the end of your next turn.",
       );
 
       #theme.featBlock(
         title: "Thunder's Rumble",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +3 feat bonus to thunder damage rolls. This bonus increases to +4 at 21st level. In addition, whenever you take thunder damage from an attack, you can push each creature adjacent to you 1 square.",
       );
 
       #theme.featBlock(
         title: "Resounding Thunder",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You can add 1 to the size of any blast or burst that has the thunder keyword.",
       );
 
       #theme.featBlock(
         title: "Lasting Frost",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "Once per turn, the first target you hit with a power that has the cold keyword gains vulnerable 5 cold after the attack. The vulnerability lasts until the end of your next turn.",
       );
 
       #theme.featBlock(
         title: "Lightning Arc",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "When you score a critical hit with a power that has the lightning keyword, you can choose to treat the attack as a normal hit instead of a critical hit. If you do, choose another target within 10 squares of the original target that was not already targeted or affected by the power. That target takes damage equal to the damage dealt to the original target.",
       );
 
       #theme.featBlock(
         title: "Lightning Soul",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +3 feat bonus to lightning damage rolls. This bonus increases to +4 at 21st level. In addition, whenever you take lightning damage from an attack, one enemy within 5 squares of you takes 10 lightning damage. This damage increases to 15 at 21st level.",
       );
 
       #theme.featBlock(
         title: "Fiery Blood",
-        prerequisite: "11th level",
+        requirements: "11th level",
         content: "You gain a +3 feat bonus to fire damage rolls. This bonus increases to +4 at 21st level. In addition, whenever you take fire damage from an attack, each enemy adjacent to you takes 5 fire damage. This damage increases to 10 at 21st level.",
       );
 
@@ -304,31 +304,31 @@
 
       #theme.featBlock(
         title: "Invigorating Critical",
-        prerequisite: "11th level, any divine class",
+        requirements: "11th level, any divine class",
         content: "The first time you score a critical hit with a divine attack power during an encounter, an ally adjacent to you or adjacent to the target regains hit points equal to 10 + your Wisdom modifier.",
       );
 
       #theme.featBlock(
         title: "Pervasive Light",
-        prerequisite: "11th level, any divine class",
+        requirements: "11th level, any divine class",
         content: "When you hit a target that has vulnerability to radiant damage with an attack that does not deal radiant damage, you deal extra damage equal to that vulnerability.",
       );
 
       #theme.featBlock(
         title: "Saving Grace",
-        prerequisite: "11th level, any divine class",
+        requirements: "11th level, any divine class",
         content: "When you succeed on a saving throw, you can choose not to end the effect you saved against and instead allow an ally within 5 squares of you to make a saving throw with a bonus equal to your Wisdom modifier.",
       );
 
       #theme.featBlock(
         title: "Armored by Faith",
-        prerequisite: "11th level, any divine class, Channel Divinity class feature",
+        requirements: "11th level, any divine class, Channel Divinity class feature",
         content: "When you use a Channel Divinity power, you gain temporary hit points equal to your Wisdom modifier.",
       );
 
       #theme.featBlock(
         title: "Darkfoe",
-        prerequisite: "11th level, any divine class, Channel Divinity class feature",
+        requirements: "11th level, any divine class, Channel Divinity class feature",
         content: "When you use a Channel Divinity power, you and each ally within 10 squares of you gain resistance to necrotic damage equal to 5 + your Wisdom modifier until the start of your next turn.",
       );
 
@@ -337,43 +337,43 @@
 
       #theme.featBlock(
         title: "Fated Survival",
-        prerequisite: "11th level, 2 Charisma",
+        requirements: "11th level, 2 Charisma",
         content: "When you fail a saving throw, you gain a +2 feat bonus to the next saving throw you make against the same effect.",
       );
 
       #theme.featBlock(
         title: "Arcane Reach",
-        prerequisite: "11th level, 3 Dexterity",
+        requirements: "11th level, 3 Dexterity",
         content: "When using a close arcane attack power, you can choose a square within 2 squares of yours as the origin square. The power still follows the rules for close attacks.",
       );
 
       #theme.featBlock(
         title: "Evasion",
-        prerequisite: "11th level, 3 Dexterity",
+        requirements: "11th level, 3 Dexterity",
         content: "When an area or close attack targeting your AC or Reflex defense misses you but deals damage on a miss, you take no damage from the attack.",
       );
 
       #theme.featBlock(
         title: "Defensive Advantage",
-        prerequisite: "11th level, 4 Dexterity",
+        requirements: "11th level, 4 Dexterity",
         content: "When you have combat advantage against an enemy, you gain a +2 bonus to AC against that enemy's attacks.",
       );
 
       #theme.featBlock(
         title: "Seize the Moment",
-        prerequisite: "11th level, 4 Dexterity",
+        requirements: "11th level, 4 Dexterity",
         content: "During the first round of combat and during surprise rounds, you automatically gain combat advantage over a foe whose initiative result is lower than yours.",
       );
 
       #theme.featBlock(
         title: "Sly Hunter",
-        prerequisite: "11th level, 3 Wisdom",
+        requirements: "11th level, 3 Wisdom",
         content: "You gain a +3 bonus to damage rolls with bow attacks against any target that has no creature within 3 squares of it.",
       );
 
       #theme.featBlock(
         title: "Uncanny Dodge",
-        prerequisite: "11th level, 3 Wisdom",
+        requirements: "11th level, 3 Wisdom",
         content: "Enemies do not gain the normal +2 bonus to attack rolls against you when they have combat advantage. Any other benefits derived from combat advantage still apply.",
       );
     ]
